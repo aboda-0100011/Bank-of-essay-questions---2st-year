@@ -3,7 +3,7 @@
   "qs": [
     {
       "id": "la3_0001",
-      "q": "لتكن المصفوفة $$M=\\begin{bmatrix}5&-1&0&7\\\\2&3&-4&8\\\\1&6&9&-2\\end{bmatrix}$$ (أ) ما حجم (Size) المصفوفة $M$؟ (ب) أوجد العناصر $m_{23}$ و $m_{14}$ و $m_{32}$. (ج) ما حجم $M^T$؟",
+      "q": "Let the matrix $$M=\\begin{bmatrix}5&-1&0&7\\\\2&3&-4&8\\\\1&6&9&-2\\end{bmatrix}$$ (a) What is the size of the matrix $M$? (b) Find the entries $m_{23}$, $m_{14}$ and $m_{32}$. (c) What is the size of $M^T$?",
       "t": ["1", "easy"],
       "a": [
         "(أ) الحجم $3 \\times 4$ (3 صفوف و4 أعمدة).",
@@ -14,7 +14,7 @@
     },
     {
       "id": "la3_0002",
-      "q": "(أ) أوجد قيمتي $x, y$ اللتين تجعلان المصفوفتين متساويتين: $$\\begin{bmatrix}x+y&5\\\\2&x-y\\end{bmatrix}=\\begin{bmatrix}7&5\\\\2&1\\end{bmatrix}$$ (ب) هل المصفوفتان $A=\\begin{bmatrix}\\frac{1}{2}&\\sqrt{9}\\\\0.25&2\\end{bmatrix}$ و $B=\\begin{bmatrix}0.5&3\\\\\\frac{1}{4}&2\\end{bmatrix}$ متساويتان؟ ولماذا؟",
+      "q": "(a) Find the values of $x, y$ that make the two matrices equal: $$\\begin{bmatrix}x+y&5\\\\2&x-y\\end{bmatrix}=\\begin{bmatrix}7&5\\\\2&1\\end{bmatrix}$$ (b) Are the matrices $A=\\begin{bmatrix}\\frac{1}{2}&\\sqrt{9}\\\\0.25&2\\end{bmatrix}$ and $B=\\begin{bmatrix}0.5&3\\\\\\frac{1}{4}&2\\end{bmatrix}$ equal? Why?",
       "t": ["1", "easy"],
       "a": [
         "(أ) $x = 4$ و $y = 3$.",
@@ -29,7 +29,7 @@
     },
     {
       "id": "la3_0003",
-      "q": "لتكن: $$A=\\begin{bmatrix}1&-2&3\\\\0&4&-1\\end{bmatrix}\\quad B=\\begin{bmatrix}5&0&-2\\\\3&1&6\\end{bmatrix}\\quad C=\\begin{bmatrix}1&2\\\\3&4\\\\5&6\\end{bmatrix}$$ (أ) أوجد $A + B$ و $A - B$ و $B - A$. (ب) هل $A + C$ و $B - C$ معرّفتان؟ ولماذا؟ (ج) هل $A - B = B - A$؟",
+      "q": "Let: $$A=\\begin{bmatrix}1&-2&3\\\\0&4&-1\\end{bmatrix}\\quad B=\\begin{bmatrix}5&0&-2\\\\3&1&6\\end{bmatrix}\\quad C=\\begin{bmatrix}1&2\\\\3&4\\\\5&6\\end{bmatrix}$$ (a) Find $A + B$, $A - B$ and $B - A$. (b) Are $A + C$ and $B - C$ defined? Why? (c) Is $A - B = B - A$?",
       "t": ["1", "easy"],
       "a": [
         "(أ) $A + B = \\begin{bmatrix}6&-2&1\\\\3&5&5\\end{bmatrix}$ ، $A - B = \\begin{bmatrix}-4&-2&5\\\\-3&3&-7\\end{bmatrix}$ ، $B - A = \\begin{bmatrix}4&2&-5\\\\3&-3&7\\end{bmatrix}$.",
@@ -47,7 +47,7 @@
     },
     {
       "id": "la3_0004",
-      "q": "لتكن المصفوفات: $$A=\\begin{bmatrix}2&3&4\\\\1&3&1\\end{bmatrix}\\quad B=\\begin{bmatrix}0&2&7\\\\-1&3&-5\\end{bmatrix}\\quad C=\\begin{bmatrix}9&-6&3\\\\3&0&12\\end{bmatrix}$$ أوجد $2A - B + \\frac{1}{3}C$.",
+      "q": "Let the matrices be: $$A=\\begin{bmatrix}2&3&4\\\\1&3&1\\end{bmatrix}\\quad B=\\begin{bmatrix}0&2&7\\\\-1&3&-5\\end{bmatrix}\\quad C=\\begin{bmatrix}9&-6&3\\\\3&0&12\\end{bmatrix}$$ Find $2A - B + \\frac{1}{3}C$.",
       "t": ["0", "medium"],
       "a": [
         "$$2A - B + \\frac{1}{3}C = \\begin{bmatrix}7&2&2\\\\4&3&11\\end{bmatrix}$$"
@@ -62,7 +62,7 @@
     },
     {
       "id": "la3_0005",
-      "q": "أوجد المصفوفة $X$ التي تحقق $3X - 2A = B$ حيث: $$A=\\begin{bmatrix}1&2\\\\0&-1\\end{bmatrix}\\quad B=\\begin{bmatrix}4&-4\\\\3&5\\end{bmatrix}$$ ثم تحقق من صحة الحل.",
+      "q": "Find the matrix $X$ that satisfies $3X - 2A = B$ where: $$A=\\begin{bmatrix}1&2\\\\0&-1\\end{bmatrix}\\quad B=\\begin{bmatrix}4&-4\\\\3&5\\end{bmatrix}$$ Then verify the solution.",
       "t": ["1", "medium"],
       "a": [
         "$$X = \\begin{bmatrix}2&0\\\\1&1\\end{bmatrix}$$"
@@ -77,7 +77,7 @@
     },
     {
       "id": "la3_0006",
-      "q": "لتكن $$A=\\begin{bmatrix}1&2&4\\\\2&6&0\\end{bmatrix}\\quad B=\\begin{bmatrix}4&1&4&3\\\\0&-1&3&1\\\\2&7&5&2\\end{bmatrix}$$ حدّد حجم $AB$ ثم أوجده.",
+      "q": "Let $$A=\\begin{bmatrix}1&2&4\\\\2&6&0\\end{bmatrix}\\quad B=\\begin{bmatrix}4&1&4&3\\\\0&-1&3&1\\\\2&7&5&2\\end{bmatrix}$$ Determine the size of $AB$, then find it.",
       "t": ["0", "medium"],
       "a": [
         "حجم $AB$ هو $2 \\times 4$.",
@@ -93,7 +93,7 @@
     },
     {
       "id": "la3_0007",
-      "q": "إذا كانت أحجام المصفوفات: $A(4 \\times 5)$ ، $B(4 \\times 5)$ ، $C(5 \\times 2)$ ، $D(4 \\times 2)$ ، $E(5 \\times 4)$ ، فحدّد أيًّا من العمليات التالية معرّف (وإن كان معرّفًا فما حجم الناتج): $BA$ ، $AC + D$ ، $AE + B$ ، $E(A + B)$.",
+      "q": "If the sizes of the matrices are: $A(4 \\times 5)$ , $B(4 \\times 5)$ , $C(5 \\times 2)$ , $D(4 \\times 2)$ , $E(5 \\times 4)$ , determine which of the following operations are defined (and if defined, what is the size of the result): $BA$ , $AC + D$ , $AE + B$ , $E(A + B)$.",
       "t": ["0", "medium"],
       "a": [
         "$BA$: غير معرّف.",
@@ -111,7 +111,7 @@
     },
     {
       "id": "la3_0008",
-      "q": "(أ) لتكن $A = \\begin{bmatrix}1&2\\\\3&4\\end{bmatrix}$ و $B = \\begin{bmatrix}0&1\\\\-1&2\\end{bmatrix}$. أوجد $AB$ و $BA$ وبيّن أن $AB \\neq BA$. <br>(ب) لتكن $C = \\begin{bmatrix}1&2&3\\end{bmatrix}$ (صف) و $D = \\begin{bmatrix}4\\\\5\\\\6\\end{bmatrix}$ (عمود). أوجد $CD$ و $DC$ مع حجم كل منهما.",
+      "q": "(a) Let $A = \\begin{bmatrix}1&2\\\\3&4\\end{bmatrix}$ and $B = \\begin{bmatrix}0&1\\\\-1&2\\end{bmatrix}$. Find $AB$ and $BA$ and show that $AB \\neq BA$. <br>(b) Let $C = \\begin{bmatrix}1&2&3\\end{bmatrix}$ (row) and $D = \\begin{bmatrix}4\\\\5\\\\6\\end{bmatrix}$ (column). Find $CD$ and $DC$ along with the size of each.",
       "t": ["1", "medium"],
       "a": [
         "(أ) $AB = \\begin{bmatrix}-2&5\\\\-4&11\\end{bmatrix}$ و $BA = \\begin{bmatrix}3&4\\\\5&6\\end{bmatrix}$ ← إذن $AB \\neq BA$.",
@@ -128,7 +128,7 @@
     },
     {
       "id": "la3_0009",
-      "q": "لتكن $A = \\begin{bmatrix}2&-1&3\\\\0&4&5\\end{bmatrix}$. (أ) اختر مصفوفة الوحدة المناسبة (بالحجم الصحيح) من اليمين ومن اليسار وتحقق من أن $AI = A$ و $IA = A$. (ب) أوجد $A + O$ و $A - O$ حيث $O$ مصفوفة صفرية من الحجم المناسب.",
+      "q": "Let $A = \\begin{bmatrix}2&-1&3\\\\0&4&5\\end{bmatrix}$. (a) Choose the appropriate identity matrix (of the correct size) on the right and on the left and verify that $AI = A$ and $IA = A$. (b) Find $A + O$ and $A - O$ where $O$ is a zero matrix of the appropriate size.",
       "t": ["1", "medium"],
       "a": [
         "(أ) نستخدم $I_3$ من اليمين و $I_2$ من اليسار؛ فينتج $AI_3 = A$ و $I_2 A = A$.",
@@ -143,7 +143,7 @@
     },
     {
       "id": "la3_0010",
-      "q": "صنّف كل مصفوفة مما يلي (قد تنطبق أكثر من صفة): square / diagonal / identity / row vector / column vector / zero. وفسّر أيّها ليست قطرية. $$P=\\begin{bmatrix}3&0&0\\\\0&-5&0\\\\0&0&2\\end{bmatrix}\\quad Q=\\begin{bmatrix}1&0\\\\0&1\\end{bmatrix}\\quad R=\\begin{bmatrix}0&0&0\\\\0&0&0\\end{bmatrix}$$ $$S=\\begin{bmatrix}2\\\\-3\\\\7\\end{bmatrix}\\quad T=\\begin{bmatrix}4&1\\\\0&3\\end{bmatrix}\\quad U=\\begin{bmatrix}1&0&0\\\\0&1&0\\\\0&0&0\\end{bmatrix}\\quad V=\\begin{bmatrix}9&-2&6\\end{bmatrix}$$ ثم: هل كل مصفوفة وحدة قطرية؟ وهل العكس صحيح؟",
+      "q": "Classify each of the following matrices (more than one property may apply): square / diagonal / identity / row vector / column vector / zero. And explain which ones are not diagonal. $$P=\\begin{bmatrix}3&0&0\\\\0&-5&0\\\\0&0&2\\end{bmatrix}\\quad Q=\\begin{bmatrix}1&0\\\\0&1\\end{bmatrix}\\quad R=\\begin{bmatrix}0&0&0\\\\0&0&0\\end{bmatrix}$$ $$S=\\begin{bmatrix}2\\\\-3\\\\7\\end{bmatrix}\\quad T=\\begin{bmatrix}4&1\\\\0&3\\end{bmatrix}\\quad U=\\begin{bmatrix}1&0&0\\\\0&1&0\\\\0&0&0\\end{bmatrix}\\quad V=\\begin{bmatrix}9&-2&6\\end{bmatrix}$$ Then: is every identity matrix diagonal? And is the converse true?",
       "t": ["1", "easy"],
       "a": [
         "$P$: square + diagonal.",
@@ -159,7 +159,7 @@
     },
     {
       "id": "la3_0011",
-      "q": "لتكن $M = \\begin{bmatrix}1&-2&0&4\\\\3&5&-1&2\\end{bmatrix}$. أوجد $M^T$ وحجمها، ثم تحقق من أن $(M^T)^T = M$ وأن $(3M)^T = 3M^T$.",
+      "q": "Let $M = \\begin{bmatrix}1&-2&0&4\\\\3&5&-1&2\\end{bmatrix}$. Find $M^T$ and its size, then verify that $(M^T)^T = M$ and that $(3M)^T = 3M^T$.",
       "t": ["1", "easy"],
       "a": [
         "$$M^T = \\begin{bmatrix}1&3\\\\-2&5\\\\0&-1\\\\4&2\\end{bmatrix}$$ وحجمها $4 \\times 2$.",
@@ -174,7 +174,7 @@
     },
     {
       "id": "la3_0012",
-      "q": "لتكن $A = \\begin{bmatrix}1&2\\\\0&3\\\\-1&4\\end{bmatrix}$ و $B = \\begin{bmatrix}2&0&1\\\\-1&3&2\\end{bmatrix}$. تحقق من أن $(AB)^T = B^T A^T$. ثم وضّح لماذا لا يمكن أن يكون $(AB)^T = A^T B^T$ في هذه الحالة.",
+      "q": "Let $A = \\begin{bmatrix}1&2\\\\0&3\\\\-1&4\\end{bmatrix}$ and $B = \\begin{bmatrix}2&0&1\\\\-1&3&2\\end{bmatrix}$. Verify that $(AB)^T = B^T A^T$. Then explain why $(AB)^T = A^T B^T$ cannot hold in this case.",
       "t": ["1", "hard"],
       "a": [
         "$$AB = \\begin{bmatrix}0&6&5\\\\-3&9&6\\\\-6&12&7\\end{bmatrix}$$ ومنها $$(AB)^T = \\begin{bmatrix}0&-3&-6\\\\6&9&12\\\\5&6&7\\end{bmatrix}$$",
@@ -197,7 +197,7 @@
     },
     {
       "id": "la3_0013",
-      "q": "(أ) حدّد هل كل من المصفوفتين متماثلة (Symmetric): $$P=\\begin{bmatrix}1&7&-2\\\\7&0&3\\\\-2&3&5\\end{bmatrix}\\quad Q=\\begin{bmatrix}1&2&3\\\\2&4&5\\\\3&6&7\\end{bmatrix}$$ (ب) أوجد قيمتي $x, y$ اللتين تجعلان المصفوفة التالية متماثلة: $$N=\\begin{bmatrix}2&x&5\\\\3&-1&y+1\\\\5&4&7\\end{bmatrix}$$",
+      "q": "(a) Determine whether each of the two matrices is Symmetric: $$P=\\begin{bmatrix}1&7&-2\\\\7&0&3\\\\-2&3&5\\end{bmatrix}\\quad Q=\\begin{bmatrix}1&2&3\\\\2&4&5\\\\3&6&7\\end{bmatrix}$$ (b) Find the values of $x, y$ that make the following matrix symmetric: $$N=\\begin{bmatrix}2&x&5\\\\3&-1&y+1\\\\5&4&7\\end{bmatrix}$$",
       "t": ["1", "medium"],
       "a": [
         "(أ) $P$ متماثلة ($P = P^T$) ، أما $Q$ فغير متماثلة لأن $q_{23} = 5 \\neq q_{32} = 6$.",
@@ -213,7 +213,7 @@
     },
     {
       "id": "la3_0014",
-      "q": "(أ) أوجد $A^{-1}$ للمصفوفة $A = \\begin{bmatrix}2&5\\\\1&3\\end{bmatrix}$ بالقانون ثم تحقق بالضرب أن $AA^{-1} = I$. <br>(ب) هل للمصفوفة $B = \\begin{bmatrix}4&-2\\\\6&-3\\end{bmatrix}$ معكوس؟ ولماذا؟",
+      "q": "(a) Find $A^{-1}$ for the matrix $A = \\begin{bmatrix}2&5\\\\1&3\\end{bmatrix}$ using the formula, then verify by multiplication that $AA^{-1} = I$. <br>(b) Does the matrix $B = \\begin{bmatrix}4&-2\\\\6&-3\\end{bmatrix}$ have an inverse? Why?",
       "t": ["1", "easy"],
       "a": [
         "(أ) $$A^{-1} = \\begin{bmatrix}3&-5\\\\-1&2\\end{bmatrix}$$",
@@ -228,7 +228,7 @@
     },
     {
       "id": "la3_0015",
-      "q": "لتكن $A = \\begin{bmatrix}k&3\\\\2&k+1\\end{bmatrix}$. (أ) أوجد قيم $k$ التي تجعل $A$ ليس لها معكوس. (ب) أوجد $A^{-1}$ عندما $k = 0$ وتحقق منه.",
+      "q": "Let $A = \\begin{bmatrix}k&3\\\\2&k+1\\end{bmatrix}$. (a) Find the values of $k$ for which $A$ has no inverse. (b) Find $A^{-1}$ when $k = 0$ and verify it.",
       "t": ["1", "medium"],
       "a": [
         "(أ) $k = 2$ أو $k = -3$.",
@@ -244,7 +244,7 @@
     },
     {
       "id": "la3_0016",
-      "q": "أوجد معكوس المصفوفة بطريقة $[A \\mid I] \\to [I \\mid A^{-1}]$ ثم تحقق من الناتج: $$A=\\begin{bmatrix}1&2&3\\\\2&4&5\\\\3&5&6\\end{bmatrix}$$",
+      "q": "Find the inverse of the matrix using the method $[A \\mid I] \\to [I \\mid A^{-1}]$ and then verify the result: $$A=\\begin{bmatrix}1&2&3\\\\2&4&5\\\\3&5&6\\end{bmatrix}$$",
       "t": ["0", "medium"],
       "a": [
         "$$A^{-1} = \\begin{bmatrix}1&-3&2\\\\-3&3&-1\\\\2&-1&0\\end{bmatrix}$$"
@@ -262,7 +262,7 @@
     },
     {
       "id": "la3_0017",
-      "q": "بيّن أن المصفوفة التالية ليس لها معكوس (Singular) باستخدام الاختزال $[A \\mid I]$: $$A=\\begin{bmatrix}1&6&4\\\\2&4&-1\\\\-1&2&5\\end{bmatrix}$$",
+      "q": "Show that the following matrix has no inverse (Singular) using the reduction $[A \\mid I]$: $$A=\\begin{bmatrix}1&6&4\\\\2&4&-1\\\\-1&2&5\\end{bmatrix}$$",
       "t": ["0", "medium"],
       "a": [
         "أثناء الاختزال يظهر في النصف الأيسر صف أصفار بالكامل: $[0\\ 0\\ 0 \\mid -1\\ 1\\ 1]$ ، لذلك لا يمكن الوصول إلى $I$ والمصفوفة <b>غير قابلة للعكس</b>."
@@ -277,7 +277,7 @@
     },
     {
       "id": "la3_0018",
-      "q": "أوجد معكوس المصفوفة بطريقة $[A \\mid I] \\to [I \\mid A^{-1}]$ ثم تحقق من الناتج: $$A=\\begin{bmatrix}1&2&3\\\\0&1&4\\\\5&6&0\\end{bmatrix}$$",
+      "q": "Find the inverse of the matrix using the method $[A \\mid I] \\to [I \\mid A^{-1}]$ and then verify the result: $$A=\\begin{bmatrix}1&2&3\\\\0&1&4\\\\5&6&0\\end{bmatrix}$$",
       "t": ["1", "hard"],
       "a": [
         "$$A^{-1} = \\begin{bmatrix}-24&18&5\\\\20&-15&-4\\\\-5&4&1\\end{bmatrix}$$"
@@ -294,7 +294,7 @@
     },
     {
       "id": "la3_0019",
-      "q": "لتكن $A = \\begin{bmatrix}1&2\\\\1&3\\end{bmatrix}$ و $B = \\begin{bmatrix}1&4\\\\2&7\\end{bmatrix}$ (وكلتاهما قابلة للعكس). (أ) أوجد $A^{-1}$ و $B^{-1}$ بالقانون. (ب) أوجد $AB$ ثم أوجد $(AB)^{-1}$ مباشرةً بالقانون. (ج) تحقق أن $(AB)^{-1} = B^{-1}A^{-1}$ وأن $A^{-1}B^{-1}$ لا تساويها. (د) تحقق أن $(A^{-1})^T = (A^T)^{-1}$.",
+      "q": "Let $A = \\begin{bmatrix}1&2\\\\1&3\\end{bmatrix}$ and $B = \\begin{bmatrix}1&4\\\\2&7\\end{bmatrix}$ (both are invertible). (a) Find $A^{-1}$ and $B^{-1}$ using the formula. (b) Find $AB$ and then find $(AB)^{-1}$ directly using the formula. (c) Verify that $(AB)^{-1} = B^{-1}A^{-1}$ and that $A^{-1}B^{-1}$ is not equal to it. (d) Verify that $(A^{-1})^T = (A^T)^{-1}$.",
       "t": ["1", "hard"],
       "a": [
         "(أ) $A^{-1} = \\begin{bmatrix}3&-2\\\\-1&1\\end{bmatrix}$ ، $B^{-1} = \\begin{bmatrix}-7&4\\\\2&-1\\end{bmatrix}$.",
@@ -313,7 +313,7 @@
     },
     {
       "id": "la3_0020",
-      "q": "(A و B مصفوفات مربعة من نفس الحجم) حدّد صحة كل عبارة مع التبرير: <br>(1) إذا كانت $A$ غير قابلة للعكس فإن $AB$ غير قابلة للعكس. <br>(2) إذا كانت $AB$ غير قابلة للعكس فإن $A$ أو $B$ غير قابلة للعكس. <br>(3) $(kA)^{-1} = kA^{-1}$ لأي ثابت $k$ غير صفري. <br>(4) إذا كانت $A$ قابلة للعكس فإن $A^T$ قابلة للعكس. <br>(5) $AB = BA$ دائمًا.",
+      "q": "(A and B are square matrices of the same size) Determine whether each statement is true, with justification: <br>(1) If $A$ is not invertible, then $AB$ is not invertible. <br>(2) If $AB$ is not invertible, then $A$ or $B$ is not invertible. <br>(3) $(kA)^{-1} = kA^{-1}$ for any nonzero constant $k$. <br>(4) If $A$ is invertible, then $A^T$ is invertible. <br>(5) $AB = BA$ always.",
       "t": ["1", "medium"],
       "a": [
         "(1) صح: حسب خواص المعكوس، إذا كانت إحدى المصفوفتين غير قابلة للعكس فإن حاصل الضرب غير قابل للعكس.",

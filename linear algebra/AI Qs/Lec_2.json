@@ -3,7 +3,7 @@
   "qs": [
     {
       "id": "la2_0001",
-      "q": "لكل نظام من الأنظمة التالية (معادلتان في مجهولين): حدّد العلاقة الهندسية بين المستقيمين $L_1$ و $L_2$، وعدد الحلول، ونوع النظام (Consistent / Inconsistent): <br>(أ) $2x + y = 4$ ، $x + y = 2$ <br>(ب) $2x + 2y = 4$ ، $x + y = 2$ <br>(ج) $x + y = 4$ ، $2x + 2y = 6$",
+      "q": "For each of the following systems (two equations in two unknowns): determine the geometric relationship between the lines $L_1$ and $L_2$, the number of solutions, and the type of the system (Consistent / Inconsistent): <br>(a) $2x + y = 4$ , $x + y = 2$ <br>(b) $2x + 2y = 4$ , $x + y = 2$ <br>(c) $x + y = 4$ , $2x + 2y = 6$",
       "t": ["0", "easy"],
       "a": [
         "(أ) المستقيمان يتقاطعان في نقطة واحدة $(2, 0)$ ← حل وحيد ← Consistent.",
@@ -19,7 +19,7 @@
     },
     {
       "id": "la2_0002",
-      "q": "حدّد صحة كل عبارة مع التبرير: <br>(1) النظام الـ Consistent يجب أن يكون له حل وحيد. <br>(2) يمكن أن يكون لنظام خطي حلّان فقط بالضبط. <br>(3) النظام الـ Inconsistent هو النظام الذي ليس له أي حل. <br>(4) إذا ظهر في المصفوفة الممتدة صف على الصورة $\\left[\\begin{array}{ccc|c}0&0&0&5\\end{array}\\right]$ فالنظام ليس له حل. <br>(5) المصفوفة $\\left[\\begin{array}{cc|c}1&1&3\\\\0&0&0\\end{array}\\right]$ تمثل نظامًا له حل وحيد.",
+      "q": "Determine whether each statement is true, with justification: <br>(1) A Consistent system must have a unique solution. <br>(2) A linear system can have exactly two solutions. <br>(3) An Inconsistent system is a system that has no solution. <br>(4) If a row of the form $\\left[\\begin{array}{ccc|c}0&0&0&5\\end{array}\\right]$ appears in the augmented matrix, the system has no solution. <br>(5) The matrix $\\left[\\begin{array}{cc|c}1&1&3\\\\0&0&0\\end{array}\\right]$ represents a system with a unique solution.",
       "t": ["1", "easy"],
       "a": [
         "(1) خطأ: الـ Consistent هو نظام له حل واحد على الأقل (حل وحيد أو عدد لانهائي من الحلول).",
@@ -32,7 +32,7 @@
     },
     {
       "id": "la2_0003",
-      "q": "المصفوفات التالية هي المصفوفات الممتدة لثلاثة أنظمة بعد اختزالها إلى Row-Echelon Form. لكل منها حدّد نوع النظام، وإن كان له حل فأوجده (أو اكتب الحل العام): $$M_1=\\left[\\begin{array}{ccc|c}1&2&0&4\\\\0&1&3&5\\\\0&0&1&2\\end{array}\\right]$$ $$M_2=\\left[\\begin{array}{ccc|c}1&-1&2&3\\\\0&1&1&2\\\\0&0&0&0\\end{array}\\right]$$ $$M_3=\\left[\\begin{array}{ccc|c}1&2&-1&3\\\\0&1&4&1\\\\0&0&0&-5\\end{array}\\right]$$",
+      "q": "The following matrices are the augmented matrices of three systems after being reduced to Row-Echelon Form. For each one, determine the type of the system, and if it has a solution, find it (or write the general solution): $$M_1=\\left[\\begin{array}{ccc|c}1&2&0&4\\\\0&1&3&5\\\\0&0&1&2\\end{array}\\right]$$ $$M_2=\\left[\\begin{array}{ccc|c}1&-1&2&3\\\\0&1&1&2\\\\0&0&0&0\\end{array}\\right]$$ $$M_3=\\left[\\begin{array}{ccc|c}1&2&-1&3\\\\0&1&4&1\\\\0&0&0&-5\\end{array}\\right]$$",
       "t": ["1", "medium"],
       "a": [
         "$M_1$: حل وحيد: $(x_1, x_2, x_3) = (6, -1, 2)$.",
@@ -48,7 +48,7 @@
     },
     {
       "id": "la2_0004",
-      "q": "المصفوفة التالية هي Reduced Row-Echelon Form لنظام في المجهولات $x, y, z, w$: $$\\left[\\begin{array}{cccc|c}1&0&-2&0&3\\\\0&1&1&0&-1\\\\0&0&0&1&4\\end{array}\\right]$$ (أ) حدّد الـ Leading variables والـ Free variables. (ب) اكتب الحل العام. (ج) أوجد حلّين خاصّين مختلفين وتحقق من أحدهما في المصفوفة.",
+      "q": "The following matrix is the Reduced Row-Echelon Form of a system in the unknowns $x, y, z, w$: $$\\left[\\begin{array}{cccc|c}1&0&-2&0&3\\\\0&1&1&0&-1\\\\0&0&0&1&4\\end{array}\\right]$$ (a) Identify the Leading variables and the Free variables. (b) Write the general solution. (c) Find two different particular solutions and verify one of them against the matrix.",
       "t": ["1", "easy"],
       "a": [
         "(أ) Leading variables: $x, y, w$. Free variable: $z$.",
@@ -64,7 +64,7 @@
     },
     {
       "id": "la2_0005",
-      "q": "اكتشف الخطأ في كل استنتاج وصحّحه: <br>(أ) بعد اختزال نظام وصل طالب إلى $$\\left[\\begin{array}{ccc|c}1&-2&3&4\\\\0&1&-1&2\\\\0&0&0&3\\end{array}\\right]$$ وقال: الصف الأخير معاملاته أصفار إذن للنظام عدد لانهائي من الحلول. <br>(ب) في نظام آخر وصل طالب إلى $$\\left[\\begin{array}{cc|c}1&0&3\\\\0&1&2\\\\0&0&0\\end{array}\\right]$$ وقال: يوجد صف $[0\\ 0 \\mid 0]$ إذن للنظام عدد لانهائي من الحلول.",
+      "q": "Find the mistake in each conclusion and correct it: <br>(a) After reducing a system, a student reached $$\\left[\\begin{array}{ccc|c}1&-2&3&4\\\\0&1&-1&2\\\\0&0&0&3\\end{array}\\right]$$ and said: the last row has zero coefficients, so the system has infinitely many solutions. <br>(b) In another system, a student reached $$\\left[\\begin{array}{cc|c}1&0&3\\\\0&1&2\\\\0&0&0\\end{array}\\right]$$ and said: there is a row $[0\\ 0 \\mid 0]$, so the system has infinitely many solutions.",
       "t": ["1", "medium"],
       "a": [
         "(أ) الخطأ: الصف الأخير يعني $0 = 3$ وهذا مستحيل، فالنظام <b>Inconsistent</b> ولا يوجد حل (وليس عدد لانهائي).",
@@ -78,7 +78,7 @@
     },
     {
       "id": "la2_0006",
-      "q": "حلّ النظام التالي بـ <b>Gaussian Elimination</b> وحدّد نوعه: $$\\begin{aligned} x_1 - 2x_2 - 6x_3 &= 12 \\\\ 2x_1 + 4x_2 + 12x_3 &= -17 \\\\ x_1 - 4x_2 - 12x_3 &= 22 \\end{aligned}$$",
+      "q": "Solve the following system using <b>Gaussian Elimination</b> and determine its type: $$\\begin{aligned} x_1 - 2x_2 - 6x_3 &= 12 \\\\ 2x_1 + 4x_2 + 12x_3 &= -17 \\\\ x_1 - 4x_2 - 12x_3 &= 22 \\end{aligned}$$",
       "t": ["0", "medium"],
       "a": [
         "النظام <b>Inconsistent</b>: لا يوجد حل.",
@@ -94,7 +94,7 @@
     },
     {
       "id": "la2_0007",
-      "q": "حلّ النظام التالي بـ Gaussian Elimination وحدّد نوعه، ثم فسّر سبب النتيجة: $$\\begin{aligned} x + 2y + 3z &= 4 \\\\ 2x + 5y + 7z &= 9 \\\\ 3x + 7y + 10z &= 14 \\end{aligned}$$",
+      "q": "Solve the following system using Gaussian Elimination and determine its type, then explain the reason for the result: $$\\begin{aligned} x + 2y + 3z &= 4 \\\\ 2x + 5y + 7z &= 9 \\\\ 3x + 7y + 10z &= 14 \\end{aligned}$$",
       "t": ["1", "medium"],
       "a": [
         "النظام Inconsistent: لا يوجد حل.",
@@ -110,7 +110,7 @@
     },
     {
       "id": "la2_0008",
-      "q": "حلّ النظام التالي بـ <b>Gauss-Jordan</b>، ثم حدّد الـ Leading والـ Free variables واكتب الحل العام وحلّين خاصّين: $$\\begin{aligned} x + 2y - 3z + w &= -2 \\\\ 3x - y - 2z - 4w &= 1 \\\\ 2x + 3y - 5z + w &= -3 \\end{aligned}$$",
+      "q": "Solve the following system using <b>Gauss-Jordan</b>, then identify the Leading and Free variables and write the general solution and two particular solutions: $$\\begin{aligned} x + 2y - 3z + w &= -2 \\\\ 3x - y - 2z - 4w &= 1 \\\\ 2x + 3y - 5z + w &= -3 \\end{aligned}$$",
       "t": ["0", "medium"],
       "a": [
         "النظام Consistent وله عدد لانهائي من الحلول.",
@@ -131,7 +131,7 @@
     },
     {
       "id": "la2_0009",
-      "q": "حلّ النظام التالي بـ Gauss-Jordan، واكتب الحل العام بدلالة المتغيرات الحرة، ثم أوجد حلّين خاصّين وتحقق منهما في المعادلات الأصلية: $$\\begin{aligned} x + 2y + z + w &= 4 \\\\ x + 2y + 2z + 3w &= 5 \\\\ 2x + 4y + z &= 7 \\end{aligned}$$",
+      "q": "Solve the following system using Gauss-Jordan, write the general solution in terms of the free variables, then find two particular solutions and verify them in the original equations: $$\\begin{aligned} x + 2y + z + w &= 4 \\\\ x + 2y + 2z + 3w &= 5 \\\\ 2x + 4y + z &= 7 \\end{aligned}$$",
       "t": ["1", "hard"],
       "a": [
         "النظام Consistent وله عدد لانهائي من الحلول.",
@@ -152,7 +152,7 @@
     },
     {
       "id": "la2_0010",
-      "q": "ما الشرط الذي يجب أن تحققه $b_1, b_2, b_3$ حتى يكون للنظام التالي حل؟ $$\\begin{aligned} x_1 + x_2 + x_3 &= b_1 \\\\ x_1 + 2x_3 &= b_2 \\\\ 2x_1 + x_2 + 3x_3 &= b_3 \\end{aligned}$$",
+      "q": "What condition must $b_1, b_2, b_3$ satisfy for the following system to have a solution? $$\\begin{aligned} x_1 + x_2 + x_3 &= b_1 \\\\ x_1 + 2x_3 &= b_2 \\\\ 2x_1 + x_2 + 3x_3 &= b_3 \\end{aligned}$$",
       "t": ["0", "medium"],
       "a": [
         "الشرط: $b_3 - b_2 - b_1 = 0$."
@@ -167,7 +167,7 @@
     },
     {
       "id": "la2_0011",
-      "q": "للنظام: $$\\begin{aligned} x_1 + x_2 + x_3 &= b_1 \\\\ x_1 + 2x_3 &= b_2 \\\\ 2x_1 + x_2 + 3x_3 &= b_3 \\end{aligned}$$ (علمًا بأن شرط وجود الحل هو $b_3 - b_2 - b_1 = 0$): <br>(أ) هل للنظام حل عندما $(b_1, b_2, b_3) = (1, 1, 2)$؟ وإن وُجد فأوجد الحل العام. <br>(ب) هل للنظام حل عندما $(b_1, b_2, b_3) = (1, 2, 4)$؟ وضّح بالاختزال.",
+      "q": "For the system: $$\\begin{aligned} x_1 + x_2 + x_3 &= b_1 \\\\ x_1 + 2x_3 &= b_2 \\\\ 2x_1 + x_2 + 3x_3 &= b_3 \\end{aligned}$$ (given that the condition for a solution to exist is $b_3 - b_2 - b_1 = 0$): <br>(a) Does the system have a solution when $(b_1, b_2, b_3) = (1, 1, 2)$? If so, find the general solution. <br>(b) Does the system have a solution when $(b_1, b_2, b_3) = (1, 2, 4)$? Explain using row reduction.",
       "t": ["1", "medium"],
       "a": [
         "(أ) $2 - 1 - 1 = 0$ ← يوجد حل؛ الحل العام: $x_1 = 1 - 2t$ ، $x_2 = t$ ، $x_3 = t$ (عدد لانهائي من الحلول).",
@@ -185,7 +185,7 @@
     },
     {
       "id": "la2_0012",
-      "q": "أوجد الشرط الذي يجب أن تحققه $b_1, b_2, b_3$ حتى يكون للنظام التالي حل، ثم حدّد أيّ المتجهين الآتيين $(b_1, b_2, b_3)$ يجعل النظام Consistent: $(1, 1, 3)$ و $(1, 1, 2)$. $$\\begin{aligned} x + y + z &= b_1 \\\\ 2x + y + 3z &= b_2 \\\\ 4x + 3y + 5z &= b_3 \\end{aligned}$$",
+      "q": "Find the condition that $b_1, b_2, b_3$ must satisfy for the following system to have a solution, then determine which of the following vectors $(b_1, b_2, b_3)$ makes the system Consistent: $(1, 1, 3)$ and $(1, 1, 2)$. $$\\begin{aligned} x + y + z &= b_1 \\\\ 2x + y + 3z &= b_2 \\\\ 4x + 3y + 5z &= b_3 \\end{aligned}$$",
       "t": ["1", "medium"],
       "a": [
         "الشرط: $b_3 - 2b_1 - b_2 = 0$.",
@@ -202,7 +202,7 @@
     },
     {
       "id": "la2_0013",
-      "q": "ليكن النظام: $$\\begin{aligned} x + 2y &= 3 \\\\ 2x + 4y &= c \\end{aligned}$$ (أ) أوجد قيمة $c$ التي ينطبق عندها المستقيمان. (ب) أوجد قيم $c$ التي يكون عندها المستقيمان متوازيين. (ج) هل يمكن أن يتقاطع المستقيمان في نقطة واحدة؟ فسّر ذلك باستخدام الاختزال.",
+      "q": "Consider the system: $$\\begin{aligned} x + 2y &= 3 \\\\ 2x + 4y &= c \\end{aligned}$$ (a) Find the value of $c$ for which the two lines coincide. (b) Find the values of $c$ for which the two lines are parallel. (c) Can the two lines intersect at exactly one point? Explain using row reduction.",
       "t": ["1", "medium"],
       "a": [
         "(أ) $c = 6$ ← ينطبقان ← عدد لانهائي من الحلول.",
@@ -219,7 +219,7 @@
     },
     {
       "id": "la2_0014",
-      "q": "أوجد قيم $k$ التي يكون عندها للنظام التالي: (1) حل وحيد، (2) عدد لانهائي من الحلول، (3) لا يوجد حل. $$\\begin{aligned} x + y + z &= 2 \\\\ 2x + 3y + 2z &= 5 \\\\ 2x + 3y + (k^2 - 2)z &= k + 3 \\end{aligned}$$",
+      "q": "Find the values of $k$ for which the following system has: (1) a unique solution, (2) infinitely many solutions, (3) no solution. $$\\begin{aligned} x + y + z &= 2 \\\\ 2x + 3y + 2z &= 5 \\\\ 2x + 3y + (k^2 - 2)z &= k + 3 \\end{aligned}$$",
       "t": ["1", "hard"],
       "a": [
         "حل وحيد: $k \\neq 2$ و $k \\neq -2$.",
@@ -238,7 +238,7 @@
     },
     {
       "id": "la2_0015",
-      "q": "في النظام التالي (وهو نظام Example 1 مع تغيير الثابت في المعادلة الثانية إلى $c$): $$\\begin{aligned} x_1 - 2x_2 - 6x_3 &= 12 \\\\ 2x_1 + 4x_2 + 12x_3 &= c \\\\ x_1 - 4x_2 - 12x_3 &= 22 \\end{aligned}$$ أوجد قيمة $c$ التي تجعل النظام Consistent، ثم اكتب الحل العام حينئذٍ وتحقق منه.",
+      "q": "In the following system (which is the system of Example 1 with the constant in the second equation changed to $c$): $$\\begin{aligned} x_1 - 2x_2 - 6x_3 &= 12 \\\\ 2x_1 + 4x_2 + 12x_3 &= c \\\\ x_1 - 4x_2 - 12x_3 &= 22 \\end{aligned}$$ find the value of $c$ that makes the system Consistent, then write the general solution in that case and verify it.",
       "t": ["1", "hard"],
       "a": [
         "$c = -16$.",

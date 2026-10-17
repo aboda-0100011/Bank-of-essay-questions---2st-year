@@ -3,7 +3,7 @@
   "qs": [
     {
       "id": "la1_0001",
-      "q": "حدّد أيّ المعادلات التالية <b>خطية (Linear)</b> وأيّها <b>غير خطية (Non-linear)</b> مع ذكر السبب: <br>1) $x + 3\\sqrt{y} = 5$ <br>2) $x^2 + 4 = 2$ <br>3) $x + 3y - xz = 2$ <br>4) $y = \\sin x$ <br>5) $x + 5y - \\sqrt{2}\\,z = 1$",
+      "q": "Determine which of the following equations are <b>Linear</b> and which are <b>Non-linear</b>, and give the reason: <br>1) $x + 3\\sqrt{y} = 5$ <br>2) $x^2 + 4 = 2$ <br>3) $x + 3y - xz = 2$ <br>4) $y = \\sin x$ <br>5) $x + 5y - \\sqrt{2}\\,z = 1$",
       "t": ["0", "easy"],
       "a": [
         "المعادلة (1) غير خطية: لأن المتغير $y$ داخل جذر تربيعي (الشرط الأول: لا جذور للمتغيرات).",
@@ -16,7 +16,7 @@
     },
     {
       "id": "la1_0002",
-      "q": "(أ) صنّف المعادلات التالية إلى خطية وغير خطية: <br>1) $4x_1 - \\sqrt{5}\\,x_2 + x_3 = 7$ <br>2) $\\ln x + y = 1$ <br>3) $e^{x} + 2y = 3$ <br>(ب) اكتب الـ <b>Augmented Matrix</b> والـ <b>Coefficient Matrix</b> للنظام الخطي: $$\\begin{aligned} x_1 + 2x_2 &= 5 \\\\ 3x_1 - x_3 &= 2 \\\\ x_2 + 4x_3 &= 0 \\end{aligned}$$",
+      "q": "(a) Classify the following equations as linear or non-linear: <br>1) $4x_1 - \\sqrt{5}\\,x_2 + x_3 = 7$ <br>2) $\\ln x + y = 1$ <br>3) $e^{x} + 2y = 3$ <br>(b) Write the <b>Augmented Matrix</b> and the <b>Coefficient Matrix</b> of the linear system: $$\\begin{aligned} x_1 + 2x_2 &= 5 \\\\ 3x_1 - x_3 &= 2 \\\\ x_2 + 4x_3 &= 0 \\end{aligned}$$",
       "t": ["1", "easy"],
       "a": [
         "(أ) المعادلة 1 خطية ($\\sqrt{5}$ مجرد معامل ثابت)، والمعادلتان 2 و3 غير خطيتين لأن $x$ داخل دالة لوغاريتمية وأسّية.",
@@ -32,7 +32,7 @@
     },
     {
       "id": "la1_0003",
-      "q": "حدّد أيّ المصفوفات التالية في صورة <b>Row-Echelon Form</b>، وإن لم تكن كذلك فاذكر القاعدة المخالفة. ثم حدّد من بين المصفوفات الـ Row-Echelon أيّها في صورة <b>Reduced Row-Echelon Form</b>. $$A=\\begin{bmatrix}1&2&0\\\\0&1&3\\\\0&0&1\\end{bmatrix}\\quad B=\\begin{bmatrix}0&1&2\\\\1&0&0\\\\0&0&0\\end{bmatrix}\\quad C=\\begin{bmatrix}2&1&0\\\\0&1&0\\\\0&0&0\\end{bmatrix}$$ $$D=\\begin{bmatrix}1&3&0&2\\\\0&0&1&4\\\\0&0&0&0\\end{bmatrix}\\quad E=\\begin{bmatrix}0&0&0\\\\1&2&3\\end{bmatrix}$$",
+      "q": "Determine which of the following matrices are in <b>Row-Echelon Form</b>, and if a matrix is not, state the rule it violates. Then, among the Row-Echelon matrices, determine which are in <b>Reduced Row-Echelon Form</b>. $$A=\\begin{bmatrix}1&2&0\\\\0&1&3\\\\0&0&1\\end{bmatrix}\\quad B=\\begin{bmatrix}0&1&2\\\\1&0&0\\\\0&0&0\\end{bmatrix}\\quad C=\\begin{bmatrix}2&1&0\\\\0&1&0\\\\0&0&0\\end{bmatrix}$$ $$D=\\begin{bmatrix}1&3&0&2\\\\0&0&1&4\\\\0&0&0&0\\end{bmatrix}\\quad E=\\begin{bmatrix}0&0&0\\\\1&2&3\\end{bmatrix}$$",
       "t": ["1", "medium"],
       "a": [
         "A: Row-Echelon ✓ (كل Leading 1 على يمين الذي فوقه)، لكنها ليست Reduced لأن أعدادًا غير صفرية تقع فوق الـ Leading 1 (مثل العنصر 2 في العمود الثاني والعنصر 3 في العمود الثالث).",
@@ -52,7 +52,7 @@
     },
     {
       "id": "la1_0004",
-      "q": "اذكر عمليات الصف الأولية (Elementary Row Operations) الثلاث. ثم حدّد أيّ العمليات التالية مسموح بها وأيّها غير مسموح مع التعليل: <br>(أ) $R_2 \\to 0\\cdot R_2$ <br>(ب) $R_1 \\leftrightarrow R_3$ <br>(ج) $R_2 \\to R_2 + 5R_1$ <br>(د) $R_1 \\to R_1 + 3$ (إضافة العدد 3 إلى كل عناصر الصف الأول)",
+      "q": "State the three Elementary Row Operations. Then determine which of the following operations are allowed and which are not, with justification: <br>(a) $R_2 \\to 0\\cdot R_2$ <br>(b) $R_1 \\leftrightarrow R_3$ <br>(c) $R_2 \\to R_2 + 5R_1$ <br>(d) $R_1 \\to R_1 + 3$ (adding the number 3 to every entry of the first row)",
       "t": ["1", "easy"],
       "a": [
         "العمليات الثلاث: (1) ضرب صف (معادلة) في ثابت <b>غير صفري</b>. (2) تبديل صفين. (3) إضافة مضاعف صف إلى صف آخر.",
@@ -65,7 +65,7 @@
     },
     {
       "id": "la1_0005",
-      "q": "أُعطيت المصفوفة الممتدة: $$\\left[\\begin{array}{ccc|c}0&3&6&9\\\\2&1&0&4\\end{array}\\right]$$ طبّق خطوات الـ Gaussian Elimination (مع ذكر العملية المستخدمة في كل خطوة) للوصول إلى <b>Row-Echelon Form</b>.",
+      "q": "Given the augmented matrix: $$\\left[\\begin{array}{ccc|c}0&3&6&9\\\\2&1&0&4\\end{array}\\right]$$ Apply the steps of Gaussian Elimination (stating the operation used in each step) to reach <b>Row-Echelon Form</b>.",
       "t": ["1", "easy"],
       "a": [
         "تبديل الصفين لتجنّب الصفر في أول عمود، ثم جعل كل Leading عنصرًا يساوي 1 بالقسمة.",
@@ -82,7 +82,7 @@
     },
     {
       "id": "la1_0006",
-      "q": "حلّ النظام الخطي التالي باستخدام <b>Gaussian Elimination</b>: $$\\begin{aligned} 2x_2 + x_3 &= -8 \\\\ x_1 - 2x_2 - 3x_3 &= 0 \\\\ -x_1 + x_2 + 2x_3 &= 3 \\end{aligned}$$",
+      "q": "Solve the following linear system using <b>Gaussian Elimination</b>: $$\\begin{aligned} 2x_2 + x_3 &= -8 \\\\ x_1 - 2x_2 - 3x_3 &= 0 \\\\ -x_1 + x_2 + 2x_3 &= 3 \\end{aligned}$$",
       "t": ["0", "medium"],
       "a": [
         "كوّن الـ Augmented Matrix ثم اختزلها إلى Row-Echelon Form بالعمليات الأولية.",
@@ -102,7 +102,7 @@
     },
     {
       "id": "la1_0007",
-      "q": "اختزل طالب نظام السؤال السابق ($2x_2 + x_3 = -8$ ، $x_1 - 2x_2 - 3x_3 = 0$ ، $-x_1 + x_2 + 2x_3 = 3$) إلى المصفوفة: $$\\left[\\begin{array}{ccc|c}1&-2&-3&0\\\\0&1&\\frac{1}{2}&-4\\\\0&0&1&2\\end{array}\\right]$$ ثم كتب: $x_3 = 2$ ، $x_2 = -4 + \\frac{1}{2}x_3 = -3$ ، $x_1 = 2x_2 + 3x_3 = 0$. اكتشف الخطأ وصحّحه، ثم تحقق من الحل الصحيح بالتعويض في النظام الأصلي.",
+      "q": "A student reduced the system from the previous question ($2x_2 + x_3 = -8$ , $x_1 - 2x_2 - 3x_3 = 0$ , $-x_1 + x_2 + 2x_3 = 3$) to the matrix: $$\\left[\\begin{array}{ccc|c}1&-2&-3&0\\\\0&1&\\frac{1}{2}&-4\\\\0&0&1&2\\end{array}\\right]$$ and then wrote: $x_3 = 2$ , $x_2 = -4 + \\frac{1}{2}x_3 = -3$ , $x_1 = 2x_2 + 3x_3 = 0$. Find the mistake and correct it, then verify the correct solution by substituting it into the original system.",
       "t": ["1", "medium"],
       "a": [
         "الخطأ في معادلة الصف الثاني: $x_2 + \\frac{1}{2}x_3 = -4$ فينتج $x_2 = -4 - \\frac{1}{2}x_3$ وليس $-4 + \\frac{1}{2}x_3$ (خطأ في إشارة نقل الحد إلى الطرف الآخر).",
@@ -119,7 +119,7 @@
     },
     {
       "id": "la1_0008",
-      "q": "حلّ النظام التالي بـ <b>Gaussian Elimination</b> (حاول تجنّب الكسور باختيار العمليات المناسبة): $$\\begin{aligned} x + y + z &= 6 \\\\ 2x - y + z &= 3 \\\\ x + 2y - z &= 2 \\end{aligned}$$",
+      "q": "Solve the following system using <b>Gaussian Elimination</b> (try to avoid fractions by choosing suitable operations): $$\\begin{aligned} x + y + z &= 6 \\\\ 2x - y + z &= 3 \\\\ x + 2y - z &= 2 \\end{aligned}$$",
       "t": ["1", "medium"],
       "a": [
         "اختزل المصفوفة الممتدة إلى Row-Echelon Form ثم عوّض خلفيًا.",
@@ -137,7 +137,7 @@
     },
     {
       "id": "la1_0009",
-      "q": "المصفوفة الممتدة التالية في صورة Row-Echelon Form: $$\\left[\\begin{array}{ccc|c}1&-2&4&5\\\\0&1&3&2\\\\0&0&1&1\\end{array}\\right]$$ (أ) أوجد الحل بالتعويض الخلفي (أسلوب Gaussian). (ب) أكمل الاختزال للوصول إلى Reduced Row-Echelon Form (أسلوب Gauss-Jordan) واقرأ الحل مباشرة. (ج) قارن بين النتيجتين.",
+      "q": "The following augmented matrix is in Row-Echelon Form: $$\\left[\\begin{array}{ccc|c}1&-2&4&5\\\\0&1&3&2\\\\0&0&1&1\\end{array}\\right]$$ (a) Find the solution by back-substitution (Gaussian method). (b) Continue the reduction to reach Reduced Row-Echelon Form (Gauss-Jordan method) and read the solution directly. (c) Compare the two results.",
       "t": ["1", "medium"],
       "a": [
         "(أ) $x_3 = 1$ ، $x_2 = -1$ ، $x_1 = -1$.",
@@ -154,7 +154,7 @@
     },
     {
       "id": "la1_0010",
-      "q": "حدّد صحة كل عبارة (صح/خطأ) مع التبرير: <br>(1) كل مصفوفة في صورة Reduced Row-Echelon Form هي أيضًا في صورة Row-Echelon Form. <br>(2) كل مصفوفة في صورة Row-Echelon Form هي أيضًا في صورة Reduced Row-Echelon Form. <br>(3) المصفوفة الصفرية $\\begin{bmatrix}0&0\\\\0&0\\end{bmatrix}$ في صورة Row-Echelon Form. <br>(4) في Gaussian Elimination نحتاج أصفارًا أسفل كل Leading 1 فقط، بينما في Gauss-Jordan نحتاج أصفارًا أعلى وأسفل كل Leading 1.",
+      "q": "Determine whether each statement is true or false, with justification: <br>(1) Every matrix in Reduced Row-Echelon Form is also in Row-Echelon Form. <br>(2) Every matrix in Row-Echelon Form is also in Reduced Row-Echelon Form. <br>(3) The zero matrix $\\begin{bmatrix}0&0\\\\0&0\\end{bmatrix}$ is in Row-Echelon Form. <br>(4) In Gaussian Elimination we need zeros below each Leading 1 only, whereas in Gauss-Jordan we need zeros above and below each Leading 1.",
       "t": ["1", "easy"],
       "a": [
         "(1) صح: الـ Reduced تشترط أن تكون المصفوفة Row-Echelon أولًا ثم تضيف شرط الأصفار فوق الـ Leading 1.",
@@ -169,7 +169,7 @@
     },
     {
       "id": "la1_0011",
-      "q": "حلّ النظام الخطي التالي باستخدام <b>Gauss-Jordan Elimination</b>: $$\\begin{aligned} x_1 + 2x_2 + 3x_3 &= 9 \\\\ 2x_1 - x_2 + x_3 &= 8 \\\\ 3x_1 - x_3 &= 3 \\end{aligned}$$",
+      "q": "Solve the following linear system using <b>Gauss-Jordan Elimination</b>: $$\\begin{aligned} x_1 + 2x_2 + 3x_3 &= 9 \\\\ 2x_1 - x_2 + x_3 &= 8 \\\\ 3x_1 - x_3 &= 3 \\end{aligned}$$",
       "t": ["0", "medium"],
       "a": [
         "اختزل المصفوفة الممتدة إلى Reduced Row-Echelon Form.",
@@ -188,7 +188,7 @@
     },
     {
       "id": "la1_0012",
-      "q": "حلّ النظام التالي بـ <b>Gauss-Jordan</b>: $$\\begin{aligned} 2y + 4z &= 2 \\\\ x + y + z &= 2 \\\\ 2x + y + 3z &= 6 \\end{aligned}$$",
+      "q": "Solve the following system using <b>Gauss-Jordan</b>: $$\\begin{aligned} 2y + 4z &= 2 \\\\ x + y + z &= 2 \\\\ 2x + y + 3z &= 6 \\end{aligned}$$",
       "t": ["1", "medium"],
       "a": [
         "المعامل الأول في المعادلة الأولى يساوي صفرًا فنحتاج لتبديل صفين في البداية.",
@@ -207,7 +207,7 @@
     },
     {
       "id": "la1_0013",
-      "q": "حلّ النظام التالي بـ <b>Gauss-Jordan</b> (انتبه لكتابة الأصفار للمتغيرات الغائبة): $$\\begin{aligned} x + y &= 3 \\\\ y + z &= 5 \\\\ x + z &= 4 \\end{aligned}$$",
+      "q": "Solve the following system using <b>Gauss-Jordan</b> (be careful to write zeros for the missing variables): $$\\begin{aligned} x + y &= 3 \\\\ y + z &= 5 \\\\ x + z &= 4 \\end{aligned}$$",
       "t": ["1", "easy"],
       "a": [
         "الحل: $x = 1$ ، $y = 2$ ، $z = 3$."
@@ -223,7 +223,7 @@
     },
     {
       "id": "la1_0014",
-      "q": "حلّ النظام التالي بـ <b>Gauss-Jordan</b>: $$\\begin{aligned} 2x + y - z &= -3 \\\\ x + 3y + 2z &= 1 \\\\ 3x - y + z &= 8 \\end{aligned}$$",
+      "q": "Solve the following system using <b>Gauss-Jordan</b>: $$\\begin{aligned} 2x + y - z &= -3 \\\\ x + 3y + 2z &= 1 \\\\ 3x - y + z &= 8 \\end{aligned}$$",
       "t": ["1", "hard"],
       "a": [
         "الحل: $x = 1$ ، $y = -2$ ، $z = 3$."
@@ -241,7 +241,7 @@
     },
     {
       "id": "la1_0015",
-      "q": "حلّ النظام التالي باستخدام <b>Gauss-Jordan</b> بدلًا من Gaussian: $$\\begin{aligned} 2x_2 + x_3 &= -8 \\\\ x_1 - 2x_2 - 3x_3 &= 0 \\\\ -x_1 + x_2 + 2x_3 &= 3 \\end{aligned}$$ ثم قارن النتيجة بحل Gaussian (التعويض الخلفي) واذكر أيّ الطريقتين احتاجت عمليات صفية أكثر.",
+      "q": "Solve the following system using <b>Gauss-Jordan</b> instead of Gaussian: $$\\begin{aligned} 2x_2 + x_3 &= -8 \\\\ x_1 - 2x_2 - 3x_3 &= 0 \\\\ -x_1 + x_2 + 2x_3 &= 3 \\end{aligned}$$ Then compare the result with the Gaussian solution (back-substitution) and state which of the two methods required more row operations.",
       "t": ["1", "hard"],
       "a": [
         "الحل: $(x_1, x_2, x_3) = (-4, -5, 2)$ — نفس نتيجة Gaussian.",
