@@ -17,129 +17,108 @@
       "q": "(a) Find the values of $x, y$ that make the two matrices equal: $$\\begin{bmatrix}x+y&5\\\\2&x-y\\end{bmatrix}=\\begin{bmatrix}7&5\\\\2&1\\end{bmatrix}$$ (b) Are the matrices $A=\\begin{bmatrix}\\frac{1}{2}&\\sqrt{9}\\\\0.25&2\\end{bmatrix}$ and $B=\\begin{bmatrix}0.5&3\\\\\\frac{1}{4}&2\\end{bmatrix}$ equal? Why?",
       "t": ["1", "easy"],
       "a": [
+        "Compare entry $(1,1)$: $x + y = 7$. Compare entry $(2,2)$: $x - y = 1$. The entries $5 = 5$ and $2 = 2$ already agree.",
+        "Add the two equations: $2x = 8 \\Rightarrow x = 4$. Substitute: $y = 7 - 4 = 3$. Check: $x - y = 4 - 3 = 1$ ✓.",
         "(a) $x = 4$ and $y = 3$.",
         "(b) Yes, they are equal: the size is the same ($2 \\times 2$) and the corresponding entries are equal: $\\frac{1}{2} = 0.5$ , $\\sqrt{9} = 3$ , $0.25 = \\frac{1}{4}$ , $2 = 2$."
       ],
-      "e": [
-        "Two matrices are equal when they have the same size and all corresponding entries are equal. Both matrices in part (a) are $2 \\times 2$.",
-        "Compare entry $(1,1)$: $x + y = 7$. Compare entry $(2,2)$: $x - y = 1$. The entries $5 = 5$ and $2 = 2$ already agree.",
-        "Add the two equations: $2x = 8 \\Rightarrow x = 4$. Substitute: $y = 7 - 4 = 3$. Check: $x - y = 4 - 3 = 1$ ✓.",
-        "Part (b): both are $2 \\times 2$; $\\frac{1}{2} = 0.5$, $\\sqrt{9} = 3$, $0.25 = \\frac{1}{4}$ and $2 = 2$, so every pair of corresponding entries is equal and $A = B$."
-      ]
+      "e": "Two matrices are equal when they have the same size and all corresponding entries are equal. Both matrices in part (a) are $2 \\times 2$."
     },
     {
       "id": "la3_0003",
       "q": "Let: $$A=\\begin{bmatrix}1&-2&3\\\\0&4&-1\\end{bmatrix}\\quad B=\\begin{bmatrix}5&0&-2\\\\3&1&6\\end{bmatrix}\\quad C=\\begin{bmatrix}1&2\\\\3&4\\\\5&6\\end{bmatrix}$$ (a) Find $A + B$, $A - B$ and $B - A$. (b) Are $A + C$ and $B - C$ defined? Why? (c) Is $A - B = B - A$?",
       "t": ["1", "easy"],
       "a": [
-        "(a) $A + B = \\begin{bmatrix}6&-2&1\\\\3&5&5\\end{bmatrix}$ , $A - B = \\begin{bmatrix}-4&-2&5\\\\-3&3&-7\\end{bmatrix}$ , $B - A = \\begin{bmatrix}4&2&-5\\\\3&-3&7\\end{bmatrix}$.",
-        "(b) Both are undefined because $A$ and $B$ have size $2 \\times 3$ while $C$ has size $3 \\times 2$ (addition and subtraction require equal sizes).",
-        "(c) No, $A - B \\neq B - A$ (each is the negative of the other), whereas $A + B = B + A$."
-      ],
-      "e": [
         "Sizes: $A$ is $2 \\times 3$, $B$ is $2 \\times 3$, $C$ is $3 \\times 2$. Addition and subtraction are done entry by entry and need equal sizes.",
         "$A + B$: row 1: $1+5 = 6$, $-2+0 = -2$, $3+(-2) = 1$. Row 2: $0+3 = 3$, $4+1 = 5$, $-1+6 = 5$.",
         "$A - B$: row 1: $1-5 = -4$, $-2-0 = -2$, $3-(-2) = 5$. Row 2: $0-3 = -3$, $4-1 = 3$, $-1-6 = -7$.",
         "$B - A$: row 1: $5-1 = 4$, $0-(-2) = 2$, $-2-3 = -5$. Row 2: $3-0 = 3$, $1-4 = -3$, $6-(-1) = 7$.",
+        "(a) $A + B = \\begin{bmatrix}6&-2&1\\\\3&5&5\\end{bmatrix}$ , $A - B = \\begin{bmatrix}-4&-2&5\\\\-3&3&-7\\end{bmatrix}$ , $B - A = \\begin{bmatrix}4&2&-5\\\\3&-3&7\\end{bmatrix}$.",
+        "(b) Both are undefined because $A$ and $B$ have size $2 \\times 3$ while $C$ has size $3 \\times 2$ (addition and subtraction require equal sizes).",
         "Comparing, every entry of $B - A$ is the negative of the corresponding entry of $A - B$ (e.g. $-4$ versus $4$), so $A - B \\neq B - A$.",
-        "$A + C$ and $B - C$ would add a $2 \\times 3$ matrix to a $3 \\times 2$ matrix, so they are undefined."
-      ]
+        "(c) No, $A - B \\neq B - A$ (each is the negative of the other), whereas $A + B = B + A$."
+      ],
+      "e": "Matrix addition is commutative ($A + B = B + A$), but subtraction is not: $B - A = -(A - B)$."
     },
     {
       "id": "la3_0004",
       "q": "Let the matrices be: $$A=\\begin{bmatrix}2&3&4\\\\1&3&1\\end{bmatrix}\\quad B=\\begin{bmatrix}0&2&7\\\\-1&3&-5\\end{bmatrix}\\quad C=\\begin{bmatrix}9&-6&3\\\\3&0&12\\end{bmatrix}$$ Find $2A - B + \\frac{1}{3}C$.",
       "t": ["0", "medium"],
       "a": [
-        "$$2A - B + \\frac{1}{3}C = \\begin{bmatrix}7&2&2\\\\4&3&11\\end{bmatrix}$$"
-      ],
-      "e": [
         "Compute each scalar multiple by multiplying every entry: $$2A = \\begin{bmatrix}4&6&8\\\\2&6&2\\end{bmatrix}$$",
         "$$-B = (-1)B = \\begin{bmatrix}0&-2&-7\\\\1&-3&5\\end{bmatrix}$$",
         "$$\\frac{1}{3}C = \\begin{bmatrix}3&-2&1\\\\1&0&4\\end{bmatrix}$$",
         "All three matrices are $2 \\times 3$, so add them entry by entry. Row 1: $4+0+3 = 7$, $6-2-2 = 2$, $8-7+1 = 2$. Row 2: $2+1+1 = 4$, $6-3+0 = 3$, $2+5+4 = 11$.",
-        "Result: $$2A - B + \\frac{1}{3}C = \\begin{bmatrix}7&2&2\\\\4&3&11\\end{bmatrix}$$"
-      ]
+        "$$2A - B + \\frac{1}{3}C = \\begin{bmatrix}7&2&2\\\\4&3&11\\end{bmatrix}$$"
+      ],
+      "e": "Scalar multiplication multiplies every entry; sums and differences are taken entry by entry and need equal sizes."
     },
     {
       "id": "la3_0005",
       "q": "Find the matrix $X$ that satisfies $3X - 2A = B$ where: $$A=\\begin{bmatrix}1&2\\\\0&-1\\end{bmatrix}\\quad B=\\begin{bmatrix}4&-4\\\\3&5\\end{bmatrix}$$ Then verify the solution.",
       "t": ["1", "medium"],
       "a": [
-        "$$X = \\begin{bmatrix}2&0\\\\1&1\\end{bmatrix}$$"
-      ],
-      "e": [
         "Isolate $X$: add $2A$ to both sides to get $3X = B + 2A$, then multiply by $\\frac{1}{3}$: $X = \\frac{1}{3}(B + 2A)$.",
         "Compute $2A$ by multiplying each entry by 2: $$2A = \\begin{bmatrix}2&4\\\\0&-2\\end{bmatrix}$$",
         "Add $B + 2A$ entry by entry: $$B + 2A = \\begin{bmatrix}4+2&-4+4\\\\3+0&5-2\\end{bmatrix} = \\begin{bmatrix}6&0\\\\3&3\\end{bmatrix}$$",
         "Multiply by $\\frac{1}{3}$: $$X = \\frac{1}{3}\\begin{bmatrix}6&0\\\\3&3\\end{bmatrix} = \\begin{bmatrix}2&0\\\\1&1\\end{bmatrix}$$",
+        "$$X = \\begin{bmatrix}2&0\\\\1&1\\end{bmatrix}$$",
         "Check: $3X = \\begin{bmatrix}6&0\\\\3&3\\end{bmatrix}$ and $3X - 2A = \\begin{bmatrix}6-2&0-4\\\\3-0&3+2\\end{bmatrix} = \\begin{bmatrix}4&-4\\\\3&5\\end{bmatrix} = B$ ✓."
-      ]
+      ],
+      "e": "Solve a matrix equation like an ordinary one: move terms with additions and subtractions, then multiply by the reciprocal of the scalar."
     },
     {
       "id": "la3_0006",
       "q": "Let $$A=\\begin{bmatrix}1&2&4\\\\2&6&0\\end{bmatrix}\\quad B=\\begin{bmatrix}4&1&4&3\\\\0&-1&3&1\\\\2&7&5&2\\end{bmatrix}$$ Determine the size of $AB$, then find it.",
       "t": ["0", "medium"],
       "a": [
-        "The size of $AB$ is $2 \\times 4$.",
-        "$$AB = \\begin{bmatrix}12&27&30&13\\\\8&-4&26&12\\end{bmatrix}$$"
-      ],
-      "e": [
         "Condition: the number of columns of $A$ (3) equals the number of rows of $B$ (3), so $AB$ is defined. Its size is (rows of $A$) × (columns of $B$) = $2 \\times 4$.",
         "Entry $(i, j)$ of $AB$ = (row $i$ of $A$) multiplied term by term with (column $j$ of $B$) and summed.",
         "Row 1 of $A$ is $(1, 2, 4)$. Entry $(1,1)$: $1\\cdot4 + 2\\cdot0 + 4\\cdot2 = 4 + 0 + 8 = 12$. Entry $(1,2)$: $1\\cdot1 + 2\\cdot(-1) + 4\\cdot7 = 1 - 2 + 28 = 27$. Entry $(1,3)$: $1\\cdot4 + 2\\cdot3 + 4\\cdot5 = 4 + 6 + 20 = 30$. Entry $(1,4)$: $1\\cdot3 + 2\\cdot1 + 4\\cdot2 = 3 + 2 + 8 = 13$.",
         "Row 2 of $A$ is $(2, 6, 0)$. Entry $(2,1)$: $2\\cdot4 + 6\\cdot0 + 0\\cdot2 = 8$. Entry $(2,2)$: $2\\cdot1 + 6\\cdot(-1) + 0\\cdot7 = 2 - 6 = -4$. Entry $(2,3)$: $2\\cdot4 + 6\\cdot3 + 0\\cdot5 = 8 + 18 = 26$. Entry $(2,4)$: $2\\cdot3 + 6\\cdot1 + 0\\cdot2 = 6 + 6 = 12$.",
-        "Assemble the entries: $$AB = \\begin{bmatrix}12&27&30&13\\\\8&-4&26&12\\end{bmatrix}$$"
-      ]
+        "$$AB = \\begin{bmatrix}12&27&30&13\\\\8&-4&26&12\\end{bmatrix}$$"
+      ],
+      "e": "Matrix multiplication is not commutative: here $BA$ is not even defined, because the number of columns of $B$ (4) differs from the number of rows of $A$ (2)."
     },
     {
       "id": "la3_0007",
       "q": "If the sizes of the matrices are: $A(4 \\times 5)$ , $B(4 \\times 5)$ , $C(5 \\times 2)$ , $D(4 \\times 2)$ , $E(5 \\times 4)$ , determine which of the following operations are defined (and if defined, what is the size of the result): $BA$ , $AC + D$ , $AE + B$ , $E(A + B)$.",
       "t": ["0", "medium"],
       "a": [
-        "$BA$: undefined.",
-        "$AC + D$: defined, and its size is $4 \\times 2$.",
-        "$AE + B$: undefined.",
-        "$E(A + B)$: defined, and its size is $5 \\times 5$."
-      ],
-      "e": [
-        "Rules: a product $XY$ is defined only if the number of columns of $X$ equals the number of rows of $Y$, and then its size is (rows of $X$) × (columns of $Y$). A sum is defined only if both matrices have the same size.",
         "$BA$: $B$ is $4 \\times 5$ and $A$ is $4 \\times 5$. Columns of $B$ = 5, rows of $A$ = 4, and $5 \\neq 4$, so $BA$ is undefined.",
         "$AC + D$: $AC$ is $(4 \\times 5)(5 \\times 2)$, defined since $5 = 5$, with size $4 \\times 2$. $D$ is also $4 \\times 2$, so the sum is defined and has size $4 \\times 2$.",
         "$AE + B$: $AE$ is $(4 \\times 5)(5 \\times 4)$, defined, with size $4 \\times 4$. But $B$ is $4 \\times 5$, so the sizes differ and the sum is undefined.",
         "$E(A + B)$: $A + B$ is defined (both $4 \\times 5$) with size $4 \\times 5$. Then $E$ is $5 \\times 4$ and $(A+B)$ is $4 \\times 5$; columns of $E$ = 4 = rows of $(A+B)$, so the product is defined with size $5 \\times 5$."
-      ]
+      ],
+      "e": "Rules: a product $XY$ is defined only if the number of columns of $X$ equals the number of rows of $Y$, and then its size is (rows of $X$) × (columns of $Y$). A sum is defined only if both matrices have the same size."
     },
     {
       "id": "la3_0008",
       "q": "(a) Let $A = \\begin{bmatrix}1&2\\\\3&4\\end{bmatrix}$ and $B = \\begin{bmatrix}0&1\\\\-1&2\\end{bmatrix}$. Find $AB$ and $BA$ and show that $AB \\neq BA$. <br>(b) Let $C = \\begin{bmatrix}1&2&3\\end{bmatrix}$ (row) and $D = \\begin{bmatrix}4\\\\5\\\\6\\end{bmatrix}$ (column). Find $CD$ and $DC$ along with the size of each.",
       "t": ["1", "medium"],
       "a": [
-        "(a) $AB = \\begin{bmatrix}-2&5\\\\-4&11\\end{bmatrix}$ and $BA = \\begin{bmatrix}3&4\\\\5&6\\end{bmatrix}$ → therefore $AB \\neq BA$.",
-        "(b) $CD = [32]$ with size $1 \\times 1$ , and $DC = \\begin{bmatrix}4&8&12\\\\5&10&15\\\\6&12&18\\end{bmatrix}$ with size $3 \\times 3$."
-      ],
-      "e": [
         "$AB$, entry $(1,1)$: $1\\cdot0 + 2\\cdot(-1) = -2$. Entry $(1,2)$: $1\\cdot1 + 2\\cdot2 = 5$. Entry $(2,1)$: $3\\cdot0 + 4\\cdot(-1) = -4$. Entry $(2,2)$: $3\\cdot1 + 4\\cdot2 = 11$.",
         "$BA$, entry $(1,1)$: $0\\cdot1 + 1\\cdot3 = 3$. Entry $(1,2)$: $0\\cdot2 + 1\\cdot4 = 4$. Entry $(2,1)$: $(-1)\\cdot1 + 2\\cdot3 = 5$. Entry $(2,2)$: $(-1)\\cdot2 + 2\\cdot4 = 6$.",
-        "Comparing, $AB = \\begin{bmatrix}-2&5\\\\-4&11\\end{bmatrix}$ and $BA = \\begin{bmatrix}3&4\\\\5&6\\end{bmatrix}$ differ in every entry, so $AB \\neq BA$.",
+        "(a) $AB = \\begin{bmatrix}-2&5\\\\-4&11\\end{bmatrix}$ and $BA = \\begin{bmatrix}3&4\\\\5&6\\end{bmatrix}$ → therefore $AB \\neq BA$.",
         "Part (b), $CD$: $(1 \\times 3)(3 \\times 1)$ is defined with size $1 \\times 1$: $1\\cdot4 + 2\\cdot5 + 3\\cdot6 = 4 + 10 + 18 = 32$.",
         "$DC$: $(3 \\times 1)(1 \\times 3)$ is defined with size $3 \\times 3$. Entry $(i, j)$ equals $d_i \\cdot c_j$. Row 1: $4\\cdot1, 4\\cdot2, 4\\cdot3 = 4, 8, 12$. Row 2: $5, 10, 15$. Row 3: $6, 12, 18$.",
-        "Conclusion: even when both products are defined, they can differ in value (part a) or even in size (part b), so in general $AB \\neq BA$."
-      ]
+        "(b) $CD = [32]$ with size $1 \\times 1$ , and $DC = \\begin{bmatrix}4&8&12\\\\5&10&15\\\\6&12&18\\end{bmatrix}$ with size $3 \\times 3$."
+      ],
+      "e": "Conclusion: even when both products are defined, they can differ in value (part a) or even in size (part b), so in general $AB \\neq BA$."
     },
     {
       "id": "la3_0009",
       "q": "Let $A = \\begin{bmatrix}2&-1&3\\\\0&4&5\\end{bmatrix}$. (a) Choose the appropriate identity matrix (of the correct size) on the right and on the left and verify that $AI = A$ and $IA = A$. (b) Find $A + O$ and $A - O$ where $O$ is a zero matrix of the appropriate size.",
       "t": ["1", "medium"],
       "a": [
-        "(a) We use $I_3$ on the right and $I_2$ on the left; so $AI_3 = A$ and $I_2 A = A$.",
-        "(b) $A + O = A - O = A$ where $O$ is a zero matrix of size $2 \\times 3$."
-      ],
-      "e": [
         "$A$ is $2 \\times 3$. For $A I$ to be defined, the identity must have 3 rows, so $I = I_3$ and the product is $2 \\times 3$. For $I A$ to be defined, the identity must have 2 columns, so $I = I_2$.",
         "$A I_3$ with $I_3 = \\begin{bmatrix}1&0&0\\\\0&1&0\\\\0&0&1\\end{bmatrix}$. Row 1: $[2\\cdot1 + (-1)\\cdot0 + 3\\cdot0,\\ 2\\cdot0 + (-1)\\cdot1 + 3\\cdot0,\\ 2\\cdot0 + (-1)\\cdot0 + 3\\cdot1] = [2,\\ -1,\\ 3]$. Row 2: $[0,\\ 4,\\ 5]$. So $AI_3 = A$.",
         "$I_2 A$ with $I_2 = \\begin{bmatrix}1&0\\\\0&1\\end{bmatrix}$. Row 1: $[1\\cdot2 + 0\\cdot0,\\ 1\\cdot(-1) + 0\\cdot4,\\ 1\\cdot3 + 0\\cdot5] = [2,\\ -1,\\ 3]$. Row 2: $[0\\cdot2 + 1\\cdot0,\\ 0\\cdot(-1) + 1\\cdot4,\\ 0\\cdot3 + 1\\cdot5] = [0,\\ 4,\\ 5]$. So $I_2 A = A$.",
-        "For $A \\pm O$ the zero matrix must be $2 \\times 3$, the same size as $A$. Adding or subtracting 0 changes no entry, so $A + O = A - O = A$."
-      ]
+        "(a) We use $I_3$ on the right and $I_2$ on the left; so $AI_3 = A$ and $I_2 A = A$.",
+        "For $A \\pm O$ the zero matrix must be $2 \\times 3$, the same size as $A$. Adding or subtracting 0 changes no entry, so $A + O = A - O = A$.",
+        "(b) $A + O = A - O = A$ where $O$ is a zero matrix of size $2 \\times 3$."
+      ],
+      "e": "The identity matrix plays the role of the number 1 ($AI = IA = A$ when the sizes match), and the zero matrix plays the role of 0 ($A + O = A$)."
     },
     {
       "id": "la3_0010",
@@ -162,26 +141,20 @@
       "q": "Let $M = \\begin{bmatrix}1&-2&0&4\\\\3&5&-1&2\\end{bmatrix}$. Find $M^T$ and its size, then verify that $(M^T)^T = M$ and that $(3M)^T = 3M^T$.",
       "t": ["1", "easy"],
       "a": [
-        "$$M^T = \\begin{bmatrix}1&3\\\\-2&5\\\\0&-1\\\\4&2\\end{bmatrix}$$ and its size is $4 \\times 2$.",
-        "The properties $(M^T)^T = M$ and $(3M)^T = 3M^T$ both hold."
-      ],
-      "e": [
         "The transpose turns rows into columns: row 1 of $M$, $(1, -2, 0, 4)$, becomes column 1 of $M^T$, and row 2, $(3, 5, -1, 2)$, becomes column 2. Since $M$ is $2 \\times 4$, $M^T$ is $4 \\times 2$.",
+        "$$M^T = \\begin{bmatrix}1&3\\\\-2&5\\\\0&-1\\\\4&2\\end{bmatrix}$$ and its size is $4 \\times 2$.",
         "Transposing again: the rows of $M^T$ are $(1, 3)$, $(-2, 5)$, $(0, -1)$, $(4, 2)$; making them columns gives $$\\begin{bmatrix}1&-2&0&4\\\\3&5&-1&2\\end{bmatrix} = M$$ so $(M^T)^T = M$ ✓.",
         "Compute $3M = \\begin{bmatrix}3&-6&0&12\\\\9&15&-3&6\\end{bmatrix}$, so $$(3M)^T = \\begin{bmatrix}3&9\\\\-6&15\\\\0&-3\\\\12&6\\end{bmatrix}$$",
-        "Compute $3M^T$ by multiplying every entry of $M^T$ by 3: $$3M^T = \\begin{bmatrix}3&9\\\\-6&15\\\\0&-3\\\\12&6\\end{bmatrix}$$ This equals $(3M)^T$ ✓."
-      ]
+        "Compute $3M^T$ by multiplying every entry of $M^T$ by 3: $$3M^T = \\begin{bmatrix}3&9\\\\-6&15\\\\0&-3\\\\12&6\\end{bmatrix}$$ This equals $(3M)^T$ ✓.",
+        "The properties $(M^T)^T = M$ and $(3M)^T = 3M^T$ both hold."
+      ],
+      "e": "Transpose properties: $(M^T)^T = M$, $(kM)^T = kM^T$, $(A + B)^T = A^T + B^T$, and $(AB)^T = B^T A^T$."
     },
     {
       "id": "la3_0012",
       "q": "Let $A = \\begin{bmatrix}1&2\\\\0&3\\\\-1&4\\end{bmatrix}$ and $B = \\begin{bmatrix}2&0&1\\\\-1&3&2\\end{bmatrix}$. Verify that $(AB)^T = B^T A^T$. Then explain why $(AB)^T = A^T B^T$ cannot hold in this case.",
       "t": ["1", "hard"],
       "a": [
-        "$$AB = \\begin{bmatrix}0&6&5\\\\-3&9&6\\\\-6&12&7\\end{bmatrix}$$ and hence $$(AB)^T = \\begin{bmatrix}0&-3&-6\\\\6&9&12\\\\5&6&7\\end{bmatrix}$$",
-        "$B^T A^T$ gives the same matrix, so the property holds.",
-        "$A^T B^T$ has size $2 \\times 2$ while $(AB)^T$ has size $3 \\times 3$, so they cannot be equal; therefore the reversed order of multiplication in the rule is necessary."
-      ],
-      "e": [
         "Sizes: $A$ is $3 \\times 2$ and $B$ is $2 \\times 3$, so $AB$ is defined and has size $3 \\times 3$.",
         "Row 1 of $A$ is $(1, 2)$: $[1\\cdot2 + 2\\cdot(-1),\\ 1\\cdot0 + 2\\cdot3,\\ 1\\cdot1 + 2\\cdot2] = [0,\\ 6,\\ 5]$.",
         "Row 2 of $A$ is $(0, 3)$: $[0\\cdot2 + 3\\cdot(-1),\\ 0\\cdot0 + 3\\cdot3,\\ 0\\cdot1 + 3\\cdot2] = [-3,\\ 9,\\ 6]$.",
@@ -193,123 +166,112 @@
         "Row 3 of $B^T$ is $(1, 2)$: $[1\\cdot1 + 2\\cdot2,\\ 1\\cdot0 + 2\\cdot3,\\ 1\\cdot(-1) + 2\\cdot4] = [5,\\ 6,\\ 7]$.",
         "So $B^T A^T = \\begin{bmatrix}0&-3&-6\\\\6&9&12\\\\5&6&7\\end{bmatrix} = (AB)^T$ ✓.",
         "Finally, $A^T B^T$ is $(2 \\times 3)(3 \\times 2)$, which has size $2 \\times 2$, but $(AB)^T$ has size $3 \\times 3$. Matrices of different sizes cannot be equal, so the order must be reversed: $(AB)^T = B^T A^T$."
-      ]
+      ],
+      "e": "Reversal law: the transpose of a product reverses the order, $(AB)^T = B^T A^T$; the inverse of a product does the same, $(AB)^{-1} = B^{-1}A^{-1}$."
     },
     {
       "id": "la3_0013",
       "q": "(a) Determine whether each of the two matrices is Symmetric: $$P=\\begin{bmatrix}1&7&-2\\\\7&0&3\\\\-2&3&5\\end{bmatrix}\\quad Q=\\begin{bmatrix}1&2&3\\\\2&4&5\\\\3&6&7\\end{bmatrix}$$ (b) Find the values of $x, y$ that make the following matrix symmetric: $$N=\\begin{bmatrix}2&x&5\\\\3&-1&y+1\\\\5&4&7\\end{bmatrix}$$",
       "t": ["1", "medium"],
       "a": [
-        "(a) $P$ is symmetric ($P = P^T$) , while $Q$ is not symmetric because $q_{23} = 5 \\neq q_{32} = 6$.",
-        "(b) $x = 3$ and $y = 3$."
-      ],
-      "e": [
-        "A square matrix is symmetric when $A = A^T$, i.e. $a_{ij} = a_{ji}$ for every pair $(i, j)$ (the matrix mirrors itself across the main diagonal).",
         "$P$: $p_{12} = 7 = p_{21}$, $p_{13} = -2 = p_{31}$, $p_{23} = 3 = p_{32}$. All mirrored pairs agree, so $P^T = P$ and $P$ is symmetric.",
         "$Q$: $q_{12} = 2 = q_{21}$ and $q_{13} = 3 = q_{31}$, but $q_{23} = 5$ while $q_{32} = 6$. One mismatch is enough, so $Q^T \\neq Q$ and $Q$ is not symmetric.",
+        "(a) $P$ is symmetric ($P = P^T$) , while $Q$ is not symmetric because $q_{23} = 5 \\neq q_{32} = 6$.",
         "$N$: the pair $n_{12} = x$ and $n_{21} = 3$ must be equal, so $x = 3$. The pair $n_{13} = 5$ and $n_{31} = 5$ already agrees. The pair $n_{23} = y + 1$ and $n_{32} = 4$ must be equal, so $y + 1 = 4 \\Rightarrow y = 3$.",
+        "(b) $x = 3$ and $y = 3$.",
         "Check: $$N = \\begin{bmatrix}2&3&5\\\\3&-1&4\\\\5&4&7\\end{bmatrix} = N^T$$ ✓."
-      ]
+      ],
+      "e": "A square matrix is symmetric when $A = A^T$, i.e. $a_{ij} = a_{ji}$ for every pair $(i, j)$ (the matrix mirrors itself across the main diagonal)."
     },
     {
       "id": "la3_0014",
       "q": "(a) Find $A^{-1}$ for the matrix $A = \\begin{bmatrix}2&5\\\\1&3\\end{bmatrix}$ using the formula, then verify by multiplication that $AA^{-1} = I$. <br>(b) Does the matrix $B = \\begin{bmatrix}4&-2\\\\6&-3\\end{bmatrix}$ have an inverse? Why?",
       "t": ["1", "easy"],
       "a": [
-        "(a) $$A^{-1} = \\begin{bmatrix}3&-5\\\\-1&2\\end{bmatrix}$$",
-        "(b) No; because $ad - bc = 4(-3) - (-2)(6) = 0$ , so $B$ is Singular."
-      ],
-      "e": [
         "For $A = \\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}$ the inverse is $A^{-1} = \\frac{1}{ad - bc}\\begin{bmatrix}d&-b\\\\-c&a\\end{bmatrix}$, provided $ad - bc \\neq 0$.",
         "For $A$: $ad - bc = 2\\cdot3 - 5\\cdot1 = 6 - 5 = 1 \\neq 0$, so $A$ is invertible and $$A^{-1} = \\frac{1}{1}\\begin{bmatrix}3&-5\\\\-1&2\\end{bmatrix}$$",
+        "(a) $$A^{-1} = \\begin{bmatrix}3&-5\\\\-1&2\\end{bmatrix}$$",
         "Verify: $$AA^{-1} = \\begin{bmatrix}2\\cdot3 + 5\\cdot(-1)&2\\cdot(-5) + 5\\cdot2\\\\1\\cdot3 + 3\\cdot(-1)&1\\cdot(-5) + 3\\cdot2\\end{bmatrix} = \\begin{bmatrix}6-5&-10+10\\\\3-3&-5+6\\end{bmatrix} = \\begin{bmatrix}1&0\\\\0&1\\end{bmatrix} = I$$ ✓.",
-        "For $B$: $ad - bc = 4\\cdot(-3) - (-2)\\cdot6 = -12 + 12 = 0$, so $B$ has no inverse (it is singular)."
-      ]
+        "(b) No; because $ad - bc = 4(-3) - (-2)(6) = 0$ , so $B$ is Singular."
+      ],
+      "e": "A $2 \\times 2$ matrix is invertible exactly when $ad - bc \\neq 0$."
     },
     {
       "id": "la3_0015",
       "q": "Let $A = \\begin{bmatrix}k&3\\\\2&k+1\\end{bmatrix}$. (a) Find the values of $k$ for which $A$ has no inverse. (b) Find $A^{-1}$ when $k = 0$ and verify it.",
       "t": ["1", "medium"],
       "a": [
-        "(a) $k = 2$ or $k = -3$.",
-        "(b) At $k = 0$: $$A^{-1} = \\begin{bmatrix}-\\frac{1}{6}&\\frac{1}{2}\\\\\\frac{1}{3}&0\\end{bmatrix}$$"
-      ],
-      "e": [
         "A $2 \\times 2$ matrix has no inverse exactly when $ad - bc = 0$. Here $a = k$, $b = 3$, $c = 2$, $d = k + 1$, so $ad - bc = k(k+1) - 3\\cdot2 = k^2 + k - 6$.",
         "Solve $k^2 + k - 6 = 0$: factor as $(k + 3)(k - 2) = 0$, so $k = -3$ or $k = 2$.",
+        "(a) $k = 2$ or $k = -3$.",
         "For $k = 0$: $A = \\begin{bmatrix}0&3\\\\2&1\\end{bmatrix}$ and $ad - bc = 0\\cdot1 - 3\\cdot2 = -6 \\neq 0$, so $A$ is invertible.",
         "Apply the formula: $$A^{-1} = \\frac{1}{-6}\\begin{bmatrix}1&-3\\\\-2&0\\end{bmatrix} = \\begin{bmatrix}-\\frac{1}{6}&\\frac{1}{2}\\\\\\frac{1}{3}&0\\end{bmatrix}$$",
+        "(b) At $k = 0$: $$A^{-1} = \\begin{bmatrix}-\\frac{1}{6}&\\frac{1}{2}\\\\\\frac{1}{3}&0\\end{bmatrix}$$",
         "Verify: $$AA^{-1} = \\begin{bmatrix}0\\cdot(-\\frac{1}{6}) + 3\\cdot\\frac{1}{3}&0\\cdot\\frac{1}{2} + 3\\cdot0\\\\2\\cdot(-\\frac{1}{6}) + 1\\cdot\\frac{1}{3}&2\\cdot\\frac{1}{2} + 1\\cdot0\\end{bmatrix} = \\begin{bmatrix}1&0\\\\-\\frac{1}{3}+\\frac{1}{3}&1\\end{bmatrix} = \\begin{bmatrix}1&0\\\\0&1\\end{bmatrix}$$ ✓."
-      ]
+      ],
+      "e": "The expression $ad - bc$ (the determinant) decides invertibility; a parameter $k$ makes it a polynomial in $k$ whose roots are the non-invertible cases."
     },
     {
       "id": "la3_0016",
       "q": "Find the inverse of the matrix using the method $[A \\mid I] \\to [I \\mid A^{-1}]$ and then verify the result: $$A=\\begin{bmatrix}1&2&3\\\\2&4&5\\\\3&5&6\\end{bmatrix}$$",
       "t": ["0", "medium"],
       "a": [
-        "$$A^{-1} = \\begin{bmatrix}1&-3&2\\\\-3&3&-1\\\\2&-1&0\\end{bmatrix}$$"
-      ],
-      "e": [
         "Form the augmented matrix $[A \\mid I]$: $$\\left[\\begin{array}{ccc|ccc}1&2&3&1&0&0\\\\2&4&5&0&1&0\\\\3&5&6&0&0&1\\end{array}\\right]$$",
         "Clear below the leading 1: $R_2 \\to R_2 - 2R_1$ gives $[0,\\ 0,\\ -1 \\mid -2,\\ 1,\\ 0]$, and $R_3 \\to R_3 - 3R_1$ gives $[0,\\ -1,\\ -3 \\mid -3,\\ 0,\\ 1]$: $$\\left[\\begin{array}{ccc|ccc}1&2&3&1&0&0\\\\0&0&-1&-2&1&0\\\\0&-1&-3&-3&0&1\\end{array}\\right]$$",
         "Entry $(2,2)$ is 0, so interchange $R_2 \\leftrightarrow R_3$: $$\\left[\\begin{array}{ccc|ccc}1&2&3&1&0&0\\\\0&-1&-3&-3&0&1\\\\0&0&-1&-2&1&0\\end{array}\\right]$$",
         "Make the leading entries 1: $R_2 \\to -R_2$ and $R_3 \\to -R_3$: $$\\left[\\begin{array}{ccc|ccc}1&2&3&1&0&0\\\\0&1&3&3&0&-1\\\\0&0&1&2&-1&0\\end{array}\\right]$$",
         "Clear above the leading 1 of row 2: $R_1 \\to R_1 - 2R_2$ gives $[1,\\ 0,\\ 3-6 \\mid 1-6,\\ 0-0,\\ 0+2] = [1,\\ 0,\\ -3 \\mid -5,\\ 0,\\ 2]$: $$\\left[\\begin{array}{ccc|ccc}1&0&-3&-5&0&2\\\\0&1&3&3&0&-1\\\\0&0&1&2&-1&0\\end{array}\\right]$$",
         "Clear above the leading 1 of row 3: $R_1 \\to R_1 + 3R_3$ gives $[1,\\ 0,\\ 0 \\mid -5+6,\\ 0-3,\\ 2+0] = [1,\\ 0,\\ 0 \\mid 1,\\ -3,\\ 2]$, and $R_2 \\to R_2 - 3R_3$ gives $[0,\\ 1,\\ 0 \\mid 3-6,\\ 0+3,\\ -1-0] = [0,\\ 1,\\ 0 \\mid -3,\\ 3,\\ -1]$: $$\\left[\\begin{array}{ccc|ccc}1&0&0&1&-3&2\\\\0&1&0&-3&3&-1\\\\0&0&1&2&-1&0\\end{array}\\right]$$",
-        "The left half is now $I$, so the right half is the inverse: $$A^{-1} = \\begin{bmatrix}1&-3&2\\\\-3&3&-1\\\\2&-1&0\\end{bmatrix}$$",
+        "$$A^{-1} = \\begin{bmatrix}1&-3&2\\\\-3&3&-1\\\\2&-1&0\\end{bmatrix}$$",
         "Verify $AA^{-1} = I$. Row 1 of $A$, $(1, 2, 3)$: with column 1 $(1, -3, 2)$: $1 - 6 + 6 = 1$; column 2 $(-3, 3, -1)$: $-3 + 6 - 3 = 0$; column 3 $(2, -1, 0)$: $2 - 2 + 0 = 0$. Row 2, $(2, 4, 5)$: $2 - 12 + 10 = 0$; $-6 + 12 - 5 = 1$; $4 - 4 + 0 = 0$. Row 3, $(3, 5, 6)$: $3 - 15 + 12 = 0$; $-9 + 15 - 6 = 0$; $6 - 5 + 0 = 1$ ✓."
-      ]
+      ],
+      "e": "Procedure $[A \\mid I] \\to [I \\mid A^{-1}]$: if the left half cannot be reduced to $I$ (a zero row appears), $A$ is singular."
     },
     {
       "id": "la3_0017",
       "q": "Show that the following matrix has no inverse (Singular) using the reduction $[A \\mid I]$: $$A=\\begin{bmatrix}1&6&4\\\\2&4&-1\\\\-1&2&5\\end{bmatrix}$$",
       "t": ["0", "medium"],
       "a": [
-        "During the reduction, a row of all zeros appears in the left half: $[0\\ 0\\ 0 \\mid -1\\ 1\\ 1]$ , so $I$ cannot be reached and the matrix is <b>not invertible</b>."
-      ],
-      "e": [
         "Form $[A \\mid I]$: $$\\left[\\begin{array}{ccc|ccc}1&6&4&1&0&0\\\\2&4&-1&0&1&0\\\\-1&2&5&0&0&1\\end{array}\\right]$$",
         "Clear below the leading 1: $R_2 \\to R_2 - 2R_1$ gives $[0,\\ 4-12,\\ -1-8 \\mid 0-2,\\ 1,\\ 0] = [0,\\ -8,\\ -9 \\mid -2,\\ 1,\\ 0]$, and $R_3 \\to R_3 + R_1$ gives $[0,\\ 2+6,\\ 5+4 \\mid 0+1,\\ 0,\\ 1] = [0,\\ 8,\\ 9 \\mid 1,\\ 0,\\ 1]$: $$\\left[\\begin{array}{ccc|ccc}1&6&4&1&0&0\\\\0&-8&-9&-2&1&0\\\\0&8&9&1&0&1\\end{array}\\right]$$",
         "Make the leading entry of row 2 equal to 1: $R_2 \\to -\\frac{1}{8}R_2$ gives $[0,\\ 1,\\ \\frac{9}{8} \\mid \\frac{1}{4},\\ -\\frac{1}{8},\\ 0]$: $$\\left[\\begin{array}{ccc|ccc}1&6&4&1&0&0\\\\0&1&\\frac{9}{8}&\\frac{1}{4}&-\\frac{1}{8}&0\\\\0&8&9&1&0&1\\end{array}\\right]$$",
         "Clear below the leading 1 of row 2: $R_3 \\to R_3 - 8R_2$ gives $[0,\\ 8-8,\\ 9-9 \\mid 1-2,\\ 0+1,\\ 1-0] = [0,\\ 0,\\ 0 \\mid -1,\\ 1,\\ 1]$: $$\\left[\\begin{array}{ccc|ccc}1&6&4&1&0&0\\\\0&1&\\frac{9}{8}&\\frac{1}{4}&-\\frac{1}{8}&0\\\\0&0&0&-1&1&1\\end{array}\\right]$$",
         "The left half of row 3 is entirely zero, so there can be no leading 1 in column 3 and the left half can never be reduced to $I$. Therefore $A$ has no inverse (it is singular)."
-      ]
+      ],
+      "e": "A square matrix is invertible exactly when it can be row-reduced to $I$; a zero row in the left half means it is singular."
     },
     {
       "id": "la3_0018",
       "q": "Find the inverse of the matrix using the method $[A \\mid I] \\to [I \\mid A^{-1}]$ and then verify the result: $$A=\\begin{bmatrix}1&2&3\\\\0&1&4\\\\5&6&0\\end{bmatrix}$$",
       "t": ["1", "hard"],
       "a": [
-        "$$A^{-1} = \\begin{bmatrix}-24&18&5\\\\20&-15&-4\\\\-5&4&1\\end{bmatrix}$$"
-      ],
-      "e": [
         "Form $[A \\mid I]$: $$\\left[\\begin{array}{ccc|ccc}1&2&3&1&0&0\\\\0&1&4&0&1&0\\\\5&6&0&0&0&1\\end{array}\\right]$$",
         "Column 1 has a leading 1 in row 1 and a 0 in row 2. Clear the entry below: $R_3 \\to R_3 - 5R_1$ gives $[0,\\ 6-10,\\ 0-15 \\mid 0-5,\\ 0,\\ 1] = [0,\\ -4,\\ -15 \\mid -5,\\ 0,\\ 1]$: $$\\left[\\begin{array}{ccc|ccc}1&2&3&1&0&0\\\\0&1&4&0&1&0\\\\0&-4&-15&-5&0&1\\end{array}\\right]$$",
         "Row 2 already has a leading 1 in column 2. Clear below it: $R_3 \\to R_3 + 4R_2$ gives $[0,\\ -4+4,\\ -15+16 \\mid -5+0,\\ 0+4,\\ 1+0] = [0,\\ 0,\\ 1 \\mid -5,\\ 4,\\ 1]$: $$\\left[\\begin{array}{ccc|ccc}1&2&3&1&0&0\\\\0&1&4&0&1&0\\\\0&0&1&-5&4&1\\end{array}\\right]$$",
         "Row 3 already has a leading 1. Clear above it in column 3: $R_2 \\to R_2 - 4R_3$ gives $[0,\\ 1,\\ 0 \\mid 0+20,\\ 1-16,\\ 0-4] = [0,\\ 1,\\ 0 \\mid 20,\\ -15,\\ -4]$, and $R_1 \\to R_1 - 3R_3$ gives $[1,\\ 2,\\ 0 \\mid 1+15,\\ 0-12,\\ 0-3] = [1,\\ 2,\\ 0 \\mid 16,\\ -12,\\ -3]$: $$\\left[\\begin{array}{ccc|ccc}1&2&0&16&-12&-3\\\\0&1&0&20&-15&-4\\\\0&0&1&-5&4&1\\end{array}\\right]$$",
         "Clear above the leading 1 of row 2: $R_1 \\to R_1 - 2R_2$ gives $[1,\\ 0,\\ 0 \\mid 16-40,\\ -12+30,\\ -3+8] = [1,\\ 0,\\ 0 \\mid -24,\\ 18,\\ 5]$: $$\\left[\\begin{array}{ccc|ccc}1&0&0&-24&18&5\\\\0&1&0&20&-15&-4\\\\0&0&1&-5&4&1\\end{array}\\right]$$",
-        "The left half is $I$, so $$A^{-1} = \\begin{bmatrix}-24&18&5\\\\20&-15&-4\\\\-5&4&1\\end{bmatrix}$$",
+        "$$A^{-1} = \\begin{bmatrix}-24&18&5\\\\20&-15&-4\\\\-5&4&1\\end{bmatrix}$$",
         "Verify $AA^{-1} = I$. Row 1 of $A$, $(1, 2, 3)$: with column 1 $(-24, 20, -5)$: $-24 + 40 - 15 = 1$; column 2 $(18, -15, 4)$: $18 - 30 + 12 = 0$; column 3 $(5, -4, 1)$: $5 - 8 + 3 = 0$. Row 2, $(0, 1, 4)$: $20 - 20 = 0$; $-15 + 16 = 1$; $-4 + 4 = 0$. Row 3, $(5, 6, 0)$: $-120 + 120 = 0$; $90 - 90 = 0$; $25 - 24 = 1$ ✓."
-      ]
+      ],
+      "e": "Clear the entries below each leading 1 first, then the entries above, and always verify the inverse with $AA^{-1} = I$."
     },
     {
       "id": "la3_0019",
       "q": "Let $A = \\begin{bmatrix}1&2\\\\1&3\\end{bmatrix}$ and $B = \\begin{bmatrix}1&4\\\\2&7\\end{bmatrix}$ (both are invertible). (a) Find $A^{-1}$ and $B^{-1}$ using the formula. (b) Find $AB$ and then find $(AB)^{-1}$ directly using the formula. (c) Verify that $(AB)^{-1} = B^{-1}A^{-1}$ and that $A^{-1}B^{-1}$ is not equal to it. (d) Verify that $(A^{-1})^T = (A^T)^{-1}$.",
       "t": ["1", "hard"],
       "a": [
-        "(a) $A^{-1} = \\begin{bmatrix}3&-2\\\\-1&1\\end{bmatrix}$ , $B^{-1} = \\begin{bmatrix}-7&4\\\\2&-1\\end{bmatrix}$.",
-        "(b) $AB = \\begin{bmatrix}5&18\\\\7&25\\end{bmatrix}$ and $(AB)^{-1} = \\begin{bmatrix}-25&18\\\\7&-5\\end{bmatrix}$.",
-        "(c) $B^{-1}A^{-1} = (AB)^{-1}$ , whereas $A^{-1}B^{-1} = \\begin{bmatrix}-25&14\\\\9&-5\\end{bmatrix} \\neq (AB)^{-1}$.",
-        "(d) $(A^{-1})^T = (A^T)^{-1} = \\begin{bmatrix}3&-1\\\\-2&1\\end{bmatrix}$."
-      ],
-      "e": [
         "Part (a): $\\det A = ad - bc = 1\\cdot3 - 2\\cdot1 = 1$, so $A^{-1} = \\frac{1}{1}\\begin{bmatrix}3&-2\\\\-1&1\\end{bmatrix}$. For $B$: $ad - bc = 1\\cdot7 - 4\\cdot2 = -1$, so $B^{-1} = \\frac{1}{-1}\\begin{bmatrix}7&-4\\\\-2&1\\end{bmatrix} = \\begin{bmatrix}-7&4\\\\2&-1\\end{bmatrix}$.",
+        "(a) $A^{-1} = \\begin{bmatrix}3&-2\\\\-1&1\\end{bmatrix}$ , $B^{-1} = \\begin{bmatrix}-7&4\\\\2&-1\\end{bmatrix}$.",
         "Part (b): $$AB = \\begin{bmatrix}1\\cdot1 + 2\\cdot2&1\\cdot4 + 2\\cdot7\\\\1\\cdot1 + 3\\cdot2&1\\cdot4 + 3\\cdot7\\end{bmatrix} = \\begin{bmatrix}5&18\\\\7&25\\end{bmatrix}$$",
         "For $AB$: $ad - bc = 5\\cdot25 - 18\\cdot7 = 125 - 126 = -1$, so $$(AB)^{-1} = \\frac{1}{-1}\\begin{bmatrix}25&-18\\\\-7&5\\end{bmatrix} = \\begin{bmatrix}-25&18\\\\7&-5\\end{bmatrix}$$",
+        "(b) $AB = \\begin{bmatrix}5&18\\\\7&25\\end{bmatrix}$ and $(AB)^{-1} = \\begin{bmatrix}-25&18\\\\7&-5\\end{bmatrix}$.",
         "Part (c): $$B^{-1}A^{-1} = \\begin{bmatrix}-7&4\\\\2&-1\\end{bmatrix}\\begin{bmatrix}3&-2\\\\-1&1\\end{bmatrix} = \\begin{bmatrix}(-7)(3) + 4(-1)&(-7)(-2) + 4(1)\\\\2\\cdot3 + (-1)(-1)&2(-2) + (-1)(1)\\end{bmatrix} = \\begin{bmatrix}-25&18\\\\7&-5\\end{bmatrix}$$ which equals $(AB)^{-1}$ ✓.",
         "Now the wrong order: $$A^{-1}B^{-1} = \\begin{bmatrix}3&-2\\\\-1&1\\end{bmatrix}\\begin{bmatrix}-7&4\\\\2&-1\\end{bmatrix} = \\begin{bmatrix}3(-7) + (-2)(2)&3\\cdot4 + (-2)(-1)\\\\(-1)(-7) + 1\\cdot2&(-1)(4) + 1\\cdot(-1)\\end{bmatrix} = \\begin{bmatrix}-25&14\\\\9&-5\\end{bmatrix}$$ This differs from $(AB)^{-1}$ (for example entry $(1,2)$ is 14 instead of 18), so the order $B^{-1}A^{-1}$ matters.",
-        "Part (d): $A^T = \\begin{bmatrix}1&1\\\\2&3\\end{bmatrix}$ with $ad - bc = 3 - 2 = 1$, so $(A^T)^{-1} = \\begin{bmatrix}3&-1\\\\-2&1\\end{bmatrix}$. Also $(A^{-1})^T$ is the transpose of $\\begin{bmatrix}3&-2\\\\-1&1\\end{bmatrix}$, which is $\\begin{bmatrix}3&-1\\\\-2&1\\end{bmatrix}$. The two are equal ✓."
-      ]
+        "(c) $B^{-1}A^{-1} = (AB)^{-1}$ , whereas $A^{-1}B^{-1} = \\begin{bmatrix}-25&14\\\\9&-5\\end{bmatrix} \\neq (AB)^{-1}$.",
+        "Part (d): $A^T = \\begin{bmatrix}1&1\\\\2&3\\end{bmatrix}$ with $ad - bc = 3 - 2 = 1$, so $(A^T)^{-1} = \\begin{bmatrix}3&-1\\\\-2&1\\end{bmatrix}$. Also $(A^{-1})^T$ is the transpose of $\\begin{bmatrix}3&-2\\\\-1&1\\end{bmatrix}$, which is $\\begin{bmatrix}3&-1\\\\-2&1\\end{bmatrix}$. The two are equal ✓.",
+        "(d) $(A^{-1})^T = (A^T)^{-1} = \\begin{bmatrix}3&-1\\\\-2&1\\end{bmatrix}$."
+      ],
+      "e": "Reversal law for inverses: $(AB)^{-1} = B^{-1}A^{-1}$, and $(A^{-1})^T = (A^T)^{-1}$."
     },
     {
       "id": "la3_0020",
@@ -319,15 +281,13 @@
         "(1) True: by the properties of the inverse, if one of the two matrices is not invertible then the product is not invertible.",
         "(2) True: it is the corresponding property (if the product $AB$ is not invertible, then at least one of the two matrices is not invertible).",
         "(3) False: the correct statement is $(kA)^{-1} = \\frac{1}{k}A^{-1}$.",
-        "(4) True, and in this case $(A^{-1})^T = (A^T)^{-1}$.",
-        "(5) False: matrix multiplication is not commutative in general."
-      ],
-      "e": [
-        "Statements (1) and (2) restate the lecture's property of products: if $A$ or $B$ is not invertible then $AB$ is not invertible, and if $AB$ is not invertible then $A$ or $B$ is not invertible.",
         "(3) Counterexample: take $A = I_2$ and $k = 2$. Then $kA = 2I_2$ and its inverse is $\\frac{1}{2}I_2$ because $(2I_2)(\\frac{1}{2}I_2) = I_2$. But $kA^{-1} = 2I_2 \\neq \\frac{1}{2}I_2$. Hence the correct rule is $(kA)^{-1} = \\frac{1}{k}A^{-1}$.",
+        "(4) True, and in this case $(A^{-1})^T = (A^T)^{-1}$.",
         "(4) If $AA^{-1} = I$, take the transpose of both sides and use $(XY)^T = Y^TX^T$: $(A^{-1})^T A^T = I^T = I$. So $A^T$ has the inverse $(A^{-1})^T$, i.e. $A^T$ is invertible and $(A^T)^{-1} = (A^{-1})^T$.",
+        "(5) False: matrix multiplication is not commutative in general.",
         "(5) Counterexample: for $A = \\begin{bmatrix}1&2\\\\3&4\\end{bmatrix}$ and $B = \\begin{bmatrix}0&1\\\\-1&2\\end{bmatrix}$ we get $AB = \\begin{bmatrix}-2&5\\\\-4&11\\end{bmatrix}$ and $BA = \\begin{bmatrix}3&4\\\\5&6\\end{bmatrix}$, which are different."
-      ]
+      ],
+      "e": "Statements (1) and (2) restate the lecture's property of products: if $A$ or $B$ is not invertible then $AB$ is not invertible, and if $AB$ is not invertible then $A$ or $B$ is not invertible."
     }
   ]
 }

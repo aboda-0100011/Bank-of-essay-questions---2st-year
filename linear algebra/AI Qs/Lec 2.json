@@ -6,16 +6,14 @@
       "q": "For each of the following systems (two equations in two unknowns): determine the geometric relationship between the lines $L_1$ and $L_2$, the number of solutions, and the type of the system (Consistent / Inconsistent): <br>(a) $2x + y = 4$ , $x + y = 2$ <br>(b) $2x + 2y = 4$ , $x + y = 2$ <br>(c) $x + y = 4$ , $2x + 2y = 6$",
       "t": ["0", "easy"],
       "a": [
+        "System (a): augmented matrix $$\\left[\\begin{array}{cc|c}2&1&4\\\\1&1&2\\end{array}\\right]$$ Interchange $R_1 \\leftrightarrow R_2$: $$\\left[\\begin{array}{cc|c}1&1&2\\\\2&1&4\\end{array}\\right]$$ Then $R_2 \\to R_2 - 2R_1$ gives $[0,\\ -1 \\mid 0]$, then $R_2 \\to -R_2$ gives $[0,\\ 1 \\mid 0]$, then $R_1 \\to R_1 - R_2$ gives $[1,\\ 0 \\mid 2]$. So $x = 2$, $y = 0$: the lines meet at exactly one point. Check: $2(2) + 0 = 4$ ✓ and $2 + 0 = 2$ ✓.",
         "(a) The lines intersect at a single point $(2, 0)$ → unique solution → Consistent.",
+        "System (b): augmented matrix $$\\left[\\begin{array}{cc|c}2&2&4\\\\1&1&2\\end{array}\\right]$$ $R_1 \\to \\frac{1}{2}R_1$ gives $[1,\\ 1 \\mid 2]$, so both rows are identical. Then $R_2 \\to R_2 - R_1$ gives $[0,\\ 0 \\mid 0]$. Only the single equation $x + y = 2$ remains for two unknowns, so $y$ is free and there are infinitely many solutions, for example $(-1,3)$, $(0,2)$, $(1,1)$, $(2,0)$. The lines coincide.",
         "(b) The lines coincide (Coincide) → infinitely many solutions → Consistent.",
+        "System (c): augmented matrix $$\\left[\\begin{array}{cc|c}1&1&4\\\\2&2&6\\end{array}\\right]$$ $R_2 \\to R_2 - 2R_1$ gives $[0,\\ 0 \\mid 6-8] = [0,\\ 0 \\mid -2]$, which means $0 = -2$, impossible. No solution, so the lines are parallel.",
         "(c) The lines are parallel → no solution → Inconsistent."
       ],
-      "e": [
-        "System (a): augmented matrix $$\\left[\\begin{array}{cc|c}2&1&4\\\\1&1&2\\end{array}\\right]$$ Interchange $R_1 \\leftrightarrow R_2$: $$\\left[\\begin{array}{cc|c}1&1&2\\\\2&1&4\\end{array}\\right]$$ Then $R_2 \\to R_2 - 2R_1$ gives $[0,\\ -1 \\mid 0]$, then $R_2 \\to -R_2$ gives $[0,\\ 1 \\mid 0]$, then $R_1 \\to R_1 - R_2$ gives $[1,\\ 0 \\mid 2]$. So $x = 2$, $y = 0$: the lines meet at exactly one point. Check: $2(2) + 0 = 4$ ✓ and $2 + 0 = 2$ ✓.",
-        "System (b): augmented matrix $$\\left[\\begin{array}{cc|c}2&2&4\\\\1&1&2\\end{array}\\right]$$ $R_1 \\to \\frac{1}{2}R_1$ gives $[1,\\ 1 \\mid 2]$, so both rows are identical. Then $R_2 \\to R_2 - R_1$ gives $[0,\\ 0 \\mid 0]$. Only the single equation $x + y = 2$ remains for two unknowns, so $y$ is free and there are infinitely many solutions, for example $(-1,3)$, $(0,2)$, $(1,1)$, $(2,0)$. The lines coincide.",
-        "System (c): augmented matrix $$\\left[\\begin{array}{cc|c}1&1&4\\\\2&2&6\\end{array}\\right]$$ $R_2 \\to R_2 - 2R_1$ gives $[0,\\ 0 \\mid 6-8] = [0,\\ 0 \\mid -2]$, which means $0 = -2$, impossible. No solution, so the lines are parallel.",
-        "Rule: a row $[0\\ 0 \\mid \\text{nonzero}]$ means no solution; a row $[0\\ 0 \\mid 0]$ together with a free variable means infinitely many solutions."
-      ]
+      "e": "Rule: a row $[0\\ 0 \\mid \\text{nonzero}]$ means no solution; a row $[0\\ 0 \\mid 0]$ together with a free variable means infinitely many solutions."
     },
     {
       "id": "la2_0002",
@@ -35,90 +33,74 @@
       "q": "The following matrices are the augmented matrices of three systems after being reduced to Row-Echelon Form. For each one, determine the type of the system, and if it has a solution, find it (or write the general solution): $$M_1=\\left[\\begin{array}{ccc|c}1&2&0&4\\\\0&1&3&5\\\\0&0&1&2\\end{array}\\right]$$ $$M_2=\\left[\\begin{array}{ccc|c}1&-1&2&3\\\\0&1&1&2\\\\0&0&0&0\\end{array}\\right]$$ $$M_3=\\left[\\begin{array}{ccc|c}1&2&-1&3\\\\0&1&4&1\\\\0&0&0&-5\\end{array}\\right]$$",
       "t": ["1", "medium"],
       "a": [
+        "$M_1$: no row of the form $[0\\ 0\\ 0 \\mid c]$ and every column has a leading 1, so there is a unique solution. Back-substitution: row 3 gives $x_3 = 2$; row 2: $x_2 + 3x_3 = 5 \\Rightarrow x_2 = 5 - 6 = -1$; row 1: $x_1 + 2x_2 = 4 \\Rightarrow x_1 = 4 + 2 = 6$.",
         "$M_1$: unique solution: $(x_1, x_2, x_3) = (6, -1, 2)$.",
+        "$M_2$: the last row is $[0\\ 0\\ 0 \\mid 0]$ and columns 1 and 2 have leading 1s, so $x_1, x_2$ are leading variables and $x_3$ is free. Let $x_3 = t$. Row 2: $x_2 + x_3 = 2 \\Rightarrow x_2 = 2 - t$. Row 1: $x_1 - x_2 + 2x_3 = 3 \\Rightarrow x_1 = 3 + (2 - t) - 2t = 5 - 3t$.",
         "$M_2$: infinitely many solutions: $x_3 = t$ (free) , $x_2 = 2 - t$ , $x_1 = 5 - 3t$.",
+        "Check of one particular solution of $M_2$ with $t = 0$: $(5, 2, 0)$ gives $5 - 2 + 0 = 3$ ✓ and $2 + 0 = 2$ ✓.",
+        "$M_3$: the last row is $[0\\ 0\\ 0 \\mid -5]$, i.e. $0 = -5$, which is impossible, so the system is inconsistent.",
         "$M_3$: no solution (Inconsistent) because the last row means $0 = -5$."
       ],
-      "e": [
-        "$M_1$: no row of the form $[0\\ 0\\ 0 \\mid c]$ and every column has a leading 1, so there is a unique solution. Back-substitution: row 3 gives $x_3 = 2$; row 2: $x_2 + 3x_3 = 5 \\Rightarrow x_2 = 5 - 6 = -1$; row 1: $x_1 + 2x_2 = 4 \\Rightarrow x_1 = 4 + 2 = 6$.",
-        "$M_2$: the last row is $[0\\ 0\\ 0 \\mid 0]$ and columns 1 and 2 have leading 1s, so $x_1, x_2$ are leading variables and $x_3$ is free. Let $x_3 = t$. Row 2: $x_2 + x_3 = 2 \\Rightarrow x_2 = 2 - t$. Row 1: $x_1 - x_2 + 2x_3 = 3 \\Rightarrow x_1 = 3 + (2 - t) - 2t = 5 - 3t$.",
-        "Check of one particular solution of $M_2$ with $t = 0$: $(5, 2, 0)$ gives $5 - 2 + 0 = 3$ ✓ and $2 + 0 = 2$ ✓.",
-        "$M_3$: the last row is $[0\\ 0\\ 0 \\mid -5]$, i.e. $0 = -5$, which is impossible, so the system is inconsistent."
-      ]
+      "e": "Quick test on a Row-Echelon matrix: a row $[0\\ 0\\ 0 \\mid c]$ with $c \\neq 0$ means no solution; otherwise, no free variables means a unique solution, and at least one free variable means infinitely many solutions."
     },
     {
       "id": "la2_0004",
       "q": "The following matrix is the Reduced Row-Echelon Form of a system in the unknowns $x, y, z, w$: $$\\left[\\begin{array}{cccc|c}1&0&-2&0&3\\\\0&1&1&0&-1\\\\0&0&0&1&4\\end{array}\\right]$$ (a) Identify the Leading variables and the Free variables. (b) Write the general solution. (c) Find two different particular solutions and verify one of them against the matrix.",
       "t": ["1", "easy"],
       "a": [
-        "(a) Leading variables: $x, y, w$. Free variable: $z$.",
-        "(b) The general solution: $x = 3 + 2z$ , $y = -1 - z$ , $w = 4$ , and $z$ is free.",
-        "(c) At $z = 0$: $(3, -1, 0, 4)$ , and at $z = 1$: $(5, -2, 1, 4)$."
-      ],
-      "e": [
         "The leading 1s are in columns 1, 2 and 4, so $x, y, w$ are leading variables. Column 3 has no leading 1, so $z$ is free; set $z = t$.",
+        "(a) Leading variables: $x, y, w$. Free variable: $z$.",
         "Row 1: $x - 2z = 3 \\Rightarrow x = 3 + 2z$. Row 2: $y + z = -1 \\Rightarrow y = -1 - z$. Row 3: $w = 4$.",
+        "(b) The general solution: $x = 3 + 2z$ , $y = -1 - z$ , $w = 4$ , and $z$ is free.",
         "For $z = 0$: $x = 3$, $y = -1$, $w = 4$, giving $(3, -1, 0, 4)$. For $z = 1$: $x = 3 + 2 = 5$, $y = -1 - 1 = -2$, $w = 4$, giving $(5, -2, 1, 4)$.",
+        "(c) At $z = 0$: $(3, -1, 0, 4)$ , and at $z = 1$: $(5, -2, 1, 4)$.",
         "Check of $(5, -2, 1, 4)$ in the matrix: row 1: $5 - 2(1) = 3$ ✓; row 2: $-2 + 1 = -1$ ✓; row 3: $w = 4$ ✓."
-      ]
+      ],
+      "e": "In a Reduced Row-Echelon Form each leading variable is expressed using only the free variables and the constants, which gives the general solution directly."
     },
     {
       "id": "la2_0005",
       "q": "Find the mistake in each conclusion and correct it: <br>(a) After reducing a system, a student reached $$\\left[\\begin{array}{ccc|c}1&-2&3&4\\\\0&1&-1&2\\\\0&0&0&3\\end{array}\\right]$$ and said: the last row has zero coefficients, so the system has infinitely many solutions. <br>(b) In another system, a student reached $$\\left[\\begin{array}{cc|c}1&0&3\\\\0&1&2\\\\0&0&0\\end{array}\\right]$$ and said: there is a row $[0\\ 0 \\mid 0]$, so the system has infinitely many solutions.",
       "t": ["1", "medium"],
       "a": [
-        "(a) The mistake: the last row means $0 = 3$, which is impossible, so the system is <b>Inconsistent</b> and has no solution (not infinitely many).",
-        "(b) The mistake: the presence of a row $[0\\ 0 \\mid 0]$ is not enough; columns 1 and 2 both have a Leading 1, so there is no free variable, hence the solution is unique: $x = 3$ , $y = 2$."
-      ],
-      "e": [
         "(a) The last row $[0\\ 0\\ 0 \\mid 3]$ stands for $0x_1 + 0x_2 + 0x_3 = 3$, i.e. $0 = 3$, which can never hold. A row of this form (zero coefficients, nonzero constant) means no solution, whatever the other rows say.",
-        "(b) Reading the rows: row 1 gives $x = 3$ and row 2 gives $y = 2$. Both columns contain a leading 1, so there is no free variable; the zero row $[0\\ 0 \\mid 0]$ just says $0 = 0$ and adds no freedom. Hence the solution is unique: $(3, 2)$.",
-        "Summary: infinitely many solutions need a consistent system and at least one free variable, which neither matrix has."
-      ]
+        "(b) Reading the rows: row 1 gives $x = 3$ and row 2 gives $y = 2$. Both columns contain a leading 1, so there is no free variable; the zero row $[0\\ 0 \\mid 0]$ just says $0 = 0$ and adds no freedom. Hence the solution is unique: $(3, 2)$."
+      ],
+      "e": "Summary: infinitely many solutions need a consistent system and at least one free variable, which neither matrix has."
     },
     {
       "id": "la2_0006",
       "q": "Solve the following system using <b>Gaussian Elimination</b> and determine its type: $$\\begin{aligned} x_1 - 2x_2 - 6x_3 &= 12 \\\\ 2x_1 + 4x_2 + 12x_3 &= -17 \\\\ x_1 - 4x_2 - 12x_3 &= 22 \\end{aligned}$$",
       "t": ["0", "medium"],
       "a": [
-        "The system is <b>Inconsistent</b>: no solution.",
-        "The last row after reduction: $\\left[\\begin{array}{ccc|c}0&0&0&-\\frac{1}{4}\\end{array}\\right]$, i.e. $0 = -\\frac{1}{4}$."
-      ],
-      "e": [
         "Augmented matrix: $$\\left[\\begin{array}{ccc|c}1&-2&-6&12\\\\2&4&12&-17\\\\1&-4&-12&22\\end{array}\\right]$$",
         "Clear below the leading 1: $R_2 \\to R_2 - 2R_1$ gives $[0,\\ 4+4,\\ 12+12 \\mid -17-24] = [0,\\ 8,\\ 24 \\mid -41]$, and $R_3 \\to R_3 - R_1$ gives $[0,\\ -4+2,\\ -12+6 \\mid 22-12] = [0,\\ -2,\\ -6 \\mid 10]$: $$\\left[\\begin{array}{ccc|c}1&-2&-6&12\\\\0&8&24&-41\\\\0&-2&-6&10\\end{array}\\right]$$",
         "Make the leading entry of row 2 equal to 1: $R_2 \\to \\frac{1}{8}R_2$ gives $[0,\\ 1,\\ 3 \\mid -\\frac{41}{8}]$: $$\\left[\\begin{array}{ccc|c}1&-2&-6&12\\\\0&1&3&-\\frac{41}{8}\\\\0&-2&-6&10\\end{array}\\right]$$",
         "Clear below the leading 1 of row 2: $R_3 \\to R_3 + 2R_2$ gives $[0,\\ 0,\\ -6+6 \\mid 10 + 2(-\\frac{41}{8})] = [0,\\ 0,\\ 0 \\mid 10 - \\frac{41}{4}]$. Since $10 - \\frac{41}{4} = \\frac{40}{4} - \\frac{41}{4} = -\\frac{1}{4}$, we get: $$\\left[\\begin{array}{ccc|c}1&-2&-6&12\\\\0&1&3&-\\frac{41}{8}\\\\0&0&0&-\\frac{1}{4}\\end{array}\\right]$$",
-        "The last row means $0x_1 + 0x_2 + 0x_3 = -\\frac{1}{4}$, which is impossible. Therefore the system has no solution (inconsistent)."
-      ]
+        "The last row means $0x_1 + 0x_2 + 0x_3 = -\\frac{1}{4}$, which is impossible. Therefore the system has no solution (inconsistent).",
+        "The system is <b>Inconsistent</b>: no solution."
+      ],
+      "e": "An inconsistent system is detected by a row $[0\\ 0\\ 0 \\mid c]$ with $c \\neq 0$; once it appears there is no need to continue the reduction."
     },
     {
       "id": "la2_0007",
       "q": "Solve the following system using Gaussian Elimination and determine its type, then explain the reason for the result: $$\\begin{aligned} x + 2y + 3z &= 4 \\\\ 2x + 5y + 7z &= 9 \\\\ 3x + 7y + 10z &= 14 \\end{aligned}$$",
       "t": ["1", "medium"],
       "a": [
-        "The system is Inconsistent: no solution.",
-        "The reason: the left side of the third equation $3x + 7y + 10z$ equals the sum of the left sides of the first and second equations, but the sum of the right sides is $4 + 9 = 13$, not $14$."
-      ],
-      "e": [
         "Augmented matrix: $$\\left[\\begin{array}{ccc|c}1&2&3&4\\\\2&5&7&9\\\\3&7&10&14\\end{array}\\right]$$",
         "Clear below the leading 1: $R_2 \\to R_2 - 2R_1$ gives $[0,\\ 5-4,\\ 7-6 \\mid 9-8] = [0,\\ 1,\\ 1 \\mid 1]$, and $R_3 \\to R_3 - 3R_1$ gives $[0,\\ 7-6,\\ 10-9 \\mid 14-12] = [0,\\ 1,\\ 1 \\mid 2]$: $$\\left[\\begin{array}{ccc|c}1&2&3&4\\\\0&1&1&1\\\\0&1&1&2\\end{array}\\right]$$",
         "Row 2 already has a leading 1. Clear below it: $R_3 \\to R_3 - R_2$ gives $[0,\\ 0,\\ 0 \\mid 1]$: $$\\left[\\begin{array}{ccc|c}1&2&3&4\\\\0&1&1&1\\\\0&0&0&1\\end{array}\\right]$$",
         "The last row says $0 = 1$, which is impossible, so the system is inconsistent.",
-        "Why it happens: adding equation 1 and equation 2 gives $3x + 7y + 10z = 13$, while equation 3 claims that the same left side equals 14, a contradiction."
-      ]
+        "The system is Inconsistent: no solution.",
+        "The reason: the left side of the third equation $3x + 7y + 10z$ equals the sum of the left sides of the first and second equations, but the sum of the right sides is $4 + 9 = 13$, not $14$."
+      ],
+      "e": "Dependent equations are the usual cause: when the left side of one equation is a combination of the others but the right side is not, the system is inconsistent."
     },
     {
       "id": "la2_0008",
       "q": "Solve the following system using <b>Gauss-Jordan</b>, then identify the Leading and Free variables and write the general solution and two particular solutions: $$\\begin{aligned} x + 2y - 3z + w &= -2 \\\\ 3x - y - 2z - 4w &= 1 \\\\ 2x + 3y - 5z + w &= -3 \\end{aligned}$$",
       "t": ["0", "medium"],
       "a": [
-        "The system is Consistent and has infinitely many solutions.",
-        "Leading variables: $x, y$. Free variables: $z, w$.",
-        "The general solution: $x = z + w$ , $y = z - w - 1$.",
-        "Two examples: $(z, w) = (0, 0)$ gives $(0, -1, 0, 0)$ , and $(z, w) = (1, 1)$ gives $(2, -1, 1, 1)$."
-      ],
-      "e": [
         "Augmented matrix: $$\\left[\\begin{array}{cccc|c}1&2&-3&1&-2\\\\3&-1&-2&-4&1\\\\2&3&-5&1&-3\\end{array}\\right]$$",
         "Clear below the leading 1: $R_2 \\to R_2 - 3R_1$ gives $[0,\\ -1-6,\\ -2+9,\\ -4-3 \\mid 1+6] = [0,\\ -7,\\ 7,\\ -7 \\mid 7]$, and $R_3 \\to R_3 - 2R_1$ gives $[0,\\ 3-4,\\ -5+6,\\ 1-2 \\mid -3+4] = [0,\\ -1,\\ 1,\\ -1 \\mid 1]$: $$\\left[\\begin{array}{cccc|c}1&2&-3&1&-2\\\\0&-7&7&-7&7\\\\0&-1&1&-1&1\\end{array}\\right]$$",
         "Make the leading entry of row 2 equal to 1: $R_2 \\to -\\frac{1}{7}R_2$ gives $[0,\\ 1,\\ -1,\\ 1 \\mid -1]$: $$\\left[\\begin{array}{cccc|c}1&2&-3&1&-2\\\\0&1&-1&1&-1\\\\0&-1&1&-1&1\\end{array}\\right]$$",
@@ -127,133 +109,120 @@
         "Row 1: $x - z - w = 0 \\Rightarrow x = z + w$. Row 2: $y - z + w = -1 \\Rightarrow y = z - w - 1$.",
         "Particular solution 1: $z = 0$, $w = 0$ gives $x = 0$, $y = -1$, i.e. $(0, -1, 0, 0)$. Particular solution 2: $z = 1$, $w = 1$ gives $x = 2$, $y = 1 - 1 - 1 = -1$, i.e. $(2, -1, 1, 1)$.",
         "Check of $(2, -1, 1, 1)$ in the original equations: $2 + 2(-1) - 3(1) + 1 = -2$ ✓; $3(2) - (-1) - 2(1) - 4(1) = 6 + 1 - 2 - 4 = 1$ ✓; $2(2) + 3(-1) - 5(1) + 1 = 4 - 3 - 5 + 1 = -3$ ✓."
-      ]
+      ],
+      "e": "The free variables parametrize the infinite solution set; every choice of their values gives a different solution."
     },
     {
       "id": "la2_0009",
       "q": "Solve the following system using Gauss-Jordan, write the general solution in terms of the free variables, then find two particular solutions and verify them in the original equations: $$\\begin{aligned} x + 2y + z + w &= 4 \\\\ x + 2y + 2z + 3w &= 5 \\\\ 2x + 4y + z &= 7 \\end{aligned}$$",
       "t": ["1", "hard"],
       "a": [
-        "The system is Consistent and has infinitely many solutions.",
-        "Leading variables: $x, z$. Free variables: $y, w$.",
-        "The general solution: $x = 3 - 2y + w$ , $z = 1 - 2w$.",
-        "Two particular solutions: $(3, 0, 1, 0)$ and $(2, 1, -1, 1)$."
-      ],
-      "e": [
         "Augmented matrix (the third equation has no $w$, so its coefficient is 0): $$\\left[\\begin{array}{cccc|c}1&2&1&1&4\\\\1&2&2&3&5\\\\2&4&1&0&7\\end{array}\\right]$$",
         "Clear below the leading 1: $R_2 \\to R_2 - R_1$ gives $[0,\\ 0,\\ 1,\\ 2 \\mid 1]$, and $R_3 \\to R_3 - 2R_1$ gives $[0,\\ 0,\\ 1-2,\\ 0-2 \\mid 7-8] = [0,\\ 0,\\ -1,\\ -2 \\mid -1]$: $$\\left[\\begin{array}{cccc|c}1&2&1&1&4\\\\0&0&1&2&1\\\\0&0&-1&-2&-1\\end{array}\\right]$$",
         "Column 2 has zeros in rows 2 and 3, so it has no leading 1 (this will make $y$ a free variable). Move to column 3: row 2 already has a leading 1 there. Clear below it: $R_3 \\to R_3 + R_2$ gives $[0,\\ 0,\\ 0,\\ 0 \\mid 0]$.",
         "Clear above the leading 1 of row 2: $R_1 \\to R_1 - R_2$ gives $[1,\\ 2,\\ 0,\\ 1-2 \\mid 4-1] = [1,\\ 2,\\ 0,\\ -1 \\mid 3]$: $$\\left[\\begin{array}{cccc|c}1&2&0&-1&3\\\\0&0&1&2&1\\\\0&0&0&0&0\\end{array}\\right]$$",
+        "The system is Consistent and has infinitely many solutions.",
         "The leading 1s are in columns 1 and 3, so $x, z$ are leading variables and $y, w$ are free.",
         "Row 1: $x + 2y - w = 3 \\Rightarrow x = 3 - 2y + w$. Row 2: $z + 2w = 1 \\Rightarrow z = 1 - 2w$.",
         "Particular solutions: $(y, w) = (0, 0)$ gives $x = 3$, $z = 1$, i.e. $(3, 0, 1, 0)$; $(y, w) = (1, 1)$ gives $x = 3 - 2 + 1 = 2$, $z = 1 - 2 = -1$, i.e. $(2, 1, -1, 1)$.",
         "Check of $(3, 0, 1, 0)$: $3 + 0 + 1 + 0 = 4$ ✓; $3 + 0 + 2 + 0 = 5$ ✓; $6 + 0 + 1 = 7$ ✓. Check of $(2, 1, -1, 1)$: $2 + 2 - 1 + 1 = 4$ ✓; $2 + 2 - 2 + 3 = 5$ ✓; $4 + 4 - 1 = 7$ ✓."
-      ]
+      ],
+      "e": "A column without a leading 1 corresponds to a free variable (here $y$ and $w$)."
     },
     {
       "id": "la2_0010",
       "q": "What condition must $b_1, b_2, b_3$ satisfy for the following system to have a solution? $$\\begin{aligned} x_1 + x_2 + x_3 &= b_1 \\\\ x_1 + 2x_3 &= b_2 \\\\ 2x_1 + x_2 + 3x_3 &= b_3 \\end{aligned}$$",
       "t": ["0", "medium"],
       "a": [
-        "The condition: $b_3 - b_2 - b_1 = 0$."
-      ],
-      "e": [
         "Augmented matrix: $$\\left[\\begin{array}{ccc|c}1&1&1&b_1\\\\1&0&2&b_2\\\\2&1&3&b_3\\end{array}\\right]$$",
         "Clear below the leading 1: $R_2 \\to R_2 - R_1$ gives $[0,\\ -1,\\ 1 \\mid b_2 - b_1]$, and $R_3 \\to R_3 - 2R_1$ gives $[0,\\ -1,\\ 1 \\mid b_3 - 2b_1]$: $$\\left[\\begin{array}{ccc|c}1&1&1&b_1\\\\0&-1&1&b_2-b_1\\\\0&-1&1&b_3-2b_1\\end{array}\\right]$$",
         "Make the leading entry of row 2 equal to 1: $R_2 \\to -R_2$ gives $[0,\\ 1,\\ -1 \\mid b_1 - b_2]$: $$\\left[\\begin{array}{ccc|c}1&1&1&b_1\\\\0&1&-1&b_1-b_2\\\\0&-1&1&b_3-2b_1\\end{array}\\right]$$",
         "Clear below the leading 1 of row 2: $R_3 \\to R_3 + R_2$ gives $[0,\\ 0,\\ 0 \\mid b_3 - 2b_1 + b_1 - b_2] = [0,\\ 0,\\ 0 \\mid b_3 - b_2 - b_1]$: $$\\left[\\begin{array}{ccc|c}1&1&1&b_1\\\\0&1&-1&b_1-b_2\\\\0&0&0&b_3-b_2-b_1\\end{array}\\right]$$",
         "The last row reads $0 = b_3 - b_2 - b_1$. The system has a solution only if this constant is 0, so the condition is $b_3 - b_2 - b_1 = 0$ (otherwise the system is inconsistent)."
-      ]
+      ],
+      "e": "The consistency condition is exactly the requirement that the zero row produced by elimination has constant 0."
     },
     {
       "id": "la2_0011",
       "q": "For the system: $$\\begin{aligned} x_1 + x_2 + x_3 &= b_1 \\\\ x_1 + 2x_3 &= b_2 \\\\ 2x_1 + x_2 + 3x_3 &= b_3 \\end{aligned}$$ (given that the condition for a solution to exist is $b_3 - b_2 - b_1 = 0$): <br>(a) Does the system have a solution when $(b_1, b_2, b_3) = (1, 1, 2)$? If so, find the general solution. <br>(b) Does the system have a solution when $(b_1, b_2, b_3) = (1, 2, 4)$? Explain using row reduction.",
       "t": ["1", "medium"],
       "a": [
-        "(a) $2 - 1 - 1 = 0$ → a solution exists; the general solution: $x_1 = 1 - 2t$ , $x_2 = t$ , $x_3 = t$ (infinitely many solutions).",
-        "(b) $4 - 2 - 1 = 1 \\neq 0$ → no solution (Inconsistent)."
-      ],
-      "e": [
         "(a) Substitute $b = (1, 1, 2)$: $$\\left[\\begin{array}{ccc|c}1&1&1&1\\\\1&0&2&1\\\\2&1&3&2\\end{array}\\right]$$",
         "$R_2 \\to R_2 - R_1$ gives $[0,\\ -1,\\ 1 \\mid 0]$ and $R_3 \\to R_3 - 2R_1$ gives $[0,\\ -1,\\ 1 \\mid 0]$: $$\\left[\\begin{array}{ccc|c}1&1&1&1\\\\0&-1&1&0\\\\0&-1&1&0\\end{array}\\right]$$",
         "$R_2 \\to -R_2$ gives $[0,\\ 1,\\ -1 \\mid 0]$; then $R_3 \\to R_3 + R_2$ gives $[0,\\ 0,\\ 0 \\mid 0]$. Then clear above the leading 1 of row 2: $R_1 \\to R_1 - R_2$ gives $[1,\\ 0,\\ 2 \\mid 1]$: $$\\left[\\begin{array}{ccc|c}1&0&2&1\\\\0&1&-1&0\\\\0&0&0&0\\end{array}\\right]$$",
         "Leading variables: $x_1, x_2$; free variable: $x_3 = t$. Row 1: $x_1 + 2t = 1 \\Rightarrow x_1 = 1 - 2t$. Row 2: $x_2 - t = 0 \\Rightarrow x_2 = t$.",
+        "(a) $2 - 1 - 1 = 0$ → a solution exists; the general solution: $x_1 = 1 - 2t$ , $x_2 = t$ , $x_3 = t$ (infinitely many solutions).",
         "Check in the original equations: $x_1 + x_2 + x_3 = (1 - 2t) + t + t = 1$ ✓; $x_1 + 2x_3 = 1 - 2t + 2t = 1$ ✓; $2x_1 + x_2 + 3x_3 = 2 - 4t + t + 3t = 2$ ✓.",
         "(b) Substitute $b = (1, 2, 4)$: $$\\left[\\begin{array}{ccc|c}1&1&1&1\\\\1&0&2&2\\\\2&1&3&4\\end{array}\\right]$$ $R_2 \\to R_2 - R_1$ gives $[0,\\ -1,\\ 1 \\mid 1]$ and $R_3 \\to R_3 - 2R_1$ gives $[0,\\ -1,\\ 1 \\mid 2]$.",
-        "$R_2 \\to -R_2$ gives $[0,\\ 1,\\ -1 \\mid -1]$; then $R_3 \\to R_3 + R_2$ gives $[0,\\ 0,\\ 0 \\mid 2 - 1] = [0,\\ 0,\\ 0 \\mid 1]$, i.e. $0 = 1$. The system has no solution, which agrees with $b_3 - b_2 - b_1 = 4 - 2 - 1 = 1 \\neq 0$."
-      ]
+        "$R_2 \\to -R_2$ gives $[0,\\ 1,\\ -1 \\mid -1]$; then $R_3 \\to R_3 + R_2$ gives $[0,\\ 0,\\ 0 \\mid 2 - 1] = [0,\\ 0,\\ 0 \\mid 1]$, i.e. $0 = 1$. The system has no solution, which agrees with $b_3 - b_2 - b_1 = 4 - 2 - 1 = 1 \\neq 0$.",
+        "(b) $4 - 2 - 1 = 1 \\neq 0$ → no solution (Inconsistent)."
+      ],
+      "e": "The condition $b_3 - b_2 - b_1 = 0$ comes from the zero row produced during elimination; any $b$ that violates it makes the last row $0 = \\text{nonzero}$."
     },
     {
       "id": "la2_0012",
       "q": "Find the condition that $b_1, b_2, b_3$ must satisfy for the following system to have a solution, then determine which of the following vectors $(b_1, b_2, b_3)$ makes the system Consistent: $(1, 1, 3)$ and $(1, 1, 2)$. $$\\begin{aligned} x + y + z &= b_1 \\\\ 2x + y + 3z &= b_2 \\\\ 4x + 3y + 5z &= b_3 \\end{aligned}$$",
       "t": ["1", "medium"],
       "a": [
-        "The condition: $b_3 - 2b_1 - b_2 = 0$.",
-        "The vector $(1, 1, 3)$: $3 - 2 - 1 = 0$ → the system is Consistent.",
-        "The vector $(1, 1, 2)$: $2 - 2 - 1 = -1 \\neq 0$ → the system is Inconsistent."
-      ],
-      "e": [
         "Augmented matrix: $$\\left[\\begin{array}{ccc|c}1&1&1&b_1\\\\2&1&3&b_2\\\\4&3&5&b_3\\end{array}\\right]$$",
         "Clear below the leading 1: $R_2 \\to R_2 - 2R_1$ gives $[0,\\ -1,\\ 1 \\mid b_2 - 2b_1]$, and $R_3 \\to R_3 - 4R_1$ gives $[0,\\ 3-4,\\ 5-4 \\mid b_3 - 4b_1] = [0,\\ -1,\\ 1 \\mid b_3 - 4b_1]$: $$\\left[\\begin{array}{ccc|c}1&1&1&b_1\\\\0&-1&1&b_2-2b_1\\\\0&-1&1&b_3-4b_1\\end{array}\\right]$$",
         "$R_2 \\to -R_2$ gives $[0,\\ 1,\\ -1 \\mid 2b_1 - b_2]$. Then $R_3 \\to R_3 + R_2$ gives $[0,\\ 0,\\ 0 \\mid b_3 - 4b_1 + 2b_1 - b_2] = [0,\\ 0,\\ 0 \\mid b_3 - 2b_1 - b_2]$.",
         "The last row says $0 = b_3 - 2b_1 - b_2$, so a solution exists only when $b_3 - 2b_1 - b_2 = 0$.",
         "Test $(1, 1, 3)$: $3 - 2(1) - 1 = 0$, so the condition holds and the system is consistent. Test $(1, 1, 2)$: $2 - 2(1) - 1 = -1 \\neq 0$, so the last row is $0 = -1$ and the system is inconsistent."
-      ]
+      ],
+      "e": "Same method as in the earlier consistency-condition questions: reduce, then read the constant of the zero row."
     },
     {
       "id": "la2_0013",
       "q": "Consider the system: $$\\begin{aligned} x + 2y &= 3 \\\\ 2x + 4y &= c \\end{aligned}$$ (a) Find the value of $c$ for which the two lines coincide. (b) Find the values of $c$ for which the two lines are parallel. (c) Can the two lines intersect at exactly one point? Explain using row reduction.",
       "t": ["1", "medium"],
       "a": [
-        "(a) $c = 6$ → the lines coincide → infinitely many solutions.",
-        "(b) $c \\neq 6$ → parallel → no solution.",
-        "(c) No; because the reduction always gives a zero-coefficient row $[0\\ 0 \\mid c - 6]$ for any value of $c$, so there is never a unique solution."
-      ],
-      "e": [
         "Augmented matrix: $$\\left[\\begin{array}{cc|c}1&2&3\\\\2&4&c\\end{array}\\right]$$",
         "$R_2 \\to R_2 - 2R_1$ gives $[0,\\ 4-4 \\mid c - 6] = [0,\\ 0 \\mid c - 6]$: $$\\left[\\begin{array}{cc|c}1&2&3\\\\0&0&c-6\\end{array}\\right]$$",
+        "(a) $c = 6$ → the lines coincide → infinitely many solutions.",
         "If $c = 6$ the last row is $[0\\ 0 \\mid 0]$, leaving one equation $x + 2y = 3$ with $y$ free: infinitely many solutions, so the lines coincide (the second equation is twice the first).",
+        "(b) $c \\neq 6$ → parallel → no solution.",
         "If $c \\neq 6$ the last row says $0 = c - 6 \\neq 0$, which is impossible: no solution, so the lines are parallel.",
+        "(c) No; because the reduction always gives a zero-coefficient row $[0\\ 0 \\mid c - 6]$ for any value of $c$, so there is never a unique solution.",
         "A unique solution would need a leading 1 in both columns, but the second row has zero coefficients for every value of $c$. Hence the lines can never meet at exactly one point."
-      ]
+      ],
+      "e": "After reduction, a row $[0\\ 0 \\mid 0]$ means the lines coincide, a row $[0\\ 0 \\mid \\text{nonzero}]$ means they are parallel, and no zero row means they meet at exactly one point."
     },
     {
       "id": "la2_0014",
       "q": "Find the values of $k$ for which the following system has: (1) a unique solution, (2) infinitely many solutions, (3) no solution. $$\\begin{aligned} x + y + z &= 2 \\\\ 2x + 3y + 2z &= 5 \\\\ 2x + 3y + (k^2 - 2)z &= k + 3 \\end{aligned}$$",
       "t": ["1", "hard"],
       "a": [
-        "Unique solution: $k \\neq 2$ and $k \\neq -2$.",
-        "Infinitely many solutions: $k = 2$.",
-        "No solution: $k = -2$."
-      ],
-      "e": [
         "Augmented matrix: $$\\left[\\begin{array}{ccc|c}1&1&1&2\\\\2&3&2&5\\\\2&3&k^2-2&k+3\\end{array}\\right]$$",
         "Clear below the leading 1: $R_2 \\to R_2 - 2R_1$ gives $[0,\\ 3-2,\\ 2-2 \\mid 5-4] = [0,\\ 1,\\ 0 \\mid 1]$, and $R_3 \\to R_3 - 2R_1$ gives $[0,\\ 1,\\ k^2-2-2 \\mid k+3-4] = [0,\\ 1,\\ k^2-4 \\mid k-1]$: $$\\left[\\begin{array}{ccc|c}1&1&1&2\\\\0&1&0&1\\\\0&1&k^2-4&k-1\\end{array}\\right]$$",
         "Row 2 already has a leading 1. Clear below it: $R_3 \\to R_3 - R_2$ gives $[0,\\ 0,\\ k^2-4 \\mid k-2]$: $$\\left[\\begin{array}{ccc|c}1&1&1&2\\\\0&1&0&1\\\\0&0&k^2-4&k-2\\end{array}\\right]$$",
         "The last row reads $(k^2 - 4)z = k - 2$, i.e. $(k-2)(k+2)z = k - 2$. Discuss the coefficient $k^2 - 4 = (k-2)(k+2)$, which vanishes at $k = 2$ and $k = -2$.",
+        "Unique solution: $k \\neq 2$ and $k \\neq -2$.",
         "Case $k \\neq 2$ and $k \\neq -2$: the coefficient is nonzero, so $z = \\frac{k-2}{k^2-4} = \\frac{1}{k+2}$, then $y = 1$ and $x = 2 - y - z = 1 - \\frac{1}{k+2}$. Every column has a leading 1: unique solution.",
+        "Infinitely many solutions: $k = 2$.",
         "Case $k = 2$: the last row becomes $[0\\ 0\\ 0 \\mid 0]$, so $z$ is free: infinitely many solutions ($y = 1$, $x = 1 - z$).",
+        "No solution: $k = -2$.",
         "Case $k = -2$: the last row becomes $[0\\ 0\\ 0 \\mid -4]$, i.e. $0 = -4$: no solution."
-      ]
+      ],
+      "e": "For problems with a parameter, reduce first, then study the last row: the coefficient and the constant decide between the three cases."
     },
     {
       "id": "la2_0015",
       "q": "In the following system (which is the system of Example 1 with the constant in the second equation changed to $c$): $$\\begin{aligned} x_1 - 2x_2 - 6x_3 &= 12 \\\\ 2x_1 + 4x_2 + 12x_3 &= c \\\\ x_1 - 4x_2 - 12x_3 &= 22 \\end{aligned}$$ find the value of $c$ that makes the system Consistent, then write the general solution in that case and verify it.",
       "t": ["1", "hard"],
       "a": [
-        "$c = -16$.",
-        "The general solution: $x_1 = 2$ , $x_2 = -5 - 3t$ , $x_3 = t$ where $t$ is free.",
-        "The system has infinitely many solutions."
-      ],
-      "e": [
         "Augmented matrix: $$\\left[\\begin{array}{ccc|c}1&-2&-6&12\\\\2&4&12&c\\\\1&-4&-12&22\\end{array}\\right]$$",
         "Clear below the leading 1: $R_2 \\to R_2 - 2R_1$ gives $[0,\\ 8,\\ 24 \\mid c - 24]$, and $R_3 \\to R_3 - R_1$ gives $[0,\\ -2,\\ -6 \\mid 10]$: $$\\left[\\begin{array}{ccc|c}1&-2&-6&12\\\\0&8&24&c-24\\\\0&-2&-6&10\\end{array}\\right]$$",
         "$R_2 \\to \\frac{1}{8}R_2$ gives $[0,\\ 1,\\ 3 \\mid \\frac{c-24}{8}]$. Then $R_3 \\to R_3 + 2R_2$ gives $[0,\\ 0,\\ 0 \\mid 10 + \\frac{c-24}{4}]$.",
         "The system is consistent exactly when the last constant is zero: $10 + \\frac{c-24}{4} = 0 \\Rightarrow c - 24 = -40 \\Rightarrow c = -16$. (As a check, the lecture's value $c = -17$ gives $10 - \\frac{41}{4} = -\\frac{1}{4} \\neq 0$, which is why that system had no solution.)",
+        "$c = -16$.",
         "With $c = -16$: row 2 becomes $[0,\\ 1,\\ 3 \\mid \\frac{-40}{8}] = [0,\\ 1,\\ 3 \\mid -5]$ and row 3 becomes $[0,\\ 0,\\ 0 \\mid 0]$. Clear above the leading 1 of row 2: $R_1 \\to R_1 + 2R_2$ gives $[1,\\ 0,\\ -6+6 \\mid 12 + 2(-5)] = [1,\\ 0,\\ 0 \\mid 2]$: $$\\left[\\begin{array}{ccc|c}1&0&0&2\\\\0&1&3&-5\\\\0&0&0&0\\end{array}\\right]$$",
         "Leading variables: $x_1, x_2$; free variable: $x_3 = t$. Row 1: $x_1 = 2$. Row 2: $x_2 + 3t = -5 \\Rightarrow x_2 = -5 - 3t$.",
+        "The general solution: $x_1 = 2$ , $x_2 = -5 - 3t$ , $x_3 = t$ where $t$ is free.",
+        "The system has infinitely many solutions.",
         "Check in the original equations with $c = -16$: $2 - 2(-5 - 3t) - 6t = 2 + 10 + 6t - 6t = 12$ ✓; $2(2) + 4(-5 - 3t) + 12t = 4 - 20 - 12t + 12t = -16$ ✓; $2 - 4(-5 - 3t) - 12t = 2 + 20 + 12t - 12t = 22$ ✓."
-      ]
+      ],
+      "e": "Compare with the original system of the lecture: only the constant $c$ changed, and it decides whether the zero row is consistent."
     }
   ]
 }

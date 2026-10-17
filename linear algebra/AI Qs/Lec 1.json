@@ -20,35 +20,27 @@
       "t": ["1", "easy"],
       "a": [
         "(a) Equation 1 is linear ($\\sqrt{5}$ is just a constant coefficient), and equations 2 and 3 are non-linear because $x$ is inside a logarithmic and an exponential function.",
-        "(b) The Coefficient Matrix: $$\\begin{bmatrix}1&2&0\\\\3&0&-1\\\\0&1&4\\end{bmatrix}$$",
-        "The Augmented Matrix: $$\\left[\\begin{array}{ccc|c}1&2&0&5\\\\3&0&-1&2\\\\0&1&4&0\\end{array}\\right]$$"
-      ],
-      "e": [
-        "Part (a): a linear equation has no roots, no powers other than 1, and no trigonometric, logarithmic or exponential functions of the variables. Equation 1 only has $\\sqrt{5}$ as a numeric coefficient, so it is linear; $\\ln x$ and $e^{x}$ break the third property.",
         "Part (b), step 1: keep the same order of unknowns $x_1, x_2, x_3$ in every equation and write a coefficient 0 for a missing unknown: $x_1 + 2x_2 + 0x_3 = 5$, $3x_1 + 0x_2 - x_3 = 2$, $0x_1 + x_2 + 4x_3 = 0$.",
         "Step 2: the coefficient matrix collects only the coefficients, one row per equation, giving the matrix with rows $(1,2,0)$, $(3,0,-1)$, $(0,1,4)$.",
-        "Step 3: the augmented matrix appends the constants column $(5,2,0)$ on the right, separated by a vertical bar."
-      ]
+        "(b) The Coefficient Matrix: $$\\begin{bmatrix}1&2&0\\\\3&0&-1\\\\0&1&4\\end{bmatrix}$$",
+        "Step 3: the augmented matrix appends the constants column $(5,2,0)$ on the right, separated by a vertical bar.",
+        "The Augmented Matrix: $$\\left[\\begin{array}{ccc|c}1&2&0&5\\\\3&0&-1&2\\\\0&1&4&0\\end{array}\\right]$$"
+      ],
+      "e": "Part (a): a linear equation has no roots, no powers other than 1, and no trigonometric, logarithmic or exponential functions of the variables. Equation 1 only has $\\sqrt{5}$ as a numeric coefficient, so it is linear; $\\ln x$ and $e^{x}$ break the third property."
     },
     {
       "id": "la1_0003",
       "q": "Determine which of the following matrices are in <b>Row-Echelon Form</b>, and if a matrix is not, state the rule it violates. Then, among the Row-Echelon matrices, determine which are in <b>Reduced Row-Echelon Form</b>. $$A=\\begin{bmatrix}1&2&0\\\\0&1&3\\\\0&0&1\\end{bmatrix}\\quad B=\\begin{bmatrix}0&1&2\\\\1&0&0\\\\0&0&0\\end{bmatrix}\\quad C=\\begin{bmatrix}2&1&0\\\\0&1&0\\\\0&0&0\\end{bmatrix}$$ $$D=\\begin{bmatrix}1&3&0&2\\\\0&0&1&4\\\\0&0&0&0\\end{bmatrix}\\quad E=\\begin{bmatrix}0&0&0\\\\1&2&3\\end{bmatrix}$$",
       "t": ["1", "medium"],
       "a": [
-        "A: Row-Echelon ✓ (every Leading 1 is to the right of the one above it), but it is not Reduced because nonzero numbers lie above the Leading 1s (such as the entry 2 in column 2 and the entry 3 in column 3).",
-        "B: not Row-Echelon: the Leading 1 in row 2 (column 1) is to the left of the Leading 1 in row 1 (column 2), which violates rule 3.",
-        "C: not Row-Echelon: the first nonzero entry in row 1 is 2, not 1, which violates rule 1.",
-        "D: Row-Echelon ✓ and also Reduced ✓ because the remaining entries of columns 1 and 3 (the Leading 1 columns) are all zeros.",
-        "E: not Row-Echelon: the zero row lies above a nonzero row, which violates rule 2."
-      ],
-      "e": [
-        "Rules recap: (1) the first nonzero entry of each nonzero row is a leading 1; (2) zero rows are at the bottom; (3) each leading 1 is to the right of the leading 1 above it. Reduced form additionally requires zeros above and below every leading 1.",
         "A: leading 1s are at positions $(1,1)$, $(2,2)$, $(3,3)$, a staircase moving right, so A is Row-Echelon. In column 2 the leading 1 is at $(2,2)$ but the entry $(1,2)=2\\neq 0$ lies above it, and in column 3 the entry $(2,3)=3\\neq 0$ lies above the leading 1 at $(3,3)$, so A is not Reduced.",
         "B: row 1 has its leading 1 in column 2, but row 2 has its leading 1 in column 1, which is to the left of the one above, so rule 3 fails.",
         "C: the first nonzero entry of row 1 is 2, not 1, so rule 1 fails.",
         "D: leading 1s at $(1,1)$ and $(2,3)$ move to the right and the zero row is at the bottom. Column 1 is $(1,0,0)$ and column 3 is $(0,1,0)$, so there are zeros above and below the leading 1s: D is Reduced Row-Echelon.",
-        "E: the zero row sits above a nonzero row, so rule 2 fails."
-      ]
+        "E: the zero row sits above a nonzero row, so rule 2 fails.",
+        "Summary: A and D are in Row-Echelon Form; only D is in Reduced Row-Echelon Form."
+      ],
+      "e": "Rules recap: (1) the first nonzero entry of each nonzero row is a leading 1; (2) zero rows are at the bottom; (3) each leading 1 is to the right of the leading 1 above it. Reduced form additionally requires zeros above and below every leading 1."
     },
     {
       "id": "la1_0004",
@@ -68,28 +60,20 @@
       "q": "Given the augmented matrix: $$\\left[\\begin{array}{ccc|c}0&3&6&9\\\\2&1&0&4\\end{array}\\right]$$ Apply the steps of Gaussian Elimination (stating the operation used in each step) to reach <b>Row-Echelon Form</b>.",
       "t": ["1", "easy"],
       "a": [
-        "Interchange the two rows to avoid the zero in the first column, then make each Leading entry equal to 1 by division.",
-        "Result: $$\\left[\\begin{array}{ccc|c}1&\\frac{1}{2}&0&2\\\\0&1&2&3\\end{array}\\right]$$"
-      ],
-      "e": [
         "Step 1: the first nonzero column is column 1, and its first entry is 0. We need a nonzero entry there, so we use operation 2 (interchange).",
         "Step 2: $R_1 \\leftrightarrow R_2$ gives $$\\left[\\begin{array}{ccc|c}2&1&0&4\\\\0&3&6&9\\end{array}\\right]$$",
         "Step 3: make the first entry 1 using operation 1: $R_1 \\to \\frac{1}{2}R_1$ gives $$\\left[\\begin{array}{ccc|c}1&\\frac{1}{2}&0&2\\\\0&3&6&9\\end{array}\\right]$$",
         "Step 4: the entry below the leading 1 is already 0, so no elimination is needed. Ignore row 1 and repeat on row 2: its first nonzero entry is 3 in column 2.",
         "Step 5: $R_2 \\to \\frac{1}{3}R_2$ gives $$\\left[\\begin{array}{ccc|c}1&\\frac{1}{2}&0&2\\\\0&1&2&3\\end{array}\\right]$$",
         "Result: the leading 1s are in columns 1 and 2, each to the right of the one above, so the matrix is in Row-Echelon Form."
-      ]
+      ],
+      "e": "If the first entry of the first nonzero column is 0, start with an interchange (operation 2); then create a leading 1 with operation 1 and the zeros below it with operation 3."
     },
     {
       "id": "la1_0006",
       "q": "Solve the following linear system using <b>Gaussian Elimination</b>: $$\\begin{aligned} 2x_2 + x_3 &= -8 \\\\ x_1 - 2x_2 - 3x_3 &= 0 \\\\ -x_1 + x_2 + 2x_3 &= 3 \\end{aligned}$$",
       "t": ["0", "medium"],
       "a": [
-        "Form the Augmented Matrix and then reduce it to Row-Echelon Form using elementary operations.",
-        "By back-substitution: $x_3 = 2$, then $x_2 = -5$, then $x_1 = -4$.",
-        "The solution: $(x_1, x_2, x_3) = (-4, -5, 2)$."
-      ],
-      "e": [
         "Write the augmented matrix (the coefficient of $x_1$ in the first equation is 0): $$\\left[\\begin{array}{ccc|c}0&2&1&-8\\\\1&-2&-3&0\\\\-1&1&2&3\\end{array}\\right]$$",
         "The first nonzero column is column 1 but its first entry is 0, so interchange $R_1 \\leftrightarrow R_2$: $$\\left[\\begin{array}{ccc|c}1&-2&-3&0\\\\0&2&1&-8\\\\-1&1&2&3\\end{array}\\right]$$",
         "Make the entry below the leading 1 zero: $R_3 \\to R_3 + R_1$ gives row 3 $= [-1+1,\\ 1-2,\\ 2-3 \\mid 3+0] = [0,\\ -1,\\ -1 \\mid 3]$: $$\\left[\\begin{array}{ccc|c}1&-2&-3&0\\\\0&2&1&-8\\\\0&-1&-1&3\\end{array}\\right]$$",
@@ -97,60 +81,56 @@
         "Clear the entry below this leading 1: $R_3 \\to R_3 + R_2$ gives $[0,\\ -1+1,\\ -1+\\frac{1}{2} \\mid 3-4] = [0,\\ 0,\\ -\\frac{1}{2} \\mid -1]$: $$\\left[\\begin{array}{ccc|c}1&-2&-3&0\\\\0&1&\\frac{1}{2}&-4\\\\0&0&-\\frac{1}{2}&-1\\end{array}\\right]$$",
         "Make the last leading entry 1: $R_3 \\to -2R_3$ gives $[0,\\ 0,\\ 1 \\mid 2]$. The matrix is now in Row-Echelon Form: $$\\left[\\begin{array}{ccc|c}1&-2&-3&0\\\\0&1&\\frac{1}{2}&-4\\\\0&0&1&2\\end{array}\\right]$$",
         "Back-substitution: row 3 gives $x_3 = 2$. Row 2: $x_2 + \\frac{1}{2}x_3 = -4 \\Rightarrow x_2 = -4 - 1 = -5$. Row 1: $x_1 - 2x_2 - 3x_3 = 0 \\Rightarrow x_1 = 2(-5) + 3(2) = -10 + 6 = -4$.",
+        "The solution: $(x_1, x_2, x_3) = (-4, -5, 2)$.",
         "Check in the original equations: $2(-5) + 2 = -8$ ✓; $-4 - 2(-5) - 3(2) = -4 + 10 - 6 = 0$ ✓; $-(-4) + (-5) + 2(2) = 4 - 5 + 4 = 3$ ✓."
-      ]
+      ],
+      "e": "Gaussian Elimination has two phases: forward elimination to Row-Echelon Form, then back-substitution. Always verify the final answer in the original equations, not in the reduced ones."
     },
     {
       "id": "la1_0007",
       "q": "A student reduced the system from the previous question ($2x_2 + x_3 = -8$ , $x_1 - 2x_2 - 3x_3 = 0$ , $-x_1 + x_2 + 2x_3 = 3$) to the matrix: $$\\left[\\begin{array}{ccc|c}1&-2&-3&0\\\\0&1&\\frac{1}{2}&-4\\\\0&0&1&2\\end{array}\\right]$$ and then wrote: $x_3 = 2$ , $x_2 = -4 + \\frac{1}{2}x_3 = -3$ , $x_1 = 2x_2 + 3x_3 = 0$. Find the mistake and correct it, then verify the correct solution by substituting it into the original system.",
       "t": ["1", "medium"],
       "a": [
-        "The mistake is in the second row's equation: $x_2 + \\frac{1}{2}x_3 = -4$ gives $x_2 = -4 - \\frac{1}{2}x_3$, not $-4 + \\frac{1}{2}x_3$ (a sign error when moving the term to the other side).",
-        "The correct solution: $x_3 = 2$ , $x_2 = -5$ , $x_1 = -4$.",
-        "The wrong solution $(0, -3, 2)$ does not satisfy the first equation: $2(-3) + 2 = -4 \\neq -8$."
-      ],
-      "e": [
         "Row 3 reads $x_3 = 2$, which is correct.",
         "Row 2 reads $x_2 + \\frac{1}{2}x_3 = -4$. Moving the term $\\frac{1}{2}x_3$ to the right side changes its sign: $x_2 = -4 - \\frac{1}{2}(2) = -4 - 1 = -5$. The student added the term instead of subtracting it.",
         "Row 1 reads $x_1 - 2x_2 - 3x_3 = 0$, so $x_1 = 2x_2 + 3x_3 = 2(-5) + 3(2) = -10 + 6 = -4$. The student's $x_1 = 0$ was consistent with his wrong $x_2$, so one sign error spoiled two unknowns.",
         "The student's solution $(0, -3, 2)$ fails the first original equation: $2x_2 + x_3 = 2(-3) + 2 = -4$, but it must equal $-8$.",
+        "The correct solution: $x_3 = 2$ , $x_2 = -5$ , $x_1 = -4$.",
         "Check of the corrected solution $(-4, -5, 2)$: equation 1: $2(-5) + 2 = -8$ ✓; equation 2: $-4 - 2(-5) - 3(2) = -4 + 10 - 6 = 0$ ✓; equation 3: $-(-4) + (-5) + 2(2) = 4 - 5 + 4 = 3$ ✓."
-      ]
+      ],
+      "e": "A typical mistake in back-substitution is forgetting to change the sign of a term when moving it to the other side of the equation; checking the answer in the original system catches it."
     },
     {
       "id": "la1_0008",
       "q": "Solve the following system using <b>Gaussian Elimination</b> (try to avoid fractions by choosing suitable operations): $$\\begin{aligned} x + y + z &= 6 \\\\ 2x - y + z &= 3 \\\\ x + 2y - z &= 2 \\end{aligned}$$",
       "t": ["1", "medium"],
       "a": [
-        "Reduce the augmented matrix to Row-Echelon Form, then back-substitute.",
-        "The solution: $x = 1$ , $y = 2$ , $z = 3$."
-      ],
-      "e": [
         "Augmented matrix: $$\\left[\\begin{array}{ccc|c}1&1&1&6\\\\2&-1&1&3\\\\1&2&-1&2\\end{array}\\right]$$",
         "Eliminate below the first leading 1: $R_2 \\to R_2 - 2R_1$ gives $[0,\\ -1-2,\\ 1-2 \\mid 3-12] = [0,\\ -3,\\ -1 \\mid -9]$, and $R_3 \\to R_3 - R_1$ gives $[0,\\ 2-1,\\ -1-1 \\mid 2-6] = [0,\\ 1,\\ -2 \\mid -4]$: $$\\left[\\begin{array}{ccc|c}1&1&1&6\\\\0&-3&-1&-9\\\\0&1&-2&-4\\end{array}\\right]$$",
         "To get a leading 1 in column 2 without creating fractions, interchange $R_2 \\leftrightarrow R_3$: $$\\left[\\begin{array}{ccc|c}1&1&1&6\\\\0&1&-2&-4\\\\0&-3&-1&-9\\end{array}\\right]$$",
         "Clear below the leading 1 of row 2: $R_3 \\to R_3 + 3R_2$ gives $[0,\\ -3+3,\\ -1+3(-2) \\mid -9+3(-4)] = [0,\\ 0,\\ -7 \\mid -21]$: $$\\left[\\begin{array}{ccc|c}1&1&1&6\\\\0&1&-2&-4\\\\0&0&-7&-21\\end{array}\\right]$$",
         "Make the last leading entry 1: $R_3 \\to -\\frac{1}{7}R_3$ gives $[0,\\ 0,\\ 1 \\mid 3]$: $$\\left[\\begin{array}{ccc|c}1&1&1&6\\\\0&1&-2&-4\\\\0&0&1&3\\end{array}\\right]$$ This is Row-Echelon Form.",
         "Back-substitution: $z = 3$. Row 2: $y - 2z = -4 \\Rightarrow y = -4 + 6 = 2$. Row 1: $x + y + z = 6 \\Rightarrow x = 6 - 2 - 3 = 1$.",
+        "The solution: $x = 1$ , $y = 2$ , $z = 3$.",
         "Check: $1 + 2 + 3 = 6$ ✓; $2(1) - 2 + 3 = 3$ ✓; $1 + 2(2) - 3 = 2$ ✓."
-      ]
+      ],
+      "e": "Interchanging rows (here $R_2 \\leftrightarrow R_3$) is a good way to obtain a leading 1 without introducing fractions."
     },
     {
       "id": "la1_0009",
       "q": "The following augmented matrix is in Row-Echelon Form: $$\\left[\\begin{array}{ccc|c}1&-2&4&5\\\\0&1&3&2\\\\0&0&1&1\\end{array}\\right]$$ (a) Find the solution by back-substitution (Gaussian method). (b) Continue the reduction to reach Reduced Row-Echelon Form (Gauss-Jordan method) and read the solution directly. (c) Compare the two results.",
       "t": ["1", "medium"],
       "a": [
-        "(a) $x_3 = 1$ , $x_2 = -1$ , $x_1 = -1$.",
-        "(b) The Reduced Row-Echelon Form: $$\\left[\\begin{array}{ccc|c}1&0&0&-1\\\\0&1&0&-1\\\\0&0&1&1\\end{array}\\right]$$",
-        "(c) The same solution in both cases; the difference is that Gauss-Jordan places zeros above and below each Leading 1, so the values are read directly without back-substitution."
-      ],
-      "e": [
         "Part (a), back-substitution: row 3 gives $x_3 = 1$. Row 2: $x_2 + 3x_3 = 2 \\Rightarrow x_2 = 2 - 3 = -1$. Row 1: $x_1 - 2x_2 + 4x_3 = 5 \\Rightarrow x_1 = 5 + 2(-1) - 4(1) = 5 - 2 - 4 = -1$.",
+        "(a) $x_3 = 1$ , $x_2 = -1$ , $x_1 = -1$.",
         "Part (b), clear the entries above the leading 1 of row 3: $R_2 \\to R_2 - 3R_3$ gives $[0,\\ 1,\\ 0 \\mid 2-3] = [0,\\ 1,\\ 0 \\mid -1]$, and $R_1 \\to R_1 - 4R_3$ gives $[1,\\ -2,\\ 0 \\mid 5-4] = [1,\\ -2,\\ 0 \\mid 1]$: $$\\left[\\begin{array}{ccc|c}1&-2&0&1\\\\0&1&0&-1\\\\0&0&1&1\\end{array}\\right]$$",
         "Clear the entry above the leading 1 of row 2: $R_1 \\to R_1 + 2R_2$ gives $[1,\\ -2+2,\\ 0 \\mid 1+2(-1)] = [1,\\ 0,\\ 0 \\mid -1]$: $$\\left[\\begin{array}{ccc|c}1&0&0&-1\\\\0&1&0&-1\\\\0&0&1&1\\end{array}\\right]$$",
+        "(b) The Reduced Row-Echelon Form: $$\\left[\\begin{array}{ccc|c}1&0&0&-1\\\\0&1&0&-1\\\\0&0&1&1\\end{array}\\right]$$",
         "Reading the matrix directly: $x_1 = -1$, $x_2 = -1$, $x_3 = 1$, the same as in part (a).",
+        "(c) The same solution in both cases; the difference is that Gauss-Jordan places zeros above and below each Leading 1, so the values are read directly without back-substitution.",
         "Check in row 1 of the original matrix: $-1 - 2(-1) + 4(1) = -1 + 2 + 4 = 5$ ✓, and row 2: $-1 + 3(1) = 2$ ✓."
-      ]
+      ],
+      "e": "Both methods always give the same solution; Gauss-Jordan simply moves the back-substitution work into extra row operations."
     },
     {
       "id": "la1_0010",
@@ -172,29 +152,22 @@
       "q": "Solve the following linear system using <b>Gauss-Jordan Elimination</b>: $$\\begin{aligned} x_1 + 2x_2 + 3x_3 &= 9 \\\\ 2x_1 - x_2 + x_3 &= 8 \\\\ 3x_1 - x_3 &= 3 \\end{aligned}$$",
       "t": ["0", "medium"],
       "a": [
-        "Reduce the augmented matrix to Reduced Row-Echelon Form.",
-        "The solution: $x_1 = 2$ , $x_2 = -1$ , $x_3 = 3$."
-      ],
-      "e": [
         "Augmented matrix (the third equation has no $x_2$, so its coefficient is 0): $$\\left[\\begin{array}{ccc|c}1&2&3&9\\\\2&-1&1&8\\\\3&0&-1&3\\end{array}\\right]$$",
         "Column 1 already has a leading 1 in row 1. Clear below it: $R_2 \\to R_2 - 2R_1$ gives $[0,\\ -1-4,\\ 1-6 \\mid 8-18] = [0,\\ -5,\\ -5 \\mid -10]$, and $R_3 \\to R_3 - 3R_1$ gives $[0,\\ 0-6,\\ -1-9 \\mid 3-27] = [0,\\ -6,\\ -10 \\mid -24]$: $$\\left[\\begin{array}{ccc|c}1&2&3&9\\\\0&-5&-5&-10\\\\0&-6&-10&-24\\end{array}\\right]$$",
         "Make the leading entry of row 2 equal to 1: $R_2 \\to -\\frac{1}{5}R_2$ gives $[0,\\ 1,\\ 1 \\mid 2]$: $$\\left[\\begin{array}{ccc|c}1&2&3&9\\\\0&1&1&2\\\\0&-6&-10&-24\\end{array}\\right]$$",
         "Clear above and below the leading 1 of row 2: $R_1 \\to R_1 - 2R_2$ gives $[1,\\ 0,\\ 3-2 \\mid 9-4] = [1,\\ 0,\\ 1 \\mid 5]$, and $R_3 \\to R_3 + 6R_2$ gives $[0,\\ 0,\\ -10+6 \\mid -24+12] = [0,\\ 0,\\ -4 \\mid -12]$: $$\\left[\\begin{array}{ccc|c}1&0&1&5\\\\0&1&1&2\\\\0&0&-4&-12\\end{array}\\right]$$",
         "Make the leading entry of row 3 equal to 1: $R_3 \\to -\\frac{1}{4}R_3$ gives $[0,\\ 0,\\ 1 \\mid 3]$: $$\\left[\\begin{array}{ccc|c}1&0&1&5\\\\0&1&1&2\\\\0&0&1&3\\end{array}\\right]$$",
         "Clear above the leading 1 of row 3: $R_1 \\to R_1 - R_3$ gives $[1,\\ 0,\\ 0 \\mid 5-3] = [1,\\ 0,\\ 0 \\mid 2]$, and $R_2 \\to R_2 - R_3$ gives $[0,\\ 1,\\ 0 \\mid 2-3] = [0,\\ 1,\\ 0 \\mid -1]$: $$\\left[\\begin{array}{ccc|c}1&0&0&2\\\\0&1&0&-1\\\\0&0&1&3\\end{array}\\right]$$",
-        "Reading the Reduced Row-Echelon Form: $x_1 = 2$, $x_2 = -1$, $x_3 = 3$.",
+        "The solution: $x_1 = 2$ , $x_2 = -1$ , $x_3 = 3$.",
         "Check: $2 + 2(-1) + 3(3) = 9$ ✓; $2(2) - (-1) + 3 = 8$ ✓; $3(2) - 3 = 3$ ✓."
-      ]
+      ],
+      "e": "In Gauss-Jordan, after creating each leading 1, clear both above and below it; the solution can then be read directly from the last column."
     },
     {
       "id": "la1_0012",
       "q": "Solve the following system using <b>Gauss-Jordan</b>: $$\\begin{aligned} 2y + 4z &= 2 \\\\ x + y + z &= 2 \\\\ 2x + y + 3z &= 6 \\end{aligned}$$",
       "t": ["1", "medium"],
       "a": [
-        "The first coefficient in the first equation is zero, so we need to interchange two rows at the start.",
-        "The solution: $x = 2$ , $y = -1$ , $z = 1$."
-      ],
-      "e": [
         "Augmented matrix (the first equation has no $x$, so its coefficient is 0): $$\\left[\\begin{array}{ccc|c}0&2&4&2\\\\1&1&1&2\\\\2&1&3&6\\end{array}\\right]$$",
         "The first entry of column 1 is 0, so interchange $R_1 \\leftrightarrow R_2$: $$\\left[\\begin{array}{ccc|c}1&1&1&2\\\\0&2&4&2\\\\2&1&3&6\\end{array}\\right]$$",
         "Clear below the leading 1: $R_3 \\to R_3 - 2R_1$ gives $[0,\\ 1-2,\\ 3-2 \\mid 6-4] = [0,\\ -1,\\ 1 \\mid 2]$: $$\\left[\\begin{array}{ccc|c}1&1&1&2\\\\0&2&4&2\\\\0&-1&1&2\\end{array}\\right]$$",
@@ -202,33 +175,31 @@
         "Clear above and below the leading 1 of row 2: $R_1 \\to R_1 - R_2$ gives $[1,\\ 0,\\ 1-2 \\mid 2-1] = [1,\\ 0,\\ -1 \\mid 1]$, and $R_3 \\to R_3 + R_2$ gives $[0,\\ 0,\\ 1+2 \\mid 2+1] = [0,\\ 0,\\ 3 \\mid 3]$: $$\\left[\\begin{array}{ccc|c}1&0&-1&1\\\\0&1&2&1\\\\0&0&3&3\\end{array}\\right]$$",
         "Make the leading entry of row 3 equal to 1: $R_3 \\to \\frac{1}{3}R_3$ gives $[0,\\ 0,\\ 1 \\mid 1]$.",
         "Clear above the leading 1 of row 3: $R_1 \\to R_1 + R_3$ gives $[1,\\ 0,\\ 0 \\mid 2]$, and $R_2 \\to R_2 - 2R_3$ gives $[0,\\ 1,\\ 0 \\mid 1-2] = [0,\\ 1,\\ 0 \\mid -1]$: $$\\left[\\begin{array}{ccc|c}1&0&0&2\\\\0&1&0&-1\\\\0&0&1&1\\end{array}\\right]$$",
+        "The solution: $x = 2$ , $y = -1$ , $z = 1$.",
         "Check: $2(-1) + 4(1) = 2$ ✓; $2 - 1 + 1 = 2$ ✓; $2(2) - 1 + 3(1) = 6$ ✓."
-      ]
+      ],
+      "e": "Whenever the coefficient of the first unknown in the first equation is 0, start by interchanging with a row that has a nonzero entry in that column."
     },
     {
       "id": "la1_0013",
       "q": "Solve the following system using <b>Gauss-Jordan</b> (be careful to write zeros for the missing variables): $$\\begin{aligned} x + y &= 3 \\\\ y + z &= 5 \\\\ x + z &= 4 \\end{aligned}$$",
       "t": ["1", "easy"],
       "a": [
-        "The solution: $x = 1$ , $y = 2$ , $z = 3$."
-      ],
-      "e": [
         "Augmented matrix, writing 0 for every missing variable: $$\\left[\\begin{array}{ccc|c}1&1&0&3\\\\0&1&1&5\\\\1&0&1&4\\end{array}\\right]$$",
         "Column 1 already has a leading 1 in row 1. Clear below it: $R_3 \\to R_3 - R_1$ gives $[0,\\ -1,\\ 1 \\mid 1]$: $$\\left[\\begin{array}{ccc|c}1&1&0&3\\\\0&1&1&5\\\\0&-1&1&1\\end{array}\\right]$$",
         "Column 2 already has a leading 1 in row 2. Clear above and below it: $R_1 \\to R_1 - R_2$ gives $[1,\\ 0,\\ -1 \\mid -2]$, and $R_3 \\to R_3 + R_2$ gives $[0,\\ 0,\\ 2 \\mid 6]$: $$\\left[\\begin{array}{ccc|c}1&0&-1&-2\\\\0&1&1&5\\\\0&0&2&6\\end{array}\\right]$$",
         "Make the leading entry of row 3 equal to 1: $R_3 \\to \\frac{1}{2}R_3$ gives $[0,\\ 0,\\ 1 \\mid 3]$.",
         "Clear above it: $R_1 \\to R_1 + R_3$ gives $[1,\\ 0,\\ 0 \\mid 1]$, and $R_2 \\to R_2 - R_3$ gives $[0,\\ 1,\\ 0 \\mid 2]$: $$\\left[\\begin{array}{ccc|c}1&0&0&1\\\\0&1&0&2\\\\0&0&1&3\\end{array}\\right]$$",
+        "The solution: $x = 1$ , $y = 2$ , $z = 3$.",
         "Check: $1 + 2 = 3$ ✓; $2 + 3 = 5$ ✓; $1 + 3 = 4$ ✓."
-      ]
+      ],
+      "e": "Write 0 for every variable that is missing from an equation so that the columns stay aligned with the unknowns $x, y, z$."
     },
     {
       "id": "la1_0014",
       "q": "Solve the following system using <b>Gauss-Jordan</b>: $$\\begin{aligned} 2x + y - z &= -3 \\\\ x + 3y + 2z &= 1 \\\\ 3x - y + z &= 8 \\end{aligned}$$",
       "t": ["1", "hard"],
       "a": [
-        "The solution: $x = 1$ , $y = -2$ , $z = 3$."
-      ],
-      "e": [
         "Augmented matrix: $$\\left[\\begin{array}{ccc|c}2&1&-1&-3\\\\1&3&2&1\\\\3&-1&1&8\\end{array}\\right]$$",
         "To obtain a leading 1 in the first column without fractions, interchange $R_1 \\leftrightarrow R_2$: $$\\left[\\begin{array}{ccc|c}1&3&2&1\\\\2&1&-1&-3\\\\3&-1&1&8\\end{array}\\right]$$",
         "Clear below the leading 1: $R_2 \\to R_2 - 2R_1$ gives $[0,\\ 1-6,\\ -1-4 \\mid -3-2] = [0,\\ -5,\\ -5 \\mid -5]$, and $R_3 \\to R_3 - 3R_1$ gives $[0,\\ -1-9,\\ 1-6 \\mid 8-3] = [0,\\ -10,\\ -5 \\mid 5]$: $$\\left[\\begin{array}{ccc|c}1&3&2&1\\\\0&-5&-5&-5\\\\0&-10&-5&5\\end{array}\\right]$$",
@@ -236,18 +207,16 @@
         "Clear above and below the leading 1 of row 2: $R_1 \\to R_1 - 3R_2$ gives $[1,\\ 0,\\ 2-3 \\mid 1-3] = [1,\\ 0,\\ -1 \\mid -2]$, and $R_3 \\to R_3 + 10R_2$ gives $[0,\\ 0,\\ -5+10 \\mid 5+10] = [0,\\ 0,\\ 5 \\mid 15]$: $$\\left[\\begin{array}{ccc|c}1&0&-1&-2\\\\0&1&1&1\\\\0&0&5&15\\end{array}\\right]$$",
         "Make the leading entry of row 3 equal to 1: $R_3 \\to \\frac{1}{5}R_3$ gives $[0,\\ 0,\\ 1 \\mid 3]$.",
         "Clear above it: $R_1 \\to R_1 + R_3$ gives $[1,\\ 0,\\ 0 \\mid -2+3] = [1,\\ 0,\\ 0 \\mid 1]$, and $R_2 \\to R_2 - R_3$ gives $[0,\\ 1,\\ 0 \\mid 1-3] = [0,\\ 1,\\ 0 \\mid -2]$: $$\\left[\\begin{array}{ccc|c}1&0&0&1\\\\0&1&0&-2\\\\0&0&1&3\\end{array}\\right]$$",
+        "The solution: $x = 1$ , $y = -2$ , $z = 3$.",
         "Check: $2(1) + (-2) - 3 = -3$ ✓; $1 + 3(-2) + 2(3) = 1 - 6 + 6 = 1$ ✓; $3(1) - (-2) + 3 = 8$ ✓."
-      ]
+      ],
+      "e": "Interchanging rows to bring a row with a leading coefficient of 1 to the top avoids fractions in the first step."
     },
     {
       "id": "la1_0015",
       "q": "Solve the following system using <b>Gauss-Jordan</b> instead of Gaussian: $$\\begin{aligned} 2x_2 + x_3 &= -8 \\\\ x_1 - 2x_2 - 3x_3 &= 0 \\\\ -x_1 + x_2 + 2x_3 &= 3 \\end{aligned}$$ Then compare the result with the Gaussian solution (back-substitution) and state which of the two methods required more row operations.",
       "t": ["1", "hard"],
       "a": [
-        "The solution: $(x_1, x_2, x_3) = (-4, -5, 2)$ — the same result as Gaussian.",
-        "Gauss-Jordan needed 3 extra operations (to zero out the entries above the Leading 1s) but did not need back-substitution, whereas Gaussian needed back-substitution after reaching Row-Echelon Form."
-      ],
-      "e": [
         "Augmented matrix: $$\\left[\\begin{array}{ccc|c}0&2&1&-8\\\\1&-2&-3&0\\\\-1&1&2&3\\end{array}\\right]$$",
         "Operation 1: $R_1 \\leftrightarrow R_2$: $$\\left[\\begin{array}{ccc|c}1&-2&-3&0\\\\0&2&1&-8\\\\-1&1&2&3\\end{array}\\right]$$",
         "Operation 2: $R_3 \\to R_3 + R_1$ gives $[0,\\ -1,\\ -1 \\mid 3]$: $$\\left[\\begin{array}{ccc|c}1&-2&-3&0\\\\0&2&1&-8\\\\0&-1&-1&3\\end{array}\\right]$$",
@@ -255,9 +224,10 @@
         "Operation 4 (clear above and below the leading 1 of row 2): $R_1 \\to R_1 + 2R_2$ gives $[1,\\ 0,\\ -3+1 \\mid 0-8] = [1,\\ 0,\\ -2 \\mid -8]$, and $R_3 \\to R_3 + R_2$ gives $[0,\\ 0,\\ -\\frac{1}{2} \\mid -1]$: $$\\left[\\begin{array}{ccc|c}1&0&-2&-8\\\\0&1&\\frac{1}{2}&-4\\\\0&0&-\\frac{1}{2}&-1\\end{array}\\right]$$",
         "Operation 5: $R_3 \\to -2R_3$ gives $[0,\\ 0,\\ 1 \\mid 2]$.",
         "Operation 6 (clear above the leading 1 of row 3): $R_1 \\to R_1 + 2R_3$ gives $[1,\\ 0,\\ 0 \\mid -8+4] = [1,\\ 0,\\ 0 \\mid -4]$, and $R_2 \\to R_2 - \\frac{1}{2}R_3$ gives $[0,\\ 1,\\ 0 \\mid -4-1] = [0,\\ 1,\\ 0 \\mid -5]$: $$\\left[\\begin{array}{ccc|c}1&0&0&-4\\\\0&1&0&-5\\\\0&0&1&2\\end{array}\\right]$$",
-        "Reading the result directly: $x_1 = -4$, $x_2 = -5$, $x_3 = 2$, identical to the Gaussian result.",
+        "The solution: $(x_1, x_2, x_3) = (-4, -5, 2)$ — the same result as Gaussian.",
         "Comparison: Gaussian needed 5 row operations (swap, $R_3 + R_1$, $\\frac{1}{2}R_2$, $R_3 + R_2$, $-2R_3$) followed by back-substitution. Gauss-Jordan needed 8 row operations, the 3 extra ones being $R_1 + 2R_2$, $R_1 + 2R_3$ and $R_2 - \\frac{1}{2}R_3$, but the solution is read with no back-substitution."
-      ]
+      ],
+      "e": "For hand calculation Gaussian Elimination is usually shorter; Gauss-Jordan is preferred when the reduced form itself is needed (for example when finding inverses or general solutions)."
     }
   ]
 }
