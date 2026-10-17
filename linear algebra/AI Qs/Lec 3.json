@@ -6,9 +6,9 @@
       "q": "Let the matrix $$M=\\begin{bmatrix}5&-1&0&7\\\\2&3&-4&8\\\\1&6&9&-2\\end{bmatrix}$$ (a) What is the size of the matrix $M$? (b) Find the entries $m_{23}$, $m_{14}$ and $m_{32}$. (c) What is the size of $M^T$?",
       "t": ["1", "easy"],
       "a": [
-        "(أ) الحجم $3 \\times 4$ (3 صفوف و4 أعمدة).",
-        "(ب) $m_{23} = -4$ ، $m_{14} = 7$ ، $m_{32} = 6$.",
-        "(ج) حجم $M^T$ هو $4 \\times 3$."
+        "(a) The size is $3 \\times 4$ (3 rows and 4 columns).",
+        "(b) $m_{23} = -4$ , $m_{14} = 7$ , $m_{32} = 6$.",
+        "(c) The size of $M^T$ is $4 \\times 3$."
       ],
       "e": "Size = rows × columns, so $M$ is $3 \\times 4$. The element $m_{ij}$ sits in row $i$ and column $j$: row 2, column 3 gives $-4$; row 1, column 4 gives $7$; row 3, column 2 gives $6$. The transpose of an $m \\times n$ matrix is $n \\times m$, so $M^T$ is $4 \\times 3$."
     },
@@ -17,8 +17,8 @@
       "q": "(a) Find the values of $x, y$ that make the two matrices equal: $$\\begin{bmatrix}x+y&5\\\\2&x-y\\end{bmatrix}=\\begin{bmatrix}7&5\\\\2&1\\end{bmatrix}$$ (b) Are the matrices $A=\\begin{bmatrix}\\frac{1}{2}&\\sqrt{9}\\\\0.25&2\\end{bmatrix}$ and $B=\\begin{bmatrix}0.5&3\\\\\\frac{1}{4}&2\\end{bmatrix}$ equal? Why?",
       "t": ["1", "easy"],
       "a": [
-        "(أ) $x = 4$ و $y = 3$.",
-        "(ب) نعم، متساويتان: الحجم واحد ($2 \\times 2$) والعناصر المتناظرة متساوية: $\\frac{1}{2} = 0.5$ ، $\\sqrt{9} = 3$ ، $0.25 = \\frac{1}{4}$ ، $2 = 2$."
+        "(a) $x = 4$ and $y = 3$.",
+        "(b) Yes, they are equal: the size is the same ($2 \\times 2$) and the corresponding entries are equal: $\\frac{1}{2} = 0.5$ , $\\sqrt{9} = 3$ , $0.25 = \\frac{1}{4}$ , $2 = 2$."
       ],
       "e": [
         "Two matrices are equal when they have the same size and all corresponding entries are equal. Both matrices in part (a) are $2 \\times 2$.",
@@ -32,9 +32,9 @@
       "q": "Let: $$A=\\begin{bmatrix}1&-2&3\\\\0&4&-1\\end{bmatrix}\\quad B=\\begin{bmatrix}5&0&-2\\\\3&1&6\\end{bmatrix}\\quad C=\\begin{bmatrix}1&2\\\\3&4\\\\5&6\\end{bmatrix}$$ (a) Find $A + B$, $A - B$ and $B - A$. (b) Are $A + C$ and $B - C$ defined? Why? (c) Is $A - B = B - A$?",
       "t": ["1", "easy"],
       "a": [
-        "(أ) $A + B = \\begin{bmatrix}6&-2&1\\\\3&5&5\\end{bmatrix}$ ، $A - B = \\begin{bmatrix}-4&-2&5\\\\-3&3&-7\\end{bmatrix}$ ، $B - A = \\begin{bmatrix}4&2&-5\\\\3&-3&7\\end{bmatrix}$.",
-        "(ب) كلتاهما غير معرّفة لأن $A$ و $B$ حجمهما $2 \\times 3$ بينما $C$ حجمها $3 \\times 2$ (الجمع والطرح يشترطان تساوي الحجم).",
-        "(ج) لا، $A - B \\neq B - A$ (كل منهما سالب الآخر)، بينما $A + B = B + A$."
+        "(a) $A + B = \\begin{bmatrix}6&-2&1\\\\3&5&5\\end{bmatrix}$ , $A - B = \\begin{bmatrix}-4&-2&5\\\\-3&3&-7\\end{bmatrix}$ , $B - A = \\begin{bmatrix}4&2&-5\\\\3&-3&7\\end{bmatrix}$.",
+        "(b) Both are undefined because $A$ and $B$ have size $2 \\times 3$ while $C$ has size $3 \\times 2$ (addition and subtraction require equal sizes).",
+        "(c) No, $A - B \\neq B - A$ (each is the negative of the other), whereas $A + B = B + A$."
       ],
       "e": [
         "Sizes: $A$ is $2 \\times 3$, $B$ is $2 \\times 3$, $C$ is $3 \\times 2$. Addition and subtraction are done entry by entry and need equal sizes.",
@@ -80,7 +80,7 @@
       "q": "Let $$A=\\begin{bmatrix}1&2&4\\\\2&6&0\\end{bmatrix}\\quad B=\\begin{bmatrix}4&1&4&3\\\\0&-1&3&1\\\\2&7&5&2\\end{bmatrix}$$ Determine the size of $AB$, then find it.",
       "t": ["0", "medium"],
       "a": [
-        "حجم $AB$ هو $2 \\times 4$.",
+        "The size of $AB$ is $2 \\times 4$.",
         "$$AB = \\begin{bmatrix}12&27&30&13\\\\8&-4&26&12\\end{bmatrix}$$"
       ],
       "e": [
@@ -96,10 +96,10 @@
       "q": "If the sizes of the matrices are: $A(4 \\times 5)$ , $B(4 \\times 5)$ , $C(5 \\times 2)$ , $D(4 \\times 2)$ , $E(5 \\times 4)$ , determine which of the following operations are defined (and if defined, what is the size of the result): $BA$ , $AC + D$ , $AE + B$ , $E(A + B)$.",
       "t": ["0", "medium"],
       "a": [
-        "$BA$: غير معرّف.",
-        "$AC + D$: معرّف وحجمه $4 \\times 2$.",
-        "$AE + B$: غير معرّف.",
-        "$E(A + B)$: معرّف وحجمه $5 \\times 5$."
+        "$BA$: undefined.",
+        "$AC + D$: defined, and its size is $4 \\times 2$.",
+        "$AE + B$: undefined.",
+        "$E(A + B)$: defined, and its size is $5 \\times 5$."
       ],
       "e": [
         "Rules: a product $XY$ is defined only if the number of columns of $X$ equals the number of rows of $Y$, and then its size is (rows of $X$) × (columns of $Y$). A sum is defined only if both matrices have the same size.",
@@ -114,8 +114,8 @@
       "q": "(a) Let $A = \\begin{bmatrix}1&2\\\\3&4\\end{bmatrix}$ and $B = \\begin{bmatrix}0&1\\\\-1&2\\end{bmatrix}$. Find $AB$ and $BA$ and show that $AB \\neq BA$. <br>(b) Let $C = \\begin{bmatrix}1&2&3\\end{bmatrix}$ (row) and $D = \\begin{bmatrix}4\\\\5\\\\6\\end{bmatrix}$ (column). Find $CD$ and $DC$ along with the size of each.",
       "t": ["1", "medium"],
       "a": [
-        "(أ) $AB = \\begin{bmatrix}-2&5\\\\-4&11\\end{bmatrix}$ و $BA = \\begin{bmatrix}3&4\\\\5&6\\end{bmatrix}$ ← إذن $AB \\neq BA$.",
-        "(ب) $CD = [32]$ وحجمه $1 \\times 1$ ، و $DC = \\begin{bmatrix}4&8&12\\\\5&10&15\\\\6&12&18\\end{bmatrix}$ وحجمه $3 \\times 3$."
+        "(a) $AB = \\begin{bmatrix}-2&5\\\\-4&11\\end{bmatrix}$ and $BA = \\begin{bmatrix}3&4\\\\5&6\\end{bmatrix}$ → therefore $AB \\neq BA$.",
+        "(b) $CD = [32]$ with size $1 \\times 1$ , and $DC = \\begin{bmatrix}4&8&12\\\\5&10&15\\\\6&12&18\\end{bmatrix}$ with size $3 \\times 3$."
       ],
       "e": [
         "$AB$, entry $(1,1)$: $1\\cdot0 + 2\\cdot(-1) = -2$. Entry $(1,2)$: $1\\cdot1 + 2\\cdot2 = 5$. Entry $(2,1)$: $3\\cdot0 + 4\\cdot(-1) = -4$. Entry $(2,2)$: $3\\cdot1 + 4\\cdot2 = 11$.",
@@ -131,8 +131,8 @@
       "q": "Let $A = \\begin{bmatrix}2&-1&3\\\\0&4&5\\end{bmatrix}$. (a) Choose the appropriate identity matrix (of the correct size) on the right and on the left and verify that $AI = A$ and $IA = A$. (b) Find $A + O$ and $A - O$ where $O$ is a zero matrix of the appropriate size.",
       "t": ["1", "medium"],
       "a": [
-        "(أ) نستخدم $I_3$ من اليمين و $I_2$ من اليسار؛ فينتج $AI_3 = A$ و $I_2 A = A$.",
-        "(ب) $A + O = A - O = A$ حيث $O$ مصفوفة صفرية حجمها $2 \\times 3$."
+        "(a) We use $I_3$ on the right and $I_2$ on the left; so $AI_3 = A$ and $I_2 A = A$.",
+        "(b) $A + O = A - O = A$ where $O$ is a zero matrix of size $2 \\times 3$."
       ],
       "e": [
         "$A$ is $2 \\times 3$. For $A I$ to be defined, the identity must have 3 rows, so $I = I_3$ and the product is $2 \\times 3$. For $I A$ to be defined, the identity must have 2 columns, so $I = I_2$.",
@@ -147,13 +147,13 @@
       "t": ["1", "easy"],
       "a": [
         "$P$: square + diagonal.",
-        "$Q$: square + diagonal + identity (هي $I_2$).",
-        "$R$: zero matrix (حجمها $2 \\times 3$ فهي ليست square).",
-        "$S$: column vector (حجمه $3 \\times 1$).",
-        "$T$: square لكنها ليست diagonal لأن العنصر $1$ خارج القطر الرئيسي لا يساوي صفرًا.",
-        "$U$: square + diagonal (عناصر القطر $1, 1, 0$) لكنها ليست identity لأن آخر عنصر في القطر يساوي 0.",
-        "$V$: row vector (حجمه $1 \\times 3$).",
-        "كل مصفوفة وحدة قطرية، لكن ليس كل مصفوفة قطرية مصفوفة وحدة (مثل $P$ و $U$)."
+        "$Q$: square + diagonal + identity (it is $I_2$).",
+        "$R$: zero matrix (its size is $2 \\times 3$, so it is not square).",
+        "$S$: column vector (its size is $3 \\times 1$).",
+        "$T$: square but not diagonal because the entry $1$ outside the main diagonal is not zero.",
+        "$U$: square + diagonal (diagonal entries $1, 1, 0$) but not identity because the last diagonal entry equals 0.",
+        "$V$: row vector (its size is $1 \\times 3$).",
+        "Every identity matrix is diagonal, but not every diagonal matrix is an identity matrix (such as $P$ and $U$)."
       ],
       "e": "A diagonal matrix is a square matrix whose entries off the main diagonal are all zero, while an identity matrix is a diagonal matrix whose diagonal entries are all 1; hence identity implies diagonal but not conversely ($P$ and $U$ are counterexamples). A zero matrix may have any size, and a vector is a matrix with a single row or a single column."
     },
@@ -162,8 +162,8 @@
       "q": "Let $M = \\begin{bmatrix}1&-2&0&4\\\\3&5&-1&2\\end{bmatrix}$. Find $M^T$ and its size, then verify that $(M^T)^T = M$ and that $(3M)^T = 3M^T$.",
       "t": ["1", "easy"],
       "a": [
-        "$$M^T = \\begin{bmatrix}1&3\\\\-2&5\\\\0&-1\\\\4&2\\end{bmatrix}$$ وحجمها $4 \\times 2$.",
-        "الخاصيتان $(M^T)^T = M$ و $(3M)^T = 3M^T$ متحققتان."
+        "$$M^T = \\begin{bmatrix}1&3\\\\-2&5\\\\0&-1\\\\4&2\\end{bmatrix}$$ and its size is $4 \\times 2$.",
+        "The properties $(M^T)^T = M$ and $(3M)^T = 3M^T$ both hold."
       ],
       "e": [
         "The transpose turns rows into columns: row 1 of $M$, $(1, -2, 0, 4)$, becomes column 1 of $M^T$, and row 2, $(3, 5, -1, 2)$, becomes column 2. Since $M$ is $2 \\times 4$, $M^T$ is $4 \\times 2$.",
@@ -177,9 +177,9 @@
       "q": "Let $A = \\begin{bmatrix}1&2\\\\0&3\\\\-1&4\\end{bmatrix}$ and $B = \\begin{bmatrix}2&0&1\\\\-1&3&2\\end{bmatrix}$. Verify that $(AB)^T = B^T A^T$. Then explain why $(AB)^T = A^T B^T$ cannot hold in this case.",
       "t": ["1", "hard"],
       "a": [
-        "$$AB = \\begin{bmatrix}0&6&5\\\\-3&9&6\\\\-6&12&7\\end{bmatrix}$$ ومنها $$(AB)^T = \\begin{bmatrix}0&-3&-6\\\\6&9&12\\\\5&6&7\\end{bmatrix}$$",
-        "$B^T A^T$ يعطي نفس المصفوفة، فالخاصية متحققة.",
-        "$A^T B^T$ حجمه $2 \\times 2$ بينما $(AB)^T$ حجمها $3 \\times 3$، فلا يمكن تساويهما؛ لذلك ترتيب الضرب المعكوس في القاعدة ضروري."
+        "$$AB = \\begin{bmatrix}0&6&5\\\\-3&9&6\\\\-6&12&7\\end{bmatrix}$$ and hence $$(AB)^T = \\begin{bmatrix}0&-3&-6\\\\6&9&12\\\\5&6&7\\end{bmatrix}$$",
+        "$B^T A^T$ gives the same matrix, so the property holds.",
+        "$A^T B^T$ has size $2 \\times 2$ while $(AB)^T$ has size $3 \\times 3$, so they cannot be equal; therefore the reversed order of multiplication in the rule is necessary."
       ],
       "e": [
         "Sizes: $A$ is $3 \\times 2$ and $B$ is $2 \\times 3$, so $AB$ is defined and has size $3 \\times 3$.",
@@ -200,8 +200,8 @@
       "q": "(a) Determine whether each of the two matrices is Symmetric: $$P=\\begin{bmatrix}1&7&-2\\\\7&0&3\\\\-2&3&5\\end{bmatrix}\\quad Q=\\begin{bmatrix}1&2&3\\\\2&4&5\\\\3&6&7\\end{bmatrix}$$ (b) Find the values of $x, y$ that make the following matrix symmetric: $$N=\\begin{bmatrix}2&x&5\\\\3&-1&y+1\\\\5&4&7\\end{bmatrix}$$",
       "t": ["1", "medium"],
       "a": [
-        "(أ) $P$ متماثلة ($P = P^T$) ، أما $Q$ فغير متماثلة لأن $q_{23} = 5 \\neq q_{32} = 6$.",
-        "(ب) $x = 3$ و $y = 3$."
+        "(a) $P$ is symmetric ($P = P^T$) , while $Q$ is not symmetric because $q_{23} = 5 \\neq q_{32} = 6$.",
+        "(b) $x = 3$ and $y = 3$."
       ],
       "e": [
         "A square matrix is symmetric when $A = A^T$, i.e. $a_{ij} = a_{ji}$ for every pair $(i, j)$ (the matrix mirrors itself across the main diagonal).",
@@ -216,8 +216,8 @@
       "q": "(a) Find $A^{-1}$ for the matrix $A = \\begin{bmatrix}2&5\\\\1&3\\end{bmatrix}$ using the formula, then verify by multiplication that $AA^{-1} = I$. <br>(b) Does the matrix $B = \\begin{bmatrix}4&-2\\\\6&-3\\end{bmatrix}$ have an inverse? Why?",
       "t": ["1", "easy"],
       "a": [
-        "(أ) $$A^{-1} = \\begin{bmatrix}3&-5\\\\-1&2\\end{bmatrix}$$",
-        "(ب) لا؛ لأن $ad - bc = 4(-3) - (-2)(6) = 0$ ، إذن $B$ Singular."
+        "(a) $$A^{-1} = \\begin{bmatrix}3&-5\\\\-1&2\\end{bmatrix}$$",
+        "(b) No; because $ad - bc = 4(-3) - (-2)(6) = 0$ , so $B$ is Singular."
       ],
       "e": [
         "For $A = \\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}$ the inverse is $A^{-1} = \\frac{1}{ad - bc}\\begin{bmatrix}d&-b\\\\-c&a\\end{bmatrix}$, provided $ad - bc \\neq 0$.",
@@ -231,8 +231,8 @@
       "q": "Let $A = \\begin{bmatrix}k&3\\\\2&k+1\\end{bmatrix}$. (a) Find the values of $k$ for which $A$ has no inverse. (b) Find $A^{-1}$ when $k = 0$ and verify it.",
       "t": ["1", "medium"],
       "a": [
-        "(أ) $k = 2$ أو $k = -3$.",
-        "(ب) عند $k = 0$: $$A^{-1} = \\begin{bmatrix}-\\frac{1}{6}&\\frac{1}{2}\\\\\\frac{1}{3}&0\\end{bmatrix}$$"
+        "(a) $k = 2$ or $k = -3$.",
+        "(b) At $k = 0$: $$A^{-1} = \\begin{bmatrix}-\\frac{1}{6}&\\frac{1}{2}\\\\\\frac{1}{3}&0\\end{bmatrix}$$"
       ],
       "e": [
         "A $2 \\times 2$ matrix has no inverse exactly when $ad - bc = 0$. Here $a = k$, $b = 3$, $c = 2$, $d = k + 1$, so $ad - bc = k(k+1) - 3\\cdot2 = k^2 + k - 6$.",
@@ -265,7 +265,7 @@
       "q": "Show that the following matrix has no inverse (Singular) using the reduction $[A \\mid I]$: $$A=\\begin{bmatrix}1&6&4\\\\2&4&-1\\\\-1&2&5\\end{bmatrix}$$",
       "t": ["0", "medium"],
       "a": [
-        "أثناء الاختزال يظهر في النصف الأيسر صف أصفار بالكامل: $[0\\ 0\\ 0 \\mid -1\\ 1\\ 1]$ ، لذلك لا يمكن الوصول إلى $I$ والمصفوفة <b>غير قابلة للعكس</b>."
+        "During the reduction, a row of all zeros appears in the left half: $[0\\ 0\\ 0 \\mid -1\\ 1\\ 1]$ , so $I$ cannot be reached and the matrix is <b>not invertible</b>."
       ],
       "e": [
         "Form $[A \\mid I]$: $$\\left[\\begin{array}{ccc|ccc}1&6&4&1&0&0\\\\2&4&-1&0&1&0\\\\-1&2&5&0&0&1\\end{array}\\right]$$",
@@ -297,10 +297,10 @@
       "q": "Let $A = \\begin{bmatrix}1&2\\\\1&3\\end{bmatrix}$ and $B = \\begin{bmatrix}1&4\\\\2&7\\end{bmatrix}$ (both are invertible). (a) Find $A^{-1}$ and $B^{-1}$ using the formula. (b) Find $AB$ and then find $(AB)^{-1}$ directly using the formula. (c) Verify that $(AB)^{-1} = B^{-1}A^{-1}$ and that $A^{-1}B^{-1}$ is not equal to it. (d) Verify that $(A^{-1})^T = (A^T)^{-1}$.",
       "t": ["1", "hard"],
       "a": [
-        "(أ) $A^{-1} = \\begin{bmatrix}3&-2\\\\-1&1\\end{bmatrix}$ ، $B^{-1} = \\begin{bmatrix}-7&4\\\\2&-1\\end{bmatrix}$.",
-        "(ب) $AB = \\begin{bmatrix}5&18\\\\7&25\\end{bmatrix}$ و $(AB)^{-1} = \\begin{bmatrix}-25&18\\\\7&-5\\end{bmatrix}$.",
-        "(ج) $B^{-1}A^{-1} = (AB)^{-1}$ ، بينما $A^{-1}B^{-1} = \\begin{bmatrix}-25&14\\\\9&-5\\end{bmatrix} \\neq (AB)^{-1}$.",
-        "(د) $(A^{-1})^T = (A^T)^{-1} = \\begin{bmatrix}3&-1\\\\-2&1\\end{bmatrix}$."
+        "(a) $A^{-1} = \\begin{bmatrix}3&-2\\\\-1&1\\end{bmatrix}$ , $B^{-1} = \\begin{bmatrix}-7&4\\\\2&-1\\end{bmatrix}$.",
+        "(b) $AB = \\begin{bmatrix}5&18\\\\7&25\\end{bmatrix}$ and $(AB)^{-1} = \\begin{bmatrix}-25&18\\\\7&-5\\end{bmatrix}$.",
+        "(c) $B^{-1}A^{-1} = (AB)^{-1}$ , whereas $A^{-1}B^{-1} = \\begin{bmatrix}-25&14\\\\9&-5\\end{bmatrix} \\neq (AB)^{-1}$.",
+        "(d) $(A^{-1})^T = (A^T)^{-1} = \\begin{bmatrix}3&-1\\\\-2&1\\end{bmatrix}$."
       ],
       "e": [
         "Part (a): $\\det A = ad - bc = 1\\cdot3 - 2\\cdot1 = 1$, so $A^{-1} = \\frac{1}{1}\\begin{bmatrix}3&-2\\\\-1&1\\end{bmatrix}$. For $B$: $ad - bc = 1\\cdot7 - 4\\cdot2 = -1$, so $B^{-1} = \\frac{1}{-1}\\begin{bmatrix}7&-4\\\\-2&1\\end{bmatrix} = \\begin{bmatrix}-7&4\\\\2&-1\\end{bmatrix}$.",
@@ -316,11 +316,11 @@
       "q": "(A and B are square matrices of the same size) Determine whether each statement is true, with justification: <br>(1) If $A$ is not invertible, then $AB$ is not invertible. <br>(2) If $AB$ is not invertible, then $A$ or $B$ is not invertible. <br>(3) $(kA)^{-1} = kA^{-1}$ for any nonzero constant $k$. <br>(4) If $A$ is invertible, then $A^T$ is invertible. <br>(5) $AB = BA$ always.",
       "t": ["1", "medium"],
       "a": [
-        "(1) صح: حسب خواص المعكوس، إذا كانت إحدى المصفوفتين غير قابلة للعكس فإن حاصل الضرب غير قابل للعكس.",
-        "(2) صح: هي الخاصية المقابلة (إذا كان الضرب $AB$ غير قابل للعكس فإحدى المصفوفتين على الأقل غير قابلة للعكس).",
-        "(3) خطأ: الصحيح $(kA)^{-1} = \\frac{1}{k}A^{-1}$.",
-        "(4) صح، وفي هذه الحالة $(A^{-1})^T = (A^T)^{-1}$.",
-        "(5) خطأ: ضرب المصفوفات ليس إبداليًا بشكل عام."
+        "(1) True: by the properties of the inverse, if one of the two matrices is not invertible then the product is not invertible.",
+        "(2) True: it is the corresponding property (if the product $AB$ is not invertible, then at least one of the two matrices is not invertible).",
+        "(3) False: the correct statement is $(kA)^{-1} = \\frac{1}{k}A^{-1}$.",
+        "(4) True, and in this case $(A^{-1})^T = (A^T)^{-1}$.",
+        "(5) False: matrix multiplication is not commutative in general."
       ],
       "e": [
         "Statements (1) and (2) restate the lecture's property of products: if $A$ or $B$ is not invertible then $AB$ is not invertible, and if $AB$ is not invertible then $A$ or $B$ is not invertible.",

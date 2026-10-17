@@ -6,9 +6,9 @@
       "q": "For each of the following systems (two equations in two unknowns): determine the geometric relationship between the lines $L_1$ and $L_2$, the number of solutions, and the type of the system (Consistent / Inconsistent): <br>(a) $2x + y = 4$ , $x + y = 2$ <br>(b) $2x + 2y = 4$ , $x + y = 2$ <br>(c) $x + y = 4$ , $2x + 2y = 6$",
       "t": ["0", "easy"],
       "a": [
-        "(أ) المستقيمان يتقاطعان في نقطة واحدة $(2, 0)$ ← حل وحيد ← Consistent.",
-        "(ب) المستقيمان ينطبقان (Coincide) ← عدد لانهائي من الحلول ← Consistent.",
-        "(ج) المستقيمان متوازيان ← لا يوجد حل ← Inconsistent."
+        "(a) The lines intersect at a single point $(2, 0)$ → unique solution → Consistent.",
+        "(b) The lines coincide (Coincide) → infinitely many solutions → Consistent.",
+        "(c) The lines are parallel → no solution → Inconsistent."
       ],
       "e": [
         "System (a): augmented matrix $$\\left[\\begin{array}{cc|c}2&1&4\\\\1&1&2\\end{array}\\right]$$ Interchange $R_1 \\leftrightarrow R_2$: $$\\left[\\begin{array}{cc|c}1&1&2\\\\2&1&4\\end{array}\\right]$$ Then $R_2 \\to R_2 - 2R_1$ gives $[0,\\ -1 \\mid 0]$, then $R_2 \\to -R_2$ gives $[0,\\ 1 \\mid 0]$, then $R_1 \\to R_1 - R_2$ gives $[1,\\ 0 \\mid 2]$. So $x = 2$, $y = 0$: the lines meet at exactly one point. Check: $2(2) + 0 = 4$ ✓ and $2 + 0 = 2$ ✓.",
@@ -22,11 +22,11 @@
       "q": "Determine whether each statement is true, with justification: <br>(1) A Consistent system must have a unique solution. <br>(2) A linear system can have exactly two solutions. <br>(3) An Inconsistent system is a system that has no solution. <br>(4) If a row of the form $\\left[\\begin{array}{ccc|c}0&0&0&5\\end{array}\\right]$ appears in the augmented matrix, the system has no solution. <br>(5) The matrix $\\left[\\begin{array}{cc|c}1&1&3\\\\0&0&0\\end{array}\\right]$ represents a system with a unique solution.",
       "t": ["1", "easy"],
       "a": [
-        "(1) خطأ: الـ Consistent هو نظام له حل واحد على الأقل (حل وحيد أو عدد لانهائي من الحلول).",
-        "(2) خطأ: الاحتمالات ثلاثة فقط: حل وحيد، أو عدد لانهائي من الحلول، أو لا يوجد حل.",
-        "(3) صح.",
-        "(4) صح: الصف يعني $0 = 5$ وهذا مستحيل.",
-        "(5) خطأ: الصف $[0\\ 0 \\mid 0]$ يترك معادلة واحدة $x + y = 3$ فيها متغير حر، فيوجد عدد لانهائي من الحلول."
+        "(1) False: a Consistent system has at least one solution (a unique solution or infinitely many solutions).",
+        "(2) False: there are only three possibilities: a unique solution, infinitely many solutions, or no solution.",
+        "(3) True.",
+        "(4) True: the row means $0 = 5$, which is impossible.",
+        "(5) False: the row $[0\\ 0 \\mid 0]$ leaves a single equation $x + y = 3$ with a free variable, so there are infinitely many solutions."
       ],
       "e": "A row $[0\\ 0\\ \\dots \\mid c]$ with $c \\neq 0$ says $0 = c$, which is impossible, so the system is inconsistent. A row $[0\\ 0\\ \\dots \\mid 0]$ only removes an equation, and in (5) the single remaining equation $x + y = 3$ has one leading variable ($x$) and one free variable ($y$), giving infinitely many solutions."
     },
@@ -35,9 +35,9 @@
       "q": "The following matrices are the augmented matrices of three systems after being reduced to Row-Echelon Form. For each one, determine the type of the system, and if it has a solution, find it (or write the general solution): $$M_1=\\left[\\begin{array}{ccc|c}1&2&0&4\\\\0&1&3&5\\\\0&0&1&2\\end{array}\\right]$$ $$M_2=\\left[\\begin{array}{ccc|c}1&-1&2&3\\\\0&1&1&2\\\\0&0&0&0\\end{array}\\right]$$ $$M_3=\\left[\\begin{array}{ccc|c}1&2&-1&3\\\\0&1&4&1\\\\0&0&0&-5\\end{array}\\right]$$",
       "t": ["1", "medium"],
       "a": [
-        "$M_1$: حل وحيد: $(x_1, x_2, x_3) = (6, -1, 2)$.",
-        "$M_2$: عدد لانهائي من الحلول: $x_3 = t$ (حر) ، $x_2 = 2 - t$ ، $x_1 = 5 - 3t$.",
-        "$M_3$: لا يوجد حل (Inconsistent) لأن الصف الأخير يعني $0 = -5$."
+        "$M_1$: unique solution: $(x_1, x_2, x_3) = (6, -1, 2)$.",
+        "$M_2$: infinitely many solutions: $x_3 = t$ (free) , $x_2 = 2 - t$ , $x_1 = 5 - 3t$.",
+        "$M_3$: no solution (Inconsistent) because the last row means $0 = -5$."
       ],
       "e": [
         "$M_1$: no row of the form $[0\\ 0\\ 0 \\mid c]$ and every column has a leading 1, so there is a unique solution. Back-substitution: row 3 gives $x_3 = 2$; row 2: $x_2 + 3x_3 = 5 \\Rightarrow x_2 = 5 - 6 = -1$; row 1: $x_1 + 2x_2 = 4 \\Rightarrow x_1 = 4 + 2 = 6$.",
@@ -51,9 +51,9 @@
       "q": "The following matrix is the Reduced Row-Echelon Form of a system in the unknowns $x, y, z, w$: $$\\left[\\begin{array}{cccc|c}1&0&-2&0&3\\\\0&1&1&0&-1\\\\0&0&0&1&4\\end{array}\\right]$$ (a) Identify the Leading variables and the Free variables. (b) Write the general solution. (c) Find two different particular solutions and verify one of them against the matrix.",
       "t": ["1", "easy"],
       "a": [
-        "(أ) Leading variables: $x, y, w$. Free variable: $z$.",
-        "(ب) الحل العام: $x = 3 + 2z$ ، $y = -1 - z$ ، $w = 4$ ، و $z$ حر.",
-        "(ج) عند $z = 0$: $(3, -1, 0, 4)$ ، وعند $z = 1$: $(5, -2, 1, 4)$."
+        "(a) Leading variables: $x, y, w$. Free variable: $z$.",
+        "(b) The general solution: $x = 3 + 2z$ , $y = -1 - z$ , $w = 4$ , and $z$ is free.",
+        "(c) At $z = 0$: $(3, -1, 0, 4)$ , and at $z = 1$: $(5, -2, 1, 4)$."
       ],
       "e": [
         "The leading 1s are in columns 1, 2 and 4, so $x, y, w$ are leading variables. Column 3 has no leading 1, so $z$ is free; set $z = t$.",
@@ -67,8 +67,8 @@
       "q": "Find the mistake in each conclusion and correct it: <br>(a) After reducing a system, a student reached $$\\left[\\begin{array}{ccc|c}1&-2&3&4\\\\0&1&-1&2\\\\0&0&0&3\\end{array}\\right]$$ and said: the last row has zero coefficients, so the system has infinitely many solutions. <br>(b) In another system, a student reached $$\\left[\\begin{array}{cc|c}1&0&3\\\\0&1&2\\\\0&0&0\\end{array}\\right]$$ and said: there is a row $[0\\ 0 \\mid 0]$, so the system has infinitely many solutions.",
       "t": ["1", "medium"],
       "a": [
-        "(أ) الخطأ: الصف الأخير يعني $0 = 3$ وهذا مستحيل، فالنظام <b>Inconsistent</b> ولا يوجد حل (وليس عدد لانهائي).",
-        "(ب) الخطأ: وجود الصف $[0\\ 0 \\mid 0]$ لا يكفي؛ العمودان 1 و2 فيهما Leading 1 فلا يوجد متغير حر، لذلك الحل وحيد: $x = 3$ ، $y = 2$."
+        "(a) The mistake: the last row means $0 = 3$, which is impossible, so the system is <b>Inconsistent</b> and has no solution (not infinitely many).",
+        "(b) The mistake: the presence of a row $[0\\ 0 \\mid 0]$ is not enough; columns 1 and 2 both have a Leading 1, so there is no free variable, hence the solution is unique: $x = 3$ , $y = 2$."
       ],
       "e": [
         "(a) The last row $[0\\ 0\\ 0 \\mid 3]$ stands for $0x_1 + 0x_2 + 0x_3 = 3$, i.e. $0 = 3$, which can never hold. A row of this form (zero coefficients, nonzero constant) means no solution, whatever the other rows say.",
@@ -81,8 +81,8 @@
       "q": "Solve the following system using <b>Gaussian Elimination</b> and determine its type: $$\\begin{aligned} x_1 - 2x_2 - 6x_3 &= 12 \\\\ 2x_1 + 4x_2 + 12x_3 &= -17 \\\\ x_1 - 4x_2 - 12x_3 &= 22 \\end{aligned}$$",
       "t": ["0", "medium"],
       "a": [
-        "النظام <b>Inconsistent</b>: لا يوجد حل.",
-        "الصف الأخير بعد الاختزال: $\\left[\\begin{array}{ccc|c}0&0&0&-\\frac{1}{4}\\end{array}\\right]$ أي $0 = -\\frac{1}{4}$."
+        "The system is <b>Inconsistent</b>: no solution.",
+        "The last row after reduction: $\\left[\\begin{array}{ccc|c}0&0&0&-\\frac{1}{4}\\end{array}\\right]$, i.e. $0 = -\\frac{1}{4}$."
       ],
       "e": [
         "Augmented matrix: $$\\left[\\begin{array}{ccc|c}1&-2&-6&12\\\\2&4&12&-17\\\\1&-4&-12&22\\end{array}\\right]$$",
@@ -97,8 +97,8 @@
       "q": "Solve the following system using Gaussian Elimination and determine its type, then explain the reason for the result: $$\\begin{aligned} x + 2y + 3z &= 4 \\\\ 2x + 5y + 7z &= 9 \\\\ 3x + 7y + 10z &= 14 \\end{aligned}$$",
       "t": ["1", "medium"],
       "a": [
-        "النظام Inconsistent: لا يوجد حل.",
-        "السبب: الطرف الأيسر للمعادلة الثالثة $3x + 7y + 10z$ يساوي مجموع الطرفين الأيسرين للمعادلتين الأولى والثانية، لكن مجموع الطرفين الأيمنين $4 + 9 = 13$ وليس $14$."
+        "The system is Inconsistent: no solution.",
+        "The reason: the left side of the third equation $3x + 7y + 10z$ equals the sum of the left sides of the first and second equations, but the sum of the right sides is $4 + 9 = 13$, not $14$."
       ],
       "e": [
         "Augmented matrix: $$\\left[\\begin{array}{ccc|c}1&2&3&4\\\\2&5&7&9\\\\3&7&10&14\\end{array}\\right]$$",
@@ -113,10 +113,10 @@
       "q": "Solve the following system using <b>Gauss-Jordan</b>, then identify the Leading and Free variables and write the general solution and two particular solutions: $$\\begin{aligned} x + 2y - 3z + w &= -2 \\\\ 3x - y - 2z - 4w &= 1 \\\\ 2x + 3y - 5z + w &= -3 \\end{aligned}$$",
       "t": ["0", "medium"],
       "a": [
-        "النظام Consistent وله عدد لانهائي من الحلول.",
+        "The system is Consistent and has infinitely many solutions.",
         "Leading variables: $x, y$. Free variables: $z, w$.",
-        "الحل العام: $x = z + w$ ، $y = z - w - 1$.",
-        "مثالان: $(z, w) = (0, 0)$ يعطي $(0, -1, 0, 0)$ ، و $(z, w) = (1, 1)$ يعطي $(2, -1, 1, 1)$."
+        "The general solution: $x = z + w$ , $y = z - w - 1$.",
+        "Two examples: $(z, w) = (0, 0)$ gives $(0, -1, 0, 0)$ , and $(z, w) = (1, 1)$ gives $(2, -1, 1, 1)$."
       ],
       "e": [
         "Augmented matrix: $$\\left[\\begin{array}{cccc|c}1&2&-3&1&-2\\\\3&-1&-2&-4&1\\\\2&3&-5&1&-3\\end{array}\\right]$$",
@@ -134,10 +134,10 @@
       "q": "Solve the following system using Gauss-Jordan, write the general solution in terms of the free variables, then find two particular solutions and verify them in the original equations: $$\\begin{aligned} x + 2y + z + w &= 4 \\\\ x + 2y + 2z + 3w &= 5 \\\\ 2x + 4y + z &= 7 \\end{aligned}$$",
       "t": ["1", "hard"],
       "a": [
-        "النظام Consistent وله عدد لانهائي من الحلول.",
+        "The system is Consistent and has infinitely many solutions.",
         "Leading variables: $x, z$. Free variables: $y, w$.",
-        "الحل العام: $x = 3 - 2y + w$ ، $z = 1 - 2w$.",
-        "حلان خاصان: $(3, 0, 1, 0)$ و $(2, 1, -1, 1)$."
+        "The general solution: $x = 3 - 2y + w$ , $z = 1 - 2w$.",
+        "Two particular solutions: $(3, 0, 1, 0)$ and $(2, 1, -1, 1)$."
       ],
       "e": [
         "Augmented matrix (the third equation has no $w$, so its coefficient is 0): $$\\left[\\begin{array}{cccc|c}1&2&1&1&4\\\\1&2&2&3&5\\\\2&4&1&0&7\\end{array}\\right]$$",
@@ -155,7 +155,7 @@
       "q": "What condition must $b_1, b_2, b_3$ satisfy for the following system to have a solution? $$\\begin{aligned} x_1 + x_2 + x_3 &= b_1 \\\\ x_1 + 2x_3 &= b_2 \\\\ 2x_1 + x_2 + 3x_3 &= b_3 \\end{aligned}$$",
       "t": ["0", "medium"],
       "a": [
-        "الشرط: $b_3 - b_2 - b_1 = 0$."
+        "The condition: $b_3 - b_2 - b_1 = 0$."
       ],
       "e": [
         "Augmented matrix: $$\\left[\\begin{array}{ccc|c}1&1&1&b_1\\\\1&0&2&b_2\\\\2&1&3&b_3\\end{array}\\right]$$",
@@ -170,8 +170,8 @@
       "q": "For the system: $$\\begin{aligned} x_1 + x_2 + x_3 &= b_1 \\\\ x_1 + 2x_3 &= b_2 \\\\ 2x_1 + x_2 + 3x_3 &= b_3 \\end{aligned}$$ (given that the condition for a solution to exist is $b_3 - b_2 - b_1 = 0$): <br>(a) Does the system have a solution when $(b_1, b_2, b_3) = (1, 1, 2)$? If so, find the general solution. <br>(b) Does the system have a solution when $(b_1, b_2, b_3) = (1, 2, 4)$? Explain using row reduction.",
       "t": ["1", "medium"],
       "a": [
-        "(أ) $2 - 1 - 1 = 0$ ← يوجد حل؛ الحل العام: $x_1 = 1 - 2t$ ، $x_2 = t$ ، $x_3 = t$ (عدد لانهائي من الحلول).",
-        "(ب) $4 - 2 - 1 = 1 \\neq 0$ ← لا يوجد حل (Inconsistent)."
+        "(a) $2 - 1 - 1 = 0$ → a solution exists; the general solution: $x_1 = 1 - 2t$ , $x_2 = t$ , $x_3 = t$ (infinitely many solutions).",
+        "(b) $4 - 2 - 1 = 1 \\neq 0$ → no solution (Inconsistent)."
       ],
       "e": [
         "(a) Substitute $b = (1, 1, 2)$: $$\\left[\\begin{array}{ccc|c}1&1&1&1\\\\1&0&2&1\\\\2&1&3&2\\end{array}\\right]$$",
@@ -188,9 +188,9 @@
       "q": "Find the condition that $b_1, b_2, b_3$ must satisfy for the following system to have a solution, then determine which of the following vectors $(b_1, b_2, b_3)$ makes the system Consistent: $(1, 1, 3)$ and $(1, 1, 2)$. $$\\begin{aligned} x + y + z &= b_1 \\\\ 2x + y + 3z &= b_2 \\\\ 4x + 3y + 5z &= b_3 \\end{aligned}$$",
       "t": ["1", "medium"],
       "a": [
-        "الشرط: $b_3 - 2b_1 - b_2 = 0$.",
-        "المتجه $(1, 1, 3)$: $3 - 2 - 1 = 0$ ← النظام Consistent.",
-        "المتجه $(1, 1, 2)$: $2 - 2 - 1 = -1 \\neq 0$ ← النظام Inconsistent."
+        "The condition: $b_3 - 2b_1 - b_2 = 0$.",
+        "The vector $(1, 1, 3)$: $3 - 2 - 1 = 0$ → the system is Consistent.",
+        "The vector $(1, 1, 2)$: $2 - 2 - 1 = -1 \\neq 0$ → the system is Inconsistent."
       ],
       "e": [
         "Augmented matrix: $$\\left[\\begin{array}{ccc|c}1&1&1&b_1\\\\2&1&3&b_2\\\\4&3&5&b_3\\end{array}\\right]$$",
@@ -205,9 +205,9 @@
       "q": "Consider the system: $$\\begin{aligned} x + 2y &= 3 \\\\ 2x + 4y &= c \\end{aligned}$$ (a) Find the value of $c$ for which the two lines coincide. (b) Find the values of $c$ for which the two lines are parallel. (c) Can the two lines intersect at exactly one point? Explain using row reduction.",
       "t": ["1", "medium"],
       "a": [
-        "(أ) $c = 6$ ← ينطبقان ← عدد لانهائي من الحلول.",
-        "(ب) $c \\neq 6$ ← متوازيان ← لا يوجد حل.",
-        "(ج) لا؛ لأن الاختزال يعطي دائمًا صفًا معاملاته أصفار $[0\\ 0 \\mid c - 6]$ لأي قيمة لـ $c$، فلا يوجد حل وحيد أبدًا."
+        "(a) $c = 6$ → the lines coincide → infinitely many solutions.",
+        "(b) $c \\neq 6$ → parallel → no solution.",
+        "(c) No; because the reduction always gives a zero-coefficient row $[0\\ 0 \\mid c - 6]$ for any value of $c$, so there is never a unique solution."
       ],
       "e": [
         "Augmented matrix: $$\\left[\\begin{array}{cc|c}1&2&3\\\\2&4&c\\end{array}\\right]$$",
@@ -222,9 +222,9 @@
       "q": "Find the values of $k$ for which the following system has: (1) a unique solution, (2) infinitely many solutions, (3) no solution. $$\\begin{aligned} x + y + z &= 2 \\\\ 2x + 3y + 2z &= 5 \\\\ 2x + 3y + (k^2 - 2)z &= k + 3 \\end{aligned}$$",
       "t": ["1", "hard"],
       "a": [
-        "حل وحيد: $k \\neq 2$ و $k \\neq -2$.",
-        "عدد لانهائي من الحلول: $k = 2$.",
-        "لا يوجد حل: $k = -2$."
+        "Unique solution: $k \\neq 2$ and $k \\neq -2$.",
+        "Infinitely many solutions: $k = 2$.",
+        "No solution: $k = -2$."
       ],
       "e": [
         "Augmented matrix: $$\\left[\\begin{array}{ccc|c}1&1&1&2\\\\2&3&2&5\\\\2&3&k^2-2&k+3\\end{array}\\right]$$",
@@ -242,8 +242,8 @@
       "t": ["1", "hard"],
       "a": [
         "$c = -16$.",
-        "الحل العام: $x_1 = 2$ ، $x_2 = -5 - 3t$ ، $x_3 = t$ حيث $t$ حر.",
-        "للنظام عدد لانهائي من الحلول."
+        "The general solution: $x_1 = 2$ , $x_2 = -5 - 3t$ , $x_3 = t$ where $t$ is free.",
+        "The system has infinitely many solutions."
       ],
       "e": [
         "Augmented matrix: $$\\left[\\begin{array}{ccc|c}1&-2&-6&12\\\\2&4&12&c\\\\1&-4&-12&22\\end{array}\\right]$$",

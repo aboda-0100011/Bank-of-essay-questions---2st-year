@@ -6,11 +6,11 @@
       "q": "Determine which of the following equations are <b>Linear</b> and which are <b>Non-linear</b>, and give the reason: <br>1) $x + 3\\sqrt{y} = 5$ <br>2) $x^2 + 4 = 2$ <br>3) $x + 3y - xz = 2$ <br>4) $y = \\sin x$ <br>5) $x + 5y - \\sqrt{2}\\,z = 1$",
       "t": ["0", "easy"],
       "a": [
-        "المعادلة (1) غير خطية: لأن المتغير $y$ داخل جذر تربيعي (الشرط الأول: لا جذور للمتغيرات).",
-        "المعادلة (2) غير خطية: لأن $x$ مرفوعة للأس 2 (الشرط الثاني: كل المتغيرات بأس 1 فقط).",
-        "المعادلة (3) غير خطية: لأن فيها حاصل ضرب متغيرين $xz$، والمعادلة الخطية لا تحتوي إلا على متغيرات مضروبة في معاملات ثابتة.",
-        "المعادلة (4) غير خطية: لأن $x$ داخل دالة مثلثية $\\sin x$ (الشرط الثالث).",
-        "المعادلة (5) <b>خطية</b>: لأن $\\sqrt{2}$ مجرد معامل ثابت للمتغير $z$ وليس جذرًا لمتغير، وكل المتغيرات بأس 1."
+        "Equation (1) is non-linear: the variable $y$ is inside a square root (first condition: no roots of variables).",
+        "Equation (2) is non-linear: $x$ is raised to the power 2 (second condition: all variables must have power 1 only).",
+        "Equation (3) is non-linear: it contains a product of two variables $xz$, and a linear equation contains only variables multiplied by constant coefficients.",
+        "Equation (4) is non-linear: $x$ is inside a trigonometric function $\\sin x$ (third condition).",
+        "Equation (5) is <b>linear</b>: $\\sqrt{2}$ is just a constant coefficient of the variable $z$, not a root of a variable, and all variables have power 1."
       ],
       "e": "A linear equation is a sum of terms, each being a constant times a single variable to the power 1. A constant such as $\\sqrt{2}$ is only a coefficient, so it is allowed; roots of variables, powers other than 1, products of variables, and trigonometric/logarithmic/exponential functions of variables all make an equation non-linear."
     },
@@ -19,9 +19,9 @@
       "q": "(a) Classify the following equations as linear or non-linear: <br>1) $4x_1 - \\sqrt{5}\\,x_2 + x_3 = 7$ <br>2) $\\ln x + y = 1$ <br>3) $e^{x} + 2y = 3$ <br>(b) Write the <b>Augmented Matrix</b> and the <b>Coefficient Matrix</b> of the linear system: $$\\begin{aligned} x_1 + 2x_2 &= 5 \\\\ 3x_1 - x_3 &= 2 \\\\ x_2 + 4x_3 &= 0 \\end{aligned}$$",
       "t": ["1", "easy"],
       "a": [
-        "(أ) المعادلة 1 خطية ($\\sqrt{5}$ مجرد معامل ثابت)، والمعادلتان 2 و3 غير خطيتين لأن $x$ داخل دالة لوغاريتمية وأسّية.",
-        "(ب) الـ Coefficient Matrix: $$\\begin{bmatrix}1&2&0\\\\3&0&-1\\\\0&1&4\\end{bmatrix}$$",
-        "الـ Augmented Matrix: $$\\left[\\begin{array}{ccc|c}1&2&0&5\\\\3&0&-1&2\\\\0&1&4&0\\end{array}\\right]$$"
+        "(a) Equation 1 is linear ($\\sqrt{5}$ is just a constant coefficient), and equations 2 and 3 are non-linear because $x$ is inside a logarithmic and an exponential function.",
+        "(b) The Coefficient Matrix: $$\\begin{bmatrix}1&2&0\\\\3&0&-1\\\\0&1&4\\end{bmatrix}$$",
+        "The Augmented Matrix: $$\\left[\\begin{array}{ccc|c}1&2&0&5\\\\3&0&-1&2\\\\0&1&4&0\\end{array}\\right]$$"
       ],
       "e": [
         "Part (a): a linear equation has no roots, no powers other than 1, and no trigonometric, logarithmic or exponential functions of the variables. Equation 1 only has $\\sqrt{5}$ as a numeric coefficient, so it is linear; $\\ln x$ and $e^{x}$ break the third property.",
@@ -35,11 +35,11 @@
       "q": "Determine which of the following matrices are in <b>Row-Echelon Form</b>, and if a matrix is not, state the rule it violates. Then, among the Row-Echelon matrices, determine which are in <b>Reduced Row-Echelon Form</b>. $$A=\\begin{bmatrix}1&2&0\\\\0&1&3\\\\0&0&1\\end{bmatrix}\\quad B=\\begin{bmatrix}0&1&2\\\\1&0&0\\\\0&0&0\\end{bmatrix}\\quad C=\\begin{bmatrix}2&1&0\\\\0&1&0\\\\0&0&0\\end{bmatrix}$$ $$D=\\begin{bmatrix}1&3&0&2\\\\0&0&1&4\\\\0&0&0&0\\end{bmatrix}\\quad E=\\begin{bmatrix}0&0&0\\\\1&2&3\\end{bmatrix}$$",
       "t": ["1", "medium"],
       "a": [
-        "A: Row-Echelon ✓ (كل Leading 1 على يمين الذي فوقه)، لكنها ليست Reduced لأن أعدادًا غير صفرية تقع فوق الـ Leading 1 (مثل العنصر 2 في العمود الثاني والعنصر 3 في العمود الثالث).",
-        "B: ليست Row-Echelon: الـ Leading 1 في الصف الثاني (العمود 1) على يسار الـ Leading 1 في الصف الأول (العمود 2) — مخالفة للقاعدة 3.",
-        "C: ليست Row-Echelon: أول عنصر غير صفري في الصف الأول هو 2 وليس 1 — مخالفة للقاعدة 1.",
-        "D: Row-Echelon ✓ وأيضًا Reduced ✓ لأن العمودين 1 و3 (عمودا الـ Leading 1) باقي عناصرهما أصفار.",
-        "E: ليست Row-Echelon: الصف الصفري يقع فوق صف غير صفري — مخالفة للقاعدة 2."
+        "A: Row-Echelon ✓ (every Leading 1 is to the right of the one above it), but it is not Reduced because nonzero numbers lie above the Leading 1s (such as the entry 2 in column 2 and the entry 3 in column 3).",
+        "B: not Row-Echelon: the Leading 1 in row 2 (column 1) is to the left of the Leading 1 in row 1 (column 2), which violates rule 3.",
+        "C: not Row-Echelon: the first nonzero entry in row 1 is 2, not 1, which violates rule 1.",
+        "D: Row-Echelon ✓ and also Reduced ✓ because the remaining entries of columns 1 and 3 (the Leading 1 columns) are all zeros.",
+        "E: not Row-Echelon: the zero row lies above a nonzero row, which violates rule 2."
       ],
       "e": [
         "Rules recap: (1) the first nonzero entry of each nonzero row is a leading 1; (2) zero rows are at the bottom; (3) each leading 1 is to the right of the leading 1 above it. Reduced form additionally requires zeros above and below every leading 1.",
@@ -55,11 +55,11 @@
       "q": "State the three Elementary Row Operations. Then determine which of the following operations are allowed and which are not, with justification: <br>(a) $R_2 \\to 0\\cdot R_2$ <br>(b) $R_1 \\leftrightarrow R_3$ <br>(c) $R_2 \\to R_2 + 5R_1$ <br>(d) $R_1 \\to R_1 + 3$ (adding the number 3 to every entry of the first row)",
       "t": ["1", "easy"],
       "a": [
-        "العمليات الثلاث: (1) ضرب صف (معادلة) في ثابت <b>غير صفري</b>. (2) تبديل صفين. (3) إضافة مضاعف صف إلى صف آخر.",
-        "(أ) غير مسموحة: الثابت لازم يكون غير صفري، والضرب في الصفر يحوّل المعادلة إلى $0=0$ ويضيّع معلوماتها.",
-        "(ب) مسموحة: تبديل صفين (العملية 2).",
-        "(ج) مسموحة: إضافة مضاعف الصف الأول ($5R_1$) إلى الصف الثاني (العملية 3).",
-        "(د) غير مسموحة: إضافة عدد ثابت لعناصر الصف ليست إضافة مضاعف صف آخر."
+        "The three operations: (1) multiply a row (equation) by a <b>nonzero</b> constant. (2) interchange two rows. (3) add a multiple of one row to another row.",
+        "(a) Not allowed: the constant must be nonzero, and multiplying by zero turns the equation into $0=0$ and loses its information.",
+        "(b) Allowed: interchanging two rows (operation 2).",
+        "(c) Allowed: adding a multiple of the first row ($5R_1$) to the second row (operation 3).",
+        "(d) Not allowed: adding a constant number to the entries of a row is not adding a multiple of another row."
       ],
       "e": "Only the three listed operations may be used. (a) fails because the multiplying constant must be nonzero (multiplying by 0 turns the equation into $0=0$ and loses information); (d) fails because it adds a bare number, not a multiple of another row."
     },
@@ -68,8 +68,8 @@
       "q": "Given the augmented matrix: $$\\left[\\begin{array}{ccc|c}0&3&6&9\\\\2&1&0&4\\end{array}\\right]$$ Apply the steps of Gaussian Elimination (stating the operation used in each step) to reach <b>Row-Echelon Form</b>.",
       "t": ["1", "easy"],
       "a": [
-        "تبديل الصفين لتجنّب الصفر في أول عمود، ثم جعل كل Leading عنصرًا يساوي 1 بالقسمة.",
-        "الناتج: $$\\left[\\begin{array}{ccc|c}1&\\frac{1}{2}&0&2\\\\0&1&2&3\\end{array}\\right]$$"
+        "Interchange the two rows to avoid the zero in the first column, then make each Leading entry equal to 1 by division.",
+        "Result: $$\\left[\\begin{array}{ccc|c}1&\\frac{1}{2}&0&2\\\\0&1&2&3\\end{array}\\right]$$"
       ],
       "e": [
         "Step 1: the first nonzero column is column 1, and its first entry is 0. We need a nonzero entry there, so we use operation 2 (interchange).",
@@ -85,9 +85,9 @@
       "q": "Solve the following linear system using <b>Gaussian Elimination</b>: $$\\begin{aligned} 2x_2 + x_3 &= -8 \\\\ x_1 - 2x_2 - 3x_3 &= 0 \\\\ -x_1 + x_2 + 2x_3 &= 3 \\end{aligned}$$",
       "t": ["0", "medium"],
       "a": [
-        "كوّن الـ Augmented Matrix ثم اختزلها إلى Row-Echelon Form بالعمليات الأولية.",
-        "بالتعويض الخلفي (Back-substitution): $x_3 = 2$ ثم $x_2 = -5$ ثم $x_1 = -4$.",
-        "الحل: $(x_1, x_2, x_3) = (-4, -5, 2)$."
+        "Form the Augmented Matrix and then reduce it to Row-Echelon Form using elementary operations.",
+        "By back-substitution: $x_3 = 2$, then $x_2 = -5$, then $x_1 = -4$.",
+        "The solution: $(x_1, x_2, x_3) = (-4, -5, 2)$."
       ],
       "e": [
         "Write the augmented matrix (the coefficient of $x_1$ in the first equation is 0): $$\\left[\\begin{array}{ccc|c}0&2&1&-8\\\\1&-2&-3&0\\\\-1&1&2&3\\end{array}\\right]$$",
@@ -105,9 +105,9 @@
       "q": "A student reduced the system from the previous question ($2x_2 + x_3 = -8$ , $x_1 - 2x_2 - 3x_3 = 0$ , $-x_1 + x_2 + 2x_3 = 3$) to the matrix: $$\\left[\\begin{array}{ccc|c}1&-2&-3&0\\\\0&1&\\frac{1}{2}&-4\\\\0&0&1&2\\end{array}\\right]$$ and then wrote: $x_3 = 2$ , $x_2 = -4 + \\frac{1}{2}x_3 = -3$ , $x_1 = 2x_2 + 3x_3 = 0$. Find the mistake and correct it, then verify the correct solution by substituting it into the original system.",
       "t": ["1", "medium"],
       "a": [
-        "الخطأ في معادلة الصف الثاني: $x_2 + \\frac{1}{2}x_3 = -4$ فينتج $x_2 = -4 - \\frac{1}{2}x_3$ وليس $-4 + \\frac{1}{2}x_3$ (خطأ في إشارة نقل الحد إلى الطرف الآخر).",
-        "الحل الصحيح: $x_3 = 2$ ، $x_2 = -5$ ، $x_1 = -4$.",
-        "الحل الخاطئ $(0, -3, 2)$ لا يحقق المعادلة الأولى: $2(-3) + 2 = -4 \\neq -8$."
+        "The mistake is in the second row's equation: $x_2 + \\frac{1}{2}x_3 = -4$ gives $x_2 = -4 - \\frac{1}{2}x_3$, not $-4 + \\frac{1}{2}x_3$ (a sign error when moving the term to the other side).",
+        "The correct solution: $x_3 = 2$ , $x_2 = -5$ , $x_1 = -4$.",
+        "The wrong solution $(0, -3, 2)$ does not satisfy the first equation: $2(-3) + 2 = -4 \\neq -8$."
       ],
       "e": [
         "Row 3 reads $x_3 = 2$, which is correct.",
@@ -122,8 +122,8 @@
       "q": "Solve the following system using <b>Gaussian Elimination</b> (try to avoid fractions by choosing suitable operations): $$\\begin{aligned} x + y + z &= 6 \\\\ 2x - y + z &= 3 \\\\ x + 2y - z &= 2 \\end{aligned}$$",
       "t": ["1", "medium"],
       "a": [
-        "اختزل المصفوفة الممتدة إلى Row-Echelon Form ثم عوّض خلفيًا.",
-        "الحل: $x = 1$ ، $y = 2$ ، $z = 3$."
+        "Reduce the augmented matrix to Row-Echelon Form, then back-substitute.",
+        "The solution: $x = 1$ , $y = 2$ , $z = 3$."
       ],
       "e": [
         "Augmented matrix: $$\\left[\\begin{array}{ccc|c}1&1&1&6\\\\2&-1&1&3\\\\1&2&-1&2\\end{array}\\right]$$",
@@ -140,9 +140,9 @@
       "q": "The following augmented matrix is in Row-Echelon Form: $$\\left[\\begin{array}{ccc|c}1&-2&4&5\\\\0&1&3&2\\\\0&0&1&1\\end{array}\\right]$$ (a) Find the solution by back-substitution (Gaussian method). (b) Continue the reduction to reach Reduced Row-Echelon Form (Gauss-Jordan method) and read the solution directly. (c) Compare the two results.",
       "t": ["1", "medium"],
       "a": [
-        "(أ) $x_3 = 1$ ، $x_2 = -1$ ، $x_1 = -1$.",
-        "(ب) الـ Reduced Row-Echelon Form: $$\\left[\\begin{array}{ccc|c}1&0&0&-1\\\\0&1&0&-1\\\\0&0&1&1\\end{array}\\right]$$",
-        "(ج) نفس الحل في الحالتين؛ الفرق أن Gauss-Jordan يضع أصفارًا فوق وتحت كل Leading 1 فتُقرأ القيم مباشرة دون تعويض خلفي."
+        "(a) $x_3 = 1$ , $x_2 = -1$ , $x_1 = -1$.",
+        "(b) The Reduced Row-Echelon Form: $$\\left[\\begin{array}{ccc|c}1&0&0&-1\\\\0&1&0&-1\\\\0&0&1&1\\end{array}\\right]$$",
+        "(c) The same solution in both cases; the difference is that Gauss-Jordan places zeros above and below each Leading 1, so the values are read directly without back-substitution."
       ],
       "e": [
         "Part (a), back-substitution: row 3 gives $x_3 = 1$. Row 2: $x_2 + 3x_3 = 2 \\Rightarrow x_2 = 2 - 3 = -1$. Row 1: $x_1 - 2x_2 + 4x_3 = 5 \\Rightarrow x_1 = 5 + 2(-1) - 4(1) = 5 - 2 - 4 = -1$.",
@@ -157,10 +157,10 @@
       "q": "Determine whether each statement is true or false, with justification: <br>(1) Every matrix in Reduced Row-Echelon Form is also in Row-Echelon Form. <br>(2) Every matrix in Row-Echelon Form is also in Reduced Row-Echelon Form. <br>(3) The zero matrix $\\begin{bmatrix}0&0\\\\0&0\\end{bmatrix}$ is in Row-Echelon Form. <br>(4) In Gaussian Elimination we need zeros below each Leading 1 only, whereas in Gauss-Jordan we need zeros above and below each Leading 1.",
       "t": ["1", "easy"],
       "a": [
-        "(1) صح: الـ Reduced تشترط أن تكون المصفوفة Row-Echelon أولًا ثم تضيف شرط الأصفار فوق الـ Leading 1.",
-        "(2) خطأ: مثال $\\begin{bmatrix}1&2\\\\0&1\\end{bmatrix}$ هي Row-Echelon لكن العنصر 2 يقع فوق الـ Leading 1 في العمود الثاني.",
-        "(3) صح: لا توجد صفوف غير صفرية فتتحقق الشروط تلقائيًا (وهي من أمثلة المحاضرة).",
-        "(4) صح."
+        "(1) True: Reduced requires the matrix to be Row-Echelon first and then adds the condition of zeros above each Leading 1.",
+        "(2) False: for example $\\begin{bmatrix}1&2\\\\0&1\\end{bmatrix}$ is Row-Echelon but the entry 2 lies above the Leading 1 in column 2.",
+        "(3) True: there are no nonzero rows, so the conditions hold automatically (it is one of the lecture examples).",
+        "(4) True."
       ],
       "e": [
         "For statement (2): in $\\begin{bmatrix}1&2\\\\0&1\\end{bmatrix}$ the leading 1s are at $(1,1)$ and $(2,2)$, a valid staircase, so it is Row-Echelon; but the entry $(1,2)=2$ above the second leading 1 is not zero, so it is not Reduced.",
@@ -172,8 +172,8 @@
       "q": "Solve the following linear system using <b>Gauss-Jordan Elimination</b>: $$\\begin{aligned} x_1 + 2x_2 + 3x_3 &= 9 \\\\ 2x_1 - x_2 + x_3 &= 8 \\\\ 3x_1 - x_3 &= 3 \\end{aligned}$$",
       "t": ["0", "medium"],
       "a": [
-        "اختزل المصفوفة الممتدة إلى Reduced Row-Echelon Form.",
-        "الحل: $x_1 = 2$ ، $x_2 = -1$ ، $x_3 = 3$."
+        "Reduce the augmented matrix to Reduced Row-Echelon Form.",
+        "The solution: $x_1 = 2$ , $x_2 = -1$ , $x_3 = 3$."
       ],
       "e": [
         "Augmented matrix (the third equation has no $x_2$, so its coefficient is 0): $$\\left[\\begin{array}{ccc|c}1&2&3&9\\\\2&-1&1&8\\\\3&0&-1&3\\end{array}\\right]$$",
@@ -191,8 +191,8 @@
       "q": "Solve the following system using <b>Gauss-Jordan</b>: $$\\begin{aligned} 2y + 4z &= 2 \\\\ x + y + z &= 2 \\\\ 2x + y + 3z &= 6 \\end{aligned}$$",
       "t": ["1", "medium"],
       "a": [
-        "المعامل الأول في المعادلة الأولى يساوي صفرًا فنحتاج لتبديل صفين في البداية.",
-        "الحل: $x = 2$ ، $y = -1$ ، $z = 1$."
+        "The first coefficient in the first equation is zero, so we need to interchange two rows at the start.",
+        "The solution: $x = 2$ , $y = -1$ , $z = 1$."
       ],
       "e": [
         "Augmented matrix (the first equation has no $x$, so its coefficient is 0): $$\\left[\\begin{array}{ccc|c}0&2&4&2\\\\1&1&1&2\\\\2&1&3&6\\end{array}\\right]$$",
@@ -210,7 +210,7 @@
       "q": "Solve the following system using <b>Gauss-Jordan</b> (be careful to write zeros for the missing variables): $$\\begin{aligned} x + y &= 3 \\\\ y + z &= 5 \\\\ x + z &= 4 \\end{aligned}$$",
       "t": ["1", "easy"],
       "a": [
-        "الحل: $x = 1$ ، $y = 2$ ، $z = 3$."
+        "The solution: $x = 1$ , $y = 2$ , $z = 3$."
       ],
       "e": [
         "Augmented matrix, writing 0 for every missing variable: $$\\left[\\begin{array}{ccc|c}1&1&0&3\\\\0&1&1&5\\\\1&0&1&4\\end{array}\\right]$$",
@@ -226,7 +226,7 @@
       "q": "Solve the following system using <b>Gauss-Jordan</b>: $$\\begin{aligned} 2x + y - z &= -3 \\\\ x + 3y + 2z &= 1 \\\\ 3x - y + z &= 8 \\end{aligned}$$",
       "t": ["1", "hard"],
       "a": [
-        "الحل: $x = 1$ ، $y = -2$ ، $z = 3$."
+        "The solution: $x = 1$ , $y = -2$ , $z = 3$."
       ],
       "e": [
         "Augmented matrix: $$\\left[\\begin{array}{ccc|c}2&1&-1&-3\\\\1&3&2&1\\\\3&-1&1&8\\end{array}\\right]$$",
@@ -244,8 +244,8 @@
       "q": "Solve the following system using <b>Gauss-Jordan</b> instead of Gaussian: $$\\begin{aligned} 2x_2 + x_3 &= -8 \\\\ x_1 - 2x_2 - 3x_3 &= 0 \\\\ -x_1 + x_2 + 2x_3 &= 3 \\end{aligned}$$ Then compare the result with the Gaussian solution (back-substitution) and state which of the two methods required more row operations.",
       "t": ["1", "hard"],
       "a": [
-        "الحل: $(x_1, x_2, x_3) = (-4, -5, 2)$ — نفس نتيجة Gaussian.",
-        "Gauss-Jordan احتاج 3 عمليات إضافية (لتصفير العناصر فوق الـ Leading 1) لكنه لم يحتج تعويضًا خلفيًا، بينما Gaussian احتاج تعويضًا خلفيًا بعد الوصول إلى Row-Echelon Form."
+        "The solution: $(x_1, x_2, x_3) = (-4, -5, 2)$ — the same result as Gaussian.",
+        "Gauss-Jordan needed 3 extra operations (to zero out the entries above the Leading 1s) but did not need back-substitution, whereas Gaussian needed back-substitution after reaching Row-Echelon Form."
       ],
       "e": [
         "Augmented matrix: $$\\left[\\begin{array}{ccc|c}0&2&1&-8\\\\1&-2&-3&0\\\\-1&1&2&3\\end{array}\\right]$$",
