@@ -1,0 +1,382 @@
+{
+  "tag": "Lec01-OS",
+  "qs": [
+    {
+      "id": "os1_0001",
+      "q": "Define the <b>kernel</b>, <b>system programs</b> and <b>application programs</b>, and state what the operating system consists of.",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "a": [
+        "<b>Operating system = kernel + system programs.</b>",
+        "The <b>kernel</b> is the one program running at all times.",
+        "<b>System programs</b> are associated with the operating system.",
+        "<b>Application programs</b> are not associated with the operating system; they define the ways in which the resources are used to solve user problems."
+      ],
+      "e": "The OS controls the hardware and coordinates its use among the application programs.",
+      "ref": "Slides 4, 6"
+    },
+    {
+      "id": "os1_0002",
+      "q": "Explain the two views of an operating system: as a <b>resource allocator</b> and as a <b>control program</b>.",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "a": [
+        "<b>Resource allocator:</b> the OS acts as the manager of the resources (CPU, memory, I/O devices) and decides how to allocate them to specific programs and users.",
+        "<b>Control program:</b> the OS controls the I/O devices and manages the execution of user programs, to prevent errors and improper use of the computer."
+      ],
+      "e": "Resource allocator = deciding who gets which resource; control program = preventing errors and misuse.",
+      "ref": "Slide 5"
+    },
+    {
+      "id": "os1_0003",
+      "q": "What is the <b>bootstrap program</b>? Where is it stored, what is it also called, and what does it do when the computer is powered up?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "a": [
+        "It is a simple program stored in ROM or EEPROM, also known by the general term <b>firmware</b>.",
+        "It runs when the computer is powered up or rebooted.",
+        "It initializes all aspects of the system (e.g. CPU, memory).",
+        "It locates the kernel, loads it into memory, and starts its execution."
+      ],
+      "e": "The bootstrap program is what gets the kernel running at startup.",
+      "ref": "Slide 10"
+    },
+    {
+      "id": "os1_0004",
+      "q": "Define an <b>interrupt</b>. Distinguish between hardware-generated and software-generated interrupts, and state what the interrupt handler is.",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "a": [
+        "An interrupt is a signal that is generated when some event occurs; once the system is fully booted, it waits for such events.",
+        "<b>Hardware interrupt:</b> occurs when a device sends a signal to the CPU.",
+        "<b>Software interrupt (trap):</b> occurs by executing a <b>system call</b>.",
+        "Each interrupt has a corresponding service routine (interrupt handler), which must be executed when the interrupt occurs."
+      ],
+      "e": "Both hardware events and system calls reach the OS through interrupts.",
+      "ref": "Slide 11"
+    },
+    {
+      "id": "os1_0005",
+      "q": "True or False (justify): 'The CPU can execute instructions directly from secondary storage such as a hard disk.'",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "a": "<b>False.</b> The CPU can load instructions only from the main memory (RAM). It interacts with RAM using <b>load</b> (moves a word from RAM to a CPU register) and <b>store</b> (moves the content of a CPU register to RAM) instructions.",
+      "e": "Secondary storage only holds programs and data permanently; to be executed they must be in main memory.",
+      "ref": "Slide 13"
+    },
+    {
+      "id": "os1_0006",
+      "q": "Why can main memory (RAM) not be the only storage of a computer? State the limitations of RAM, and the role and the main requirement of secondary storage.",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "a": [
+        "RAM is usually too small to store all the needed programs and data.",
+        "RAM is a <b>volatile</b> storage device: it loses its contents when power is off.",
+        "Therefore, most computer systems provide <b>secondary storage</b> as an extension of main memory.",
+        "The main requirement of secondary storage is to hold large quantities of data <b>permanently</b> (e.g. a hard disk drive)."
+      ],
+      "e": "RAM is small and volatile, while secondary storage is large and permanent.",
+      "ref": "Slide 15"
+    },
+    {
+      "id": "os1_0007",
+      "q": "What is <b>caching</b>? State its benefit, and explain the problem that <b>cache coherency</b> solves.",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "a": [
+        "Caching is the use of high-speed memory to hold a copy of recently-accessed data, assuming that it will be needed again soon.",
+        "Benefit: caches improve the access time or the transfer rate.",
+        "Problem: when several caches hold copies of the same data, an update in one of them must not be missed by the others.",
+        "<b>Cache coherency</b> ensures that an update to some data in a cache is reflected immediately in the other caches containing a copy of that data."
+      ],
+      "e": "Without coherency, different caches could hold different values for the same data.",
+      "ref": "Slide 17"
+    },
+    {
+      "id": "os1_0008",
+      "q": "What is <b>Direct Memory Access (DMA)</b>, and why is it better than interrupting the CPU for every byte when moving large amounts of data?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "a": [
+        "With DMA, the device controller transfers an entire block of data directly between its local buffer and main memory, with no intervention by the CPU.",
+        "The controller generates only <b>one interrupt per block</b> (to inform the device driver) instead of one interrupt per byte.",
+        "While the controller is transferring a whole block, the CPU is available to accomplish other work.",
+        "Without DMA, I/O is fine for small amounts of data but produces high overhead on the CPU for bulk data movement."
+      ],
+      "e": "Fewer interrupts and a free CPU make DMA suitable for bulk data transfers.",
+      "ref": "Slides 19, 20"
+    },
+    {
+      "id": "os1_0009",
+      "q": "Compare a <b>single-processor system</b> and a <b>multiprocessor system</b>. In your answer, explain the difference between general-purpose and special-purpose processors, and say whether special-purpose processors turn a single-processor system into a multiprocessor system.",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "a": [
+        "A <b>general-purpose processor</b> supports a complete instruction set, so it can execute user processes.",
+        "A <b>special-purpose processor</b> supports a limited instruction set, so it cannot execute user processes (e.g. disk, keyboard and graphics controllers).",
+        "<b>Single-processor system:</b> has only one general-purpose processor.",
+        "<b>Multiprocessor system:</b> has two or more general-purpose processors in close communication, sharing the bus, clock, memory and peripheral devices.",
+        "The use of special-purpose microprocessors is common and does <b>not</b> turn a single-processor system into a multiprocessor system."
+      ],
+      "e": "What counts is the number of general-purpose processors, not the total number of processors.",
+      "ref": "Slides 23, 24"
+    },
+    {
+      "id": "os1_0010",
+      "q": "Compare <b>asymmetric multiprocessing</b> and <b>symmetric multiprocessing (SMP)</b> in terms of the relationship between the processors, who schedules the work, and how widely each one is used.",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "a": [
+        "<b>Asymmetric multiprocessing:</b> defines a boss-worker relationship. The boss processor schedules and allocates work to the worker processors, and the workers look to the boss for instructions or have predefined tasks.",
+        "<b>Symmetric multiprocessing (SMP):</b> there is no boss-worker relationship. All processors are peers, and each processor can perform any task.",
+        "SMP is the type used by most systems."
+      ],
+      "e": "In asymmetric multiprocessing one processor controls the others; in SMP every processor can do any task.",
+      "ref": "Slide 27"
+    },
+    {
+      "id": "os1_0011",
+      "q": "List the advantages of multiprocessor systems and explain each one briefly. Is the speed-up with $N$ processors equal to $N$?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "a": [
+        "<b>Increased throughput:</b> more processors means more work in less time. The speed-up ratio with $N$ processors is less than $N$, so it is not equal to $N$.",
+        "<b>Economy of scale:</b> sharing peripherals, mass storage and power supplies means less cost.",
+        "<b>Increased reliability:</b> the failure of one processor will not halt the system, but only slows it down."
+      ],
+      "e": "Adding processors never gives a perfect $N$ times speed-up; the speed-up is always less than $N$.",
+      "ref": "Slide 25"
+    },
+    {
+      "id": "os1_0012",
+      "q": "True or False (justify): 'Graceful degradation means that when one processor fails, the whole system stops working.'",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "a": "<b>False.</b> Graceful degradation is the ability to continue providing service proportional to the level of surviving hardware. In a multiprocessor system, the failure of one processor does not halt the system; it only slows it down.",
+      "e": "A fault tolerant system goes further: it continues operation despite failures, and it needs a mechanism to detect, diagnose and, if possible, correct the failure.",
+      "ref": "Slides 25, 26"
+    },
+    {
+      "id": "os1_0013",
+      "q": "What is a <b>multicore system</b>? State why it is more efficient than using multiple chips with a single core each.",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "a": [
+        "A multicore system has multiple computing cores on a single chip.",
+        "On-chip communication is faster than communication between chips.",
+        "One chip with multiple cores uses less power than multiple single-core chips."
+      ],
+      "e": "Faster communication and lower power are the two advantages of putting the cores on one chip.",
+      "ref": "Slide 29"
+    },
+    {
+      "id": "os1_0014",
+      "q": "True or False (justify): 'Every multiprocessor system is a multicore system.'",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "a": "<b>False.</b> Multicore systems are multiprocessor systems, but the reverse is not true. A multiprocessor system can be built from several separate chips, so not all multiprocessor systems are multicore systems.",
+      "e": "Multicore systems are a subset of multiprocessor systems.",
+      "ref": "Slide 29"
+    },
+    {
+      "id": "os1_0015",
+      "q": "Compare <b>multiprocessor systems</b> and <b>clustered systems</b> in terms of other names, what they consist of, and how their parts are connected.",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "a": [
+        "<b>Multiprocessor systems</b> (also called parallel systems or tightly-coupled systems): two or more general-purpose processors in close communication, sharing the bus, clock, memory and peripheral devices.",
+        "<b>Clustered systems</b> (also called loosely-coupled systems): composed of two or more individual systems (nodes); each node may be a single-processor system or a multicore system.",
+        "The nodes of a cluster share storage and are closely linked via a LAN."
+      ],
+      "e": "Tightly-coupled processors share the bus, clock and memory; loosely-coupled nodes are separate systems linked by a network.",
+      "ref": "Slides 24, 31"
+    },
+    {
+      "id": "os1_0016",
+      "q": "Compare <b>asymmetric clustering</b> and <b>symmetric clustering</b>: how the nodes work, and the main purpose that each one supports.",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "a": [
+        "<b>Asymmetric clustering:</b> one node is in <b>hot-standby mode</b> monitoring the active server. If the active server fails, the hot-standby node becomes the active server. It supports <b>high-availability service</b>, where a node failure does not stop the service.",
+        "<b>Symmetric clustering:</b> two or more nodes are running applications and are monitoring each other. It supports <b>high performance computing</b> better than multiprocessor systems.",
+        "In symmetric clustering an application can run concurrently on all the nodes using <b>parallelization</b>, which divides a program into separate components that run in parallel."
+      ],
+      "e": "Hot standby gives availability; all nodes working together gives performance.",
+      "ref": "Slide 32"
+    },
+    {
+      "id": "os1_0017",
+      "q": "A hospital's patient-records service must keep working even if its main server fails. Which type of clustering should it use? Explain how it works and what kind of service it supports.",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "a": [
+        "It should use <b>asymmetric clustering</b>.",
+        "One node works as the active server, while another node stays in <b>hot-standby mode</b> and monitors the active server.",
+        "If the active server fails, the hot-standby node becomes the active server, so the service continues.",
+        "This supports a <b>high-availability service</b>, where a node failure does not stop the service."
+      ],
+      "e": "If the goal were maximum computing speed instead, symmetric clustering with parallelization would fit better.",
+      "ref": "Slide 32"
+    },
+    {
+      "id": "os1_0018",
+      "q": "Explain <b>dual-mode operation</b>: why it is needed, the two modes and the code that runs in each, and what privileged instructions are. How can the idea of modes be extended?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "a": [
+        "Purpose: to protect the operating system from errant users.",
+        "<b>User mode:</b> user-defined code must execute in this mode.",
+        "<b>Kernel mode</b> (also called supervisor, system or privileged mode): only the operating system executes in this mode.",
+        "A <b>mode bit</b> indicates the current mode.",
+        "<b>Privileged instructions</b> are the instructions that may cause harm; they can execute only in kernel mode (i.e. by the OS).",
+        "Extension (multi-mode): a CPU that supports virtualization can have a third mode for the VMM (Virtual Machine Manager), with more privileges than user mode but fewer than kernel mode."
+      ],
+      "e": "Harmful instructions are privileged, so only the OS in kernel mode can run them.",
+      "ref": "Slides 35, 37"
+    },
+    {
+      "id": "os1_0019",
+      "q": "A user program contains an endless loop and never gives control back to the OS. Which mechanism lets the OS prevent this, how does it work, and why must the instructions that modify it be privileged?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "a": [
+        "The OS uses a <b>timer</b>, which can be set to interrupt the system after a specified period.",
+        "The OS sets the counter before turning control over to a user program. Every time the clock ticks, the counter is decremented; when it reaches 0, an interrupt occurs and control returns to the OS.",
+        "The OS may treat the interrupt as a fatal error or give the program more time.",
+        "Instructions that modify the content of the timer must be privileged; otherwise a user program could change the timer and keep running too long."
+      ],
+      "e": "The timer guarantees that the OS regains control of the CPU.",
+      "ref": "Slide 38"
+    },
+    {
+      "id": "os1_0020",
+      "q": "Compare <b>batch</b>, <b>multiprogramming</b> and <b>time-sharing</b> systems in terms of how jobs are handled, CPU utilization, and user interaction.",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "a": [
+        "<b>Batch:</b> processes jobs in bulk, one job after another (the OS is a resident monitor for automatic job sequencing). When the running job waits for I/O, the CPU stays idle, so CPU utilization is low. There is no direct interaction between the user and the system.",
+        "<b>Multiprogramming:</b> several jobs are kept in main memory and the CPU is always executing a job: when the running job waits for I/O, the OS picks another job. CPU utilization increases, but there is still no direct interaction. It requires I/O routines, CPU scheduling, memory management and resource allocation.",
+        "<b>Time-sharing (multitasking):</b> an interactive extension of multiprogramming. The CPU switches between jobs so frequently that the user can interact with each program while it is running, so the response time should be minimal."
+      ],
+      "e": "Progression: batch, then multiprogramming (better CPU use), then time-sharing (adds interaction).",
+      "ref": "Slides 41-43"
+    },
+    {
+      "id": "os1_0021",
+      "q": "State the disadvantages of batch systems, and explain how multiprogramming overcomes the main one. What does multiprogramming still not provide?",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "a": [
+        "Disadvantage 1 of batch: <b>low CPU utilization</b>, because when the running job waits for an I/O operation the CPU remains idle.",
+        "Disadvantage 2 of batch: there is <b>no direct interaction</b> between the user and the system.",
+        "Multiprogramming keeps several jobs in main memory; when the running job waits for I/O, the OS picks another job, so the CPU is always executing a job and CPU utilization increases.",
+        "Multiprogramming still has no direct interaction; interaction is provided by time-sharing systems."
+      ],
+      "e": "Multiprogramming fixes the idle CPU time but not the lack of interaction.",
+      "ref": "Slides 41-43"
+    },
+    {
+      "id": "os1_0022",
+      "q": "Compare the <b>client-server</b> and <b>peer-to-peer (P2P)</b> models of distributed computing: the roles of the nodes, and which one suffers from a bottleneck.",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "a": [
+        "<b>Client-server:</b> server systems satisfy the requests of client systems. A server can be a file-server (clients create, update, read and delete files) or a compute-server (receives client requests, executes actions and returns results).",
+        "<b>Peer-to-peer:</b> a node must first join the P2P system. All nodes are peers, and each node may act as a server (when providing services to other nodes) or as a client (when requesting services from other nodes).",
+        "In client-server systems the server is a bottleneck, while in P2P systems several nodes can provide the service."
+      ],
+      "e": "In P2P the roles are not fixed: the same node can be both a client and a server.",
+      "ref": "Slides 47, 48"
+    },
+    {
+      "id": "os1_0023",
+      "q": "A company wants to (a) run several servers, each with its own operating system, on a single physical computer; (b) offer a cloud used only by its own employees; (c) use a cloud that has both a private part and a part available to anyone through the Internet. Name the technology or the cloud type that matches each need and explain briefly.",
+      "t": [
+        "1",
+        "hard"
+      ],
+      "a": [
+        "(a) <b>Virtualization:</b> a single computer (host) runs several virtual machines (guests). The host and the guests share the hardware, but each guest has its own OS. The virtual machine manager runs the guests, manages their resource use and protects each guest from the others.",
+        "(b) <b>Private cloud:</b> it is used only by the company that owns it.",
+        "(c) <b>Hybrid cloud:</b> it includes both public and private cloud components. A <b>public cloud</b> is the part that is available to anyone via the Internet."
+      ],
+      "e": "Cloud computing uses virtualization to run millions of virtual machines on thousands of servers.",
+      "ref": "Slides 49, 51"
+    },
+    {
+      "id": "os1_0024",
+      "q": "Compare <b>SaaS</b>, <b>PaaS</b> and <b>IaaS</b> cloud services: what each one provides, with the example given in the lecture where there is one.",
+      "t": [
+        "1",
+        "medium"
+      ],
+      "a": [
+        "<b>Software as a Service (SaaS):</b> provides applications (e.g. Google Docs).",
+        "<b>Platform as a Service (PaaS):</b> provides a software stack (e.g. Google Firebase).",
+        "<b>Infrastructure as a Service (IaaS):</b> provides servers or storage over the Internet."
+      ],
+      "e": "Applications are SaaS, a software stack is PaaS, and servers or storage are IaaS.",
+      "ref": "Slide 51"
+    },
+    {
+      "id": "os1_0025",
+      "q": "A company is building the control system of a medical imaging device. It must respond within fixed time limits, or the system fails. What kind of system is needed, and what features do its computers and operating system usually have?",
+      "t": [
+        "1",
+        "easy"
+      ],
+      "a": [
+        "A <b>real-time embedded system</b>, which almost always runs a real-time operating system.",
+        "A real-time system has well-defined, fixed time constraints, and processing must be done within these constraints or the system fails.",
+        "Embedded computers are primitive with very specific tasks, and their operating systems provide limited features with little or no user interface.",
+        "Other examples are weapons systems, nuclear plant systems and industrial control systems."
+      ],
+      "e": "In a real-time system, meeting the time constraints is part of being correct.",
+      "ref": "Slide 53"
+    }
+  ]
+}
