@@ -4,7 +4,10 @@
     {
       "id": "arc1_0001",
       "q": "A 16-bit word is stored as `0110100111000011`.\n(a) Split it into <b>nibbles</b> and into <b>bytes</b>.\n(b) Identify the MS-bit and the LS-bit, and also the MSB and LSB when they refer to <b>bytes</b>.\n(c) How many nibbles, bytes and words does it contain?",
-      "t": ["1", "easy"],
+      "t": [
+        "1",
+        "easy"
+      ],
       "a": [
         "Nibbles: `0110` `1001` `1100` `0011`.",
         "Bytes: `01101001` `11000011`.",
@@ -23,14 +26,20 @@
     {
       "id": "arc1_0002",
       "q": "True or False (justify): 'MSB always means the leftmost <b>bit</b> of a binary number.'",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "a": "<b>False.</b> The meaning depends on the context. MS-bit / LS-bit refer to the most / least significant <b>bit</b> (leftmost / rightmost bit), while MSB / LSB can also refer to the most / least significant <b>byte</b> of a multi-byte value, i.e. the byte that contains the highest / lowest-weight bits.",
       "e": "Lecture example: in the four bytes `10101001 01001010 10101011 10001100`, the MSB is the first byte `10101001` and the LSB is the last byte `10001100`, not single bits."
     },
     {
       "id": "arc1_0003",
       "q": "An image has 800 × 600 pixels. Calculate the storage (in bytes, without compression) needed if it is stored as (a) a binary (1-bit) image, (b) a grayscale image, (c) a 24-bit color image. Then compare the three sizes.",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "a": [
         "Number of pixels = 480,000.",
         "Binary image: 480,000 bits = 60,000 bytes.",
@@ -49,7 +58,10 @@
     {
       "id": "arc1_0004",
       "q": "A 24-bit color image of 400 × 300 pixels is converted to an 8-bit grayscale image (no compression in either case).\n(a) How many different values can one pixel take before and after the conversion?\n(b) What are the storage sizes before and after?\n(c) By what percentage is the size reduced, and why?",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "a": [
         "(a) Before: $2^{24} = 16{,}777{,}216$ possible colors. After: $2^{8} = 256$ gray levels (0 to 255).",
         "(b) Pixels = 120,000. Before: 360,000 bytes. After: 120,000 bytes.",
@@ -67,14 +79,20 @@
     {
       "id": "arc1_0005",
       "q": "True or False (justify): 'Every image must be stored using 24 bits per pixel, because the number of bits does not depend on the output device or on the image type.'",
-      "t": ["1", "easy"],
+      "t": [
+        "1",
+        "easy"
+      ],
       "a": "<b>False.</b> The number of bits depends on what the output device can display and on the image type. A seven-segment display needs only 7 bits (one per segment), a binary image uses 1 bit per pixel, a gray image uses 8 bits, and only a color image uses 24 bits.",
       "e": "Example: on a seven-segment display the digit 1 is represented by `0110000`, so 7 bits are enough and 24 bits would be wasteful."
     },
     {
       "id": "arc1_0006",
       "q": "A sound signal is recorded for 10 seconds, sampled 48,000 times per second, using 16 bits per sample.\n(a) How many samples are taken?\n(b) How many bytes are needed to store it without compression?\n(c) How would the size change if each sample used 32 bits?",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "a": [
         "(a) 480,000 samples.",
         "(b) 7,680,000 bits = 960,000 bytes.",
@@ -90,14 +108,20 @@
     {
       "id": "arc1_0007",
       "q": "True or False (justify): 'Increasing the <b>amplitude</b> of a sound wave makes its tone higher.'",
-      "t": ["1", "easy"],
+      "t": [
+        "1",
+        "easy"
+      ],
       "a": "<b>False.</b> Amplitude controls the loudness (larger amplitude gives a louder sound), while frequency controls the tone (higher frequency gives a higher tone).",
       "e": "In the lecture's sine-wave figure, amplitude is the height of the wave and the period equals 1/frequency."
     },
     {
       "id": "arc1_0008",
       "q": "A sine-wave voltage is sampled 48,000 times per second, and each sample is stored as one of 16 discrete levels (0 to 15), as in the lecture's sampling figure.\n(a) How many bits are needed to store one sample?\n(b) How many bits and bytes are produced per second?\n(c) Why does a stored level differ slightly from the true wave value, and how can this difference be reduced?",
-      "t": ["1", "hard"],
+      "t": [
+        "1",
+        "hard"
+      ],
       "a": [
         "(a) 4 bits per sample, because $2^{4} = 16$ levels.",
         "(b) $48{,}000 \\times 4 = 192{,}000$ bits per second $= 24{,}000$ bytes per second.",
@@ -114,7 +138,10 @@
     {
       "id": "arc1_0009",
       "q": "A video clip lasts 10 seconds. Its frames are 800 × 600 pixels with 24-bit color and are shown at 50 frames per second. Its sound track is a sound signal sampled 48,000 times per second with 16 bits per sample. Without any compression:\n(a) How many frames does the clip contain?\n(b) What is the size of all the frames?\n(c) What is the size of the sound track, and what fraction of the total size does it represent?",
-      "t": ["1", "hard"],
+      "t": [
+        "1",
+        "hard"
+      ],
       "a": [
         "(a) 500 frames.",
         "(b) 1,440,000 bytes per frame, so 720,000,000 bytes for all frames.",
@@ -132,7 +159,10 @@
     {
       "id": "arc1_0010",
       "q": "Compare <b>ASCII</b> and <b>EBCDIC</b> using these points: full name, where it was used, number of possible combinations, and the limitation they share. Also, why is a data representation standard needed?",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "a": [
         "<b>Why a standard:</b> to ensure that the code used on your computer is the same as the code used on any other computer.",
         "<b>ASCII</b> = American Standard Code for Information Interchange.",
@@ -145,7 +175,10 @@
     {
       "id": "arc1_0011",
       "q": "Using the ASCII table, store the word <b>Hi</b> in memory:\n(a) find the decimal ASCII code of each character,\n(b) write the byte stored for each character,\n(c) state how many bytes are used and what the leftmost bit of each byte is.",
-      "t": ["1", "easy"],
+      "t": [
+        "1",
+        "easy"
+      ],
       "a": [
         "H = 72 = `01001000`; i = 105 = `01101001`.",
         "The word occupies 2 bytes: `01001000 01101001`.",
@@ -162,7 +195,10 @@
     {
       "id": "arc1_0012",
       "q": "Represent the following code in UTF-8:\n`1110 0111 01 011011 101011`\nIn the result, separate the bytes with a space.",
-      "t": ["0", "hard"],
+      "t": [
+        "0",
+        "hard"
+      ],
       "a": "`11111000 10001110 10011101 10011011 10101011`",
       "e": [
         "Count the bits: $4 + 4 + 2 + 6 + 6 = 22$ bits, so the code is `1110011101011011101011`.",
@@ -175,19 +211,21 @@
     {
       "id": "arc1_0013",
       "q": "Is this a correct UTF-8 code: `11000000 10000000 10000000`? Justify your answer.",
-      "t": ["0", "medium"],
+      "t": [
+        "0",
+        "medium"
+      ],
       "a": "<b>No.</b> The first byte `11000000` starts with two 1s, so the character is made of exactly 2 bytes (`110XXXXX 10XXXXXX`). The third byte `10000000` starts with `10`, which marks a continuation byte, but there is no leading byte left for it to continue, so the sequence is not valid UTF-8.",
       "e": "Also, the first two bytes carry the free bits `00000000000` = code point U+0000, which belongs to the 1-byte range (U+0000 to U+007F), not to the 2-byte range."
     },
     {
       "id": "arc1_0014",
       "q": "Encode the Unicode code points <b>U+00E9</b> and <b>U+20AC</b> in UTF-8. For each one, first decide how many bytes are needed using the UTF-8 table.",
-      "t": ["1", "medium"],
-      "a": [
-        "U+00E9 needs 2 bytes: `11000011 10101001`.",
-        "U+20AC needs 3 bytes: `11100010 10000010 10101100`."
+      "t": [
+        "1",
+        "medium"
       ],
-      "e": [
+      "a": [
         "U+00E9 lies in U+0080 to U+07FF, so it needs 2 bytes: `110xxxxx 10xxxxxx` (11 free bits).",
         "Hex E9 = `1110 1001`; pad with zeros to 11 bits: `00011101001`.",
         "Split into 5 + 6 bits: `00011` and `101001`.",
@@ -195,31 +233,34 @@
         "U+20AC lies in U+0800 to U+FFFF, so it needs 3 bytes: `1110xxxx 10xxxxxx 10xxxxxx` (16 free bits).",
         "Hex 20AC = `0010 0000 1010 1100` (already 16 bits).",
         "Split into 4 + 6 + 6 bits: `0010`, `000010`, `101100`.",
-        "Add the headers: `1110` + `0010` = `11100010`; `10` + `000010` = `10000010`; `10` + `101100` = `10101100`."
+        "Add the headers: `1110` + `0010` = `11100010`; `10` + `000010` = `10000010`; `10` + `101100` = `10101100`.",
+        "<b>Final answer:</b> U+00E9 = `11000011 10101001`; U+20AC = `11100010 10000010 10101100`."
       ]
     },
     {
       "id": "arc1_0015",
       "q": "(a) Decode the UTF-8 sequence `11000011 10100100` back to its Unicode code point (give it in binary and in hex).\n(b) Are these byte sequences valid UTF-8? Justify each one:\n(i) `11100010 10000010`\n(ii) `10100100 11000011`",
-      "t": ["1", "hard"],
-      "a": [
-        "(a) The free bits are `00011100100`, which is U+00E4 (hex E4).",
-        "(b)(i) Invalid: the leading byte `11100010` announces a 3-byte character, but only 2 bytes are present.",
-        "(b)(ii) Invalid: the sequence starts with `10100100`, a continuation byte (it starts with `10`), and a character can never start with a continuation byte."
+      "t": [
+        "1",
+        "hard"
       ],
-      "e": [
+      "a": [
         "The first byte `11000011` starts with `110`, so the character has 2 bytes: `110xxxxx 10xxxxxx`.",
         "Remove the headers: `110` + `00011` and `10` + `100100`, so the free bits are `00011` and `100100`.",
         "Concatenate them: `00011100100` (11 bits).",
         "Pad to 12 bits and group in fours: `0000 1110 0100` = 0x0E4, so the code point is U+00E4.",
         "For (i): `1110xxxx` means 3 bytes in total, so a 2-byte sequence is incomplete.",
-        "For (ii): in a multi-byte encoding every byte after the first starts with `10`, so a byte starting with `10` cannot be the first byte."
+        "For (ii): in a multi-byte encoding every byte after the first starts with `10`, so a byte starting with `10` cannot be the first byte.",
+        "<b>Final answer:</b> (a) U+00E4 (hex E4); (b)(i) invalid (incomplete 3-byte character); (b)(ii) invalid (starts with a continuation byte)."
       ]
     },
     {
       "id": "arc1_0016",
       "q": "A text contains 10 characters whose code points are in U+0000 to U+007F, 5 characters in U+0080 to U+07FF, and 3 characters in U+0800 to U+FFFF.\n(a) How many bytes does it occupy in UTF-8?\n(b) How many bytes would it need if every one of the 18 characters used 3 bytes? What does this show about UTF-8?",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "a": [
         "(a) $10 \\times 1 + 5 \\times 2 + 3 \\times 3 = 29$ bytes.",
         "(b) $18 \\times 3 = 54$ bytes, so UTF-8 saves 25 bytes.",
@@ -235,43 +276,51 @@
     {
       "id": "arc1_0017",
       "q": "A 64-bit word of hexadecimal value #1122334455667788 was stored at the address 9656 (decimal) in memory of a Little-Endian computer with 8-bit bytes. What is the address of a byte containing value #22?",
-      "t": ["0", "medium"],
-      "a": "9662",
-      "e": [
+      "t": [
+        "0",
+        "medium"
+      ],
+      "a": [
         "Split the 64-bit value into 8 bytes (2 hex digits each): `11 22 33 44 55 66 77 88`.",
         "Little-Endian stores the least-significant byte first (at the lowest address), so the order in memory is `88 77 66 55 44 33 22 11`.",
         "Assign consecutive addresses starting from 9656: 88 at 9656, 77 at 9657, 66 at 9658, 55 at 9659, 44 at 9660, 33 at 9661, 22 at 9662, 11 at 9663.",
-        "The byte `22` is at address <b>9662</b>."
+        "The byte `22` is at address <b>9662</b>.",
+        "<b>Final answer:</b> 9662"
       ]
     },
     {
       "id": "arc1_0018",
       "q": "The 32-bit value `0x1A2B3C4D` is stored starting at address `0x100` (byte-addressable memory).\n(a) Show the memory contents (address and byte) on a big-endian machine and on a little-endian machine.\n(b) A program then loads <b>one byte</b> from address `0x100`. What value does each machine read?\n(c) The 4 bytes are copied, in memory order, from the big-endian machine to a little-endian machine, which then reads them as one 32-bit value. What value does it get, and what does this show?",
-      "t": ["1", "hard"],
-      "a": [
-        "(a) Big-endian: 0x100 holds 1A, 0x101 holds 2B, 0x102 holds 3C, 0x103 holds 4D. Little-endian: 0x100 holds 4D, 0x101 holds 3C, 0x102 holds 2B, 0x103 holds 1A.",
-        "(b) The big-endian machine reads `0x1A`; the little-endian machine reads `0x4D`.",
-        "(c) The little-endian machine reads `0x4D3C2B1A`, not `0x1A2B3C4D`. This shows that endianness must be accounted for when sending multi-byte data between machines with different endianness."
+      "t": [
+        "1",
+        "hard"
       ],
-      "e": [
+      "a": [
         "Split the value into bytes from MSB to LSB: `1A 2B 3C 4D`.",
         "Big-endian stores the MSB first, in the lowest address: `1A` at 0x100, then `2B`, `3C`, `4D` at 0x101 to 0x103.",
         "Little-endian stores the LSB first, in the lowest address: `4D` at 0x100, then `3C`, `2B`, `1A` at 0x101 to 0x103.",
         "(b) The lowest address 0x100 holds the first byte stored: `1A` on big-endian and `4D` on little-endian. Endianness matters when you store a multi-byte value and then load a subset of its bytes.",
-        "(c) The bytes travel in memory order `1A 2B 3C 4D`. A little-endian machine treats the first byte (lowest address) as the least-significant byte, so it assembles the value from MSB to LSB as `4D 3C 2B 1A`, which is `0x4D3C2B1A`."
+        "(c) The bytes travel in memory order `1A 2B 3C 4D`. A little-endian machine treats the first byte (lowest address) as the least-significant byte, so it assembles the value from MSB to LSB as `4D 3C 2B 1A`, which is `0x4D3C2B1A`.",
+        "<b>Final answer:</b> (a) big-endian `1A 2B 3C 4D`, little-endian `4D 3C 2B 1A` (from 0x100 upward); (b) `0x1A` on big-endian, `0x4D` on little-endian; (c) `0x4D3C2B1A`, so endianness must be accounted for when sending multi-byte data between machines."
       ]
     },
     {
       "id": "arc1_0019",
       "q": "True or False (justify): 'If a program stores a 32-bit value to memory and then loads the whole 32-bit value back on the same machine, it gets a different result on a big-endian machine than on a little-endian machine.'",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "a": "<b>False.</b> Endianness only changes the order in which the bytes are placed in memory. Loading the whole value back on the same machine gives the same value on both types of machines. A difference appears only when a <b>subset</b> of the bytes is loaded, or when the data is sent to a machine with a different endianness.",
       "e": "There is no superior endian; the issue is only the byte order seen by whoever reads individual bytes."
     },
     {
       "id": "arc1_0020",
       "q": "Compare <b>big-endian</b> and <b>little-endian</b> processors: which byte goes to the lowest address, examples of processors, and when the difference matters. Is one of them better?",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "a": [
         "<b>Big-endian:</b> loads/stores the MSB first, i.e. in the lowest address. Examples: Motorola 68k and PowerPC (by default).",
         "<b>Little-endian:</b> loads/stores the LSB first, i.e. in the lowest address. Examples: Intel x86/IA-32 and NIOS.",

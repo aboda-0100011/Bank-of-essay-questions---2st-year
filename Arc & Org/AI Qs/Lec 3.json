@@ -4,54 +4,58 @@
     {
       "id": "arc3_0001",
       "q": "(a) Convert $(110101)_2$ to decimal.\n(b) Convert $(45)_{10}$ to binary using repeated division by 2.\n(c) Verify your answer of (b) by converting it back to decimal.",
-      "t": ["1", "easy"],
-      "a": [
-        "(a) $(110101)_2 = (53)_{10}$.",
-        "(b) $(45)_{10} = (101101)_2$.",
-        "(c) $(101101)_2 = 32 + 8 + 4 + 1 = 45$, which matches."
+      "t": [
+        "1",
+        "easy"
       ],
-      "e": [
+      "a": [
         "(a) Write the weights $2^5, 2^4, 2^3, 2^2, 2^1, 2^0$ above the bits `1 1 0 1 0 1`.",
         "$1 \\times 2^5 + 1 \\times 2^4 + 0 \\times 2^3 + 1 \\times 2^2 + 0 \\times 2^1 + 1 \\times 2^0 = 32 + 16 + 0 + 4 + 0 + 1 = 53$.",
         "(b) Divide by 2 and record the remainders: $45 \\div 2 = 22$ r <b>1</b>; $22 \\div 2 = 11$ r <b>0</b>; $11 \\div 2 = 5$ r <b>1</b>; $5 \\div 2 = 2$ r <b>1</b>; $2 \\div 2 = 1$ r <b>0</b>; $1 \\div 2 = 0$ r <b>1</b>.",
         "Read the remainders from bottom to top: `101101`.",
-        "(c) $1 \\times 32 + 0 \\times 16 + 1 \\times 8 + 1 \\times 4 + 0 \\times 2 + 1 \\times 1 = 45$, which equals the original number."
+        "(c) $1 \\times 32 + 0 \\times 16 + 1 \\times 8 + 1 \\times 4 + 0 \\times 2 + 1 \\times 1 = 45$, which equals the original number.",
+        "<b>Final answer:</b> (a) $(110101)_2 = (53)_{10}$; (b) $(45)_{10} = (101101)_2$; (c) verified, it equals 45."
       ]
     },
     {
       "id": "arc3_0002",
       "q": "(a) Convert $(2F7)_{16}$ to decimal.\n(b) Convert $(200)_{10}$ to hexadecimal using repeated division by 16.\n(c) Convert $(1101101011)_2$ to hexadecimal by grouping the bits, then check that the result equals the decimal value of the same binary number.",
-      "t": ["1", "medium"],
-      "a": [
-        "(a) $(2F7)_{16} = (759)_{10}$.",
-        "(b) $(200)_{10} = (C8)_{16}$.",
-        "(c) $(1101101011)_2 = (36B)_{16} = (875)_{10}$."
+      "t": [
+        "1",
+        "medium"
       ],
-      "e": [
+      "a": [
         "(a) Weights $16^2, 16^1, 16^0$ above `2 F 7`, with F = 15: $2 \\times 256 + 15 \\times 16 + 7 \\times 1 = 512 + 240 + 7 = 759$.",
         "(b) $200 \\div 16 = 12$ r <b>8</b>; $12 \\div 16 = 0$ r <b>12</b> (12 is C). Read the remainders from bottom to top: C then 8, so the result is `C8`.",
         "(c) Split the bits into groups of four starting from the right, and pad the leftmost group with zeros: `0011 | 0110 | 1011`.",
         "Use the binary-hex table: `0011` = 3, `0110` = 6, `1011` = B, so the result is `36B`.",
         "Check through decimal: $(36B)_{16} = 3 \\times 256 + 6 \\times 16 + 11 = 768 + 96 + 11 = 875$.",
-        "Directly from the binary number: $512 + 256 + 64 + 32 + 8 + 2 + 1 = 875$, which matches."
+        "Directly from the binary number: $512 + 256 + 64 + 32 + 8 + 2 + 1 = 875$, which matches.",
+        "<b>Final answer:</b> (a) $(2F7)_{16} = (759)_{10}$; (b) $(200)_{10} = (C8)_{16}$; (c) $(1101101011)_2 = (36B)_{16} = (875)_{10}$."
       ]
     },
     {
       "id": "arc3_0003",
       "q": "The decimal value of the byte in the Sign-Magnitude code, given in hex: #E8 is:",
-      "t": ["0", "easy"],
-      "a": "$-104$",
-      "e": [
+      "t": [
+        "0",
+        "easy"
+      ],
+      "a": [
         "Convert E8 to binary: E = `1110` and 8 = `1000`, so the byte is `1110 1000`.",
         "In sign-magnitude, the leftmost bit is the sign (1 means negative) and the remaining 7 bits `1101000` are the magnitude.",
         "Magnitude: $1 \\times 64 + 1 \\times 32 + 0 \\times 16 + 1 \\times 8 + 0 + 0 + 0 = 104$.",
-        "Result: $-104$."
+        "Result: $-104$.",
+        "<b>Final answer:</b> $-104$"
       ]
     },
     {
       "id": "arc3_0004",
       "q": "(a) Represent $-19$ in 8-bit 1's complement.\n(b) Write the 8-bit 1's complement patterns of $+0$ and $-0$, and explain the problem this causes.\n(c) Find the value of the 8-bit 1's complement pattern `11110000`.",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "a": [
         "(a) $+19 = 00010011$, so $-19 = 11101100$.",
         "(b) $+0 = 00000000$ and $-0 = 11111111$. The same value has two different patterns, so $0 \\neq -0$ in this representation.",
@@ -67,7 +71,10 @@
     {
       "id": "arc3_0005",
       "q": "(a) Represent $-45$ in 8-bit 2's complement.\n(b) Verify your answer using the bit weights $-128, 64, 32, 16, 8, 4, 2, 1$.",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "a": [
         "(a) $+45 = 00101101$, so $-45 = 11010011$.",
         "(b) $-128 + 64 + 16 + 2 + 1 = -45$, which matches."
@@ -84,14 +91,20 @@
     {
       "id": "arc3_0006",
       "q": "True or False (justify): 'In 2's complement, the number zero has two different representations (+0 and -0), just like in 1's complement and sign-magnitude.'",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "a": "<b>False.</b> In 2's complement zero has only one representation (with 3 bits: `000`), as the lecture's 3-bit list shows: `000` = +0 and `100` = -4, with no -0. The pattern that sign-magnitude and 1's complement waste on -0 is used for one extra negative value, so the 3-bit range is -4 to +3 (and -8 to +7 with 4 bits).",
       "e": "This is why 2's complement is the preferred representation: it has no -0 and uses every pattern for a different value."
     },
     {
       "id": "arc3_0007",
       "q": "Compare <b>sign-magnitude</b>, <b>1's complement</b> and <b>2's complement</b> using 3-bit numbers:\n(a) list the value of every pattern in each representation,\n(b) give the negation rule of each one,\n(c) say which one is preferred and why.",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "a": [
         "<b>Sign-magnitude:</b> `000` = +0, `001` = +1, `010` = +2, `011` = +3, `100` = -0, `101` = -1, `110` = -2, `111` = -3 (leftmost bit = sign, the rest = magnitude).",
         "<b>1's complement:</b> `000` = +0, `001` = +1, `010` = +2, `011` = +3, `100` = -3, `101` = -2, `110` = -1, `111` = -0.",
@@ -104,7 +117,10 @@
     {
       "id": "arc3_0008",
       "q": "The 8-bit pattern `11100101` is read as a signed number. Find its decimal value if it is interpreted as (a) sign-magnitude, (b) 1's complement, (c) 2's complement. Explain why the three results differ.",
-      "t": ["1", "hard"],
+      "t": [
+        "1",
+        "hard"
+      ],
       "a": [
         "(a) Sign-magnitude: $-101$.",
         "(b) 1's complement: $-26$.",
@@ -122,14 +138,20 @@
     {
       "id": "arc3_0009",
       "q": "True or False (justify): 'To extend the 4-bit 2's complement number `1101` (-3) to 8 bits, we simply add zeros on its left: `00001101`.'",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "a": "<b>False.</b> For 1's complement and 2's complement the added bits must copy the sign bit, so a negative number is extended with 1s: `1101` becomes `11111101`, which is still -3. The pattern `00001101` is $+13$, a different value. Only in sign-magnitude are zeros inserted, and they go between the sign bit and the magnitude.",
       "e": "Lecture example: -3 is `1101` in 4-bit 2's complement and `11111101` in 8-bit 2's complement."
     },
     {
       "id": "arc3_0010",
       "q": "Represent $-5$ in 4 bits using (a) sign-magnitude, (b) 1's complement and (c) 2's complement. Then extend each representation to 8 bits and confirm that the value is unchanged.",
-      "t": ["1", "hard"],
+      "t": [
+        "1",
+        "hard"
+      ],
       "a": [
         "Sign-magnitude: 4-bit `1101`, 8-bit `10000101`.",
         "1's complement: 4-bit `1010`, 8-bit `11111010`.",
@@ -147,19 +169,25 @@
     {
       "id": "arc3_0011",
       "q": "The fractional binary number $0.1101$ is equal to a proper decimal irreducible fraction A/B. Find A/B.",
-      "t": ["0", "easy"],
-      "a": "$\\frac{13}{16}$",
-      "e": [
+      "t": [
+        "0",
+        "easy"
+      ],
+      "a": [
         "Use the weights $2^{-1}, 2^{-2}, 2^{-3}, 2^{-4}$ for the digits `1 1 0 1`.",
         "$0.1101 = \\frac{1}{2} \\times 1 + \\frac{1}{4} \\times 1 + \\frac{1}{8} \\times 0 + \\frac{1}{16} \\times 1$.",
         "$= \\frac{8}{16} + \\frac{4}{16} + 0 + \\frac{1}{16} = \\frac{13}{16}$.",
-        "13 is prime and does not divide 16, so the fraction is irreducible."
+        "13 is prime and does not divide 16, so the fraction is irreducible.",
+        "<b>Final answer:</b> $\\frac{13}{16}$"
       ]
     },
     {
       "id": "arc3_0012",
       "q": "Compare the method used to convert the <b>integer part</b> and the method used to convert the <b>fractional part</b> of a decimal number to binary (operation, how the digits are collected, and whether it always ends). Apply both methods to $(6.75)_{10}$.",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "a": [
         "<b>Integer part:</b> repeatedly divide by 2; the remainders are the bits, read from <b>bottom to top</b>; it always ends when the quotient reaches 0.",
         "<b>Fractional part:</b> repeatedly multiply the fraction by 2; the integral part (0 or 1) of each result is the next bit, read from <b>top to bottom</b>; it may never end (the same fraction repeats), so the result can only be approximated, which causes rounding errors.",
@@ -174,33 +202,38 @@
     {
       "id": "arc3_0013",
       "q": "True or False (justify): 'Any decimal fraction with a finite number of digits, such as $0.1$, can be written exactly with a finite number of binary digits.'",
-      "t": ["1", "medium"],
+      "t": [
+        "1",
+        "medium"
+      ],
       "a": "<b>False.</b> Some fractions never end in binary: the multiply-by-2 process reaches a fraction it has already produced, so the digits repeat forever and the stored value is only approximate (rounding error). For example, $0.1$ gives the repeating pattern $0.0\\overline{0011}$, while $0.375$ ends exactly at $0.011$.",
       "e": "Multiplying 0.1 by 2 repeatedly gives the bits 0, 0, 0, 1, 1 and then the fraction 0.2 appears again, so `0011` repeats; for 0.375 the steps give 0.75, 1.5, 1.0, so it stops after the bits 0, 1, 1."
     },
     {
       "id": "arc3_0014",
       "q": "True or False (justify): 'In the notation fixed<8,2>, the 8 means 8 integer bits and the 2 means 2 fractional bits.'",
-      "t": ["1", "easy"],
+      "t": [
+        "1",
+        "easy"
+      ],
       "a": "<b>False.</b> In fixed<w,b>, w is the <b>total width</b> in bits and b is the position of the binary point. So fixed<8,2> = `xxxxxx.xx` has 6 integer bits and 2 fractional bits, 8 bits in total.",
       "e": "Example: `110111.01` is a fixed<8,2> number; its value is $32 + 16 + 4 + 2 + 1 + \\frac{1}{4} = 55.25$."
     },
     {
       "id": "arc3_0015",
       "q": "Represent $-2.375$ using 8 bits (4 bits for the integer part and 4 bits for the fractional part) in (a) sign/magnitude notation and (b) two's complement notation.",
-      "t": ["0", "hard"],
-      "a": [
-        "$2.375 = 0010.0110$.",
-        "(a) Sign/magnitude: `1010 0110`.",
-        "(b) Two's complement: `1101 1010`."
+      "t": [
+        "0",
+        "hard"
       ],
-      "e": [
+      "a": [
         "Integer part: $2 = (10)_2$, which in 4 bits is `0010`.",
         "Fractional part: $0.375 \\times 2 = 0.75$ gives bit 0; $0.75 \\times 2 = 1.5$ gives bit 1; $0.5 \\times 2 = 1.0$ gives bit 1. The digits are `.011`, padded to 4 bits: `0110`.",
         "So $+2.375 = 0010.0110$. Check: $2 + \\frac{1}{4} + \\frac{1}{8} = 2.375$.",
         "(a) Sign/magnitude: change the leftmost bit to 1, giving `1010 0110`.",
         "(b) Two's complement: invert all the bits of `0010 0110` to get `1101 1001`, then add 1: `1101 1001` + `0000 0001` = `1101 1010`.",
-        "Check (b): $1101.1010 = -8 + 4 + 1 + \\frac{1}{2} + \\frac{1}{8} = -2.375$."
+        "Check (b): $1101.1010 = -8 + 4 + 1 + \\frac{1}{2} + \\frac{1}{8} = -2.375$.",
+        "<b>Final answer:</b> $2.375 = 0010.0110$; (a) sign/magnitude `1010 0110`; (b) two's complement `1101 1010`."
       ]
     }
   ]
