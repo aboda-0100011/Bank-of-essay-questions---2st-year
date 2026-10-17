@@ -1,0 +1,259 @@
+{
+  "tag": "Lec02-LA",
+  "qs": [
+    {
+      "id": "la2_0001",
+      "q": "لكل نظام من الأنظمة التالية (معادلتان في مجهولين): حدّد العلاقة الهندسية بين المستقيمين $L_1$ و $L_2$، وعدد الحلول، ونوع النظام (Consistent / Inconsistent): <br>(أ) $2x + y = 4$ ، $x + y = 2$ <br>(ب) $2x + 2y = 4$ ، $x + y = 2$ <br>(ج) $x + y = 4$ ، $2x + 2y = 6$",
+      "t": ["0", "easy"],
+      "a": [
+        "(أ) المستقيمان يتقاطعان في نقطة واحدة $(2, 0)$ ← حل وحيد ← Consistent.",
+        "(ب) المستقيمان ينطبقان (Coincide) ← عدد لانهائي من الحلول ← Consistent.",
+        "(ج) المستقيمان متوازيان ← لا يوجد حل ← Inconsistent."
+      ],
+      "e": [
+        "System (a): augmented matrix $$\\left[\\begin{array}{cc|c}2&1&4\\\\1&1&2\\end{array}\\right]$$ Interchange $R_1 \\leftrightarrow R_2$: $$\\left[\\begin{array}{cc|c}1&1&2\\\\2&1&4\\end{array}\\right]$$ Then $R_2 \\to R_2 - 2R_1$ gives $[0,\\ -1 \\mid 0]$, then $R_2 \\to -R_2$ gives $[0,\\ 1 \\mid 0]$, then $R_1 \\to R_1 - R_2$ gives $[1,\\ 0 \\mid 2]$. So $x = 2$, $y = 0$: the lines meet at exactly one point. Check: $2(2) + 0 = 4$ ✓ and $2 + 0 = 2$ ✓.",
+        "System (b): augmented matrix $$\\left[\\begin{array}{cc|c}2&2&4\\\\1&1&2\\end{array}\\right]$$ $R_1 \\to \\frac{1}{2}R_1$ gives $[1,\\ 1 \\mid 2]$, so both rows are identical. Then $R_2 \\to R_2 - R_1$ gives $[0,\\ 0 \\mid 0]$. Only the single equation $x + y = 2$ remains for two unknowns, so $y$ is free and there are infinitely many solutions, for example $(-1,3)$, $(0,2)$, $(1,1)$, $(2,0)$. The lines coincide.",
+        "System (c): augmented matrix $$\\left[\\begin{array}{cc|c}1&1&4\\\\2&2&6\\end{array}\\right]$$ $R_2 \\to R_2 - 2R_1$ gives $[0,\\ 0 \\mid 6-8] = [0,\\ 0 \\mid -2]$, which means $0 = -2$, impossible. No solution, so the lines are parallel.",
+        "Rule: a row $[0\\ 0 \\mid \\text{nonzero}]$ means no solution; a row $[0\\ 0 \\mid 0]$ together with a free variable means infinitely many solutions."
+      ]
+    },
+    {
+      "id": "la2_0002",
+      "q": "حدّد صحة كل عبارة مع التبرير: <br>(1) النظام الـ Consistent يجب أن يكون له حل وحيد. <br>(2) يمكن أن يكون لنظام خطي حلّان فقط بالضبط. <br>(3) النظام الـ Inconsistent هو النظام الذي ليس له أي حل. <br>(4) إذا ظهر في المصفوفة الممتدة صف على الصورة $\\left[\\begin{array}{ccc|c}0&0&0&5\\end{array}\\right]$ فالنظام ليس له حل. <br>(5) المصفوفة $\\left[\\begin{array}{cc|c}1&1&3\\\\0&0&0\\end{array}\\right]$ تمثل نظامًا له حل وحيد.",
+      "t": ["1", "easy"],
+      "a": [
+        "(1) خطأ: الـ Consistent هو نظام له حل واحد على الأقل (حل وحيد أو عدد لانهائي من الحلول).",
+        "(2) خطأ: الاحتمالات ثلاثة فقط: حل وحيد، أو عدد لانهائي من الحلول، أو لا يوجد حل.",
+        "(3) صح.",
+        "(4) صح: الصف يعني $0 = 5$ وهذا مستحيل.",
+        "(5) خطأ: الصف $[0\\ 0 \\mid 0]$ يترك معادلة واحدة $x + y = 3$ فيها متغير حر، فيوجد عدد لانهائي من الحلول."
+      ],
+      "e": "A row $[0\\ 0\\ \\dots \\mid c]$ with $c \\neq 0$ says $0 = c$, which is impossible, so the system is inconsistent. A row $[0\\ 0\\ \\dots \\mid 0]$ only removes an equation, and in (5) the single remaining equation $x + y = 3$ has one leading variable ($x$) and one free variable ($y$), giving infinitely many solutions."
+    },
+    {
+      "id": "la2_0003",
+      "q": "المصفوفات التالية هي المصفوفات الممتدة لثلاثة أنظمة بعد اختزالها إلى Row-Echelon Form. لكل منها حدّد نوع النظام، وإن كان له حل فأوجده (أو اكتب الحل العام): $$M_1=\\left[\\begin{array}{ccc|c}1&2&0&4\\\\0&1&3&5\\\\0&0&1&2\\end{array}\\right]$$ $$M_2=\\left[\\begin{array}{ccc|c}1&-1&2&3\\\\0&1&1&2\\\\0&0&0&0\\end{array}\\right]$$ $$M_3=\\left[\\begin{array}{ccc|c}1&2&-1&3\\\\0&1&4&1\\\\0&0&0&-5\\end{array}\\right]$$",
+      "t": ["1", "medium"],
+      "a": [
+        "$M_1$: حل وحيد: $(x_1, x_2, x_3) = (6, -1, 2)$.",
+        "$M_2$: عدد لانهائي من الحلول: $x_3 = t$ (حر) ، $x_2 = 2 - t$ ، $x_1 = 5 - 3t$.",
+        "$M_3$: لا يوجد حل (Inconsistent) لأن الصف الأخير يعني $0 = -5$."
+      ],
+      "e": [
+        "$M_1$: no row of the form $[0\\ 0\\ 0 \\mid c]$ and every column has a leading 1, so there is a unique solution. Back-substitution: row 3 gives $x_3 = 2$; row 2: $x_2 + 3x_3 = 5 \\Rightarrow x_2 = 5 - 6 = -1$; row 1: $x_1 + 2x_2 = 4 \\Rightarrow x_1 = 4 + 2 = 6$.",
+        "$M_2$: the last row is $[0\\ 0\\ 0 \\mid 0]$ and columns 1 and 2 have leading 1s, so $x_1, x_2$ are leading variables and $x_3$ is free. Let $x_3 = t$. Row 2: $x_2 + x_3 = 2 \\Rightarrow x_2 = 2 - t$. Row 1: $x_1 - x_2 + 2x_3 = 3 \\Rightarrow x_1 = 3 + (2 - t) - 2t = 5 - 3t$.",
+        "Check of one particular solution of $M_2$ with $t = 0$: $(5, 2, 0)$ gives $5 - 2 + 0 = 3$ ✓ and $2 + 0 = 2$ ✓.",
+        "$M_3$: the last row is $[0\\ 0\\ 0 \\mid -5]$, i.e. $0 = -5$, which is impossible, so the system is inconsistent."
+      ]
+    },
+    {
+      "id": "la2_0004",
+      "q": "المصفوفة التالية هي Reduced Row-Echelon Form لنظام في المجهولات $x, y, z, w$: $$\\left[\\begin{array}{cccc|c}1&0&-2&0&3\\\\0&1&1&0&-1\\\\0&0&0&1&4\\end{array}\\right]$$ (أ) حدّد الـ Leading variables والـ Free variables. (ب) اكتب الحل العام. (ج) أوجد حلّين خاصّين مختلفين وتحقق من أحدهما في المصفوفة.",
+      "t": ["1", "easy"],
+      "a": [
+        "(أ) Leading variables: $x, y, w$. Free variable: $z$.",
+        "(ب) الحل العام: $x = 3 + 2z$ ، $y = -1 - z$ ، $w = 4$ ، و $z$ حر.",
+        "(ج) عند $z = 0$: $(3, -1, 0, 4)$ ، وعند $z = 1$: $(5, -2, 1, 4)$."
+      ],
+      "e": [
+        "The leading 1s are in columns 1, 2 and 4, so $x, y, w$ are leading variables. Column 3 has no leading 1, so $z$ is free; set $z = t$.",
+        "Row 1: $x - 2z = 3 \\Rightarrow x = 3 + 2z$. Row 2: $y + z = -1 \\Rightarrow y = -1 - z$. Row 3: $w = 4$.",
+        "For $z = 0$: $x = 3$, $y = -1$, $w = 4$, giving $(3, -1, 0, 4)$. For $z = 1$: $x = 3 + 2 = 5$, $y = -1 - 1 = -2$, $w = 4$, giving $(5, -2, 1, 4)$.",
+        "Check of $(5, -2, 1, 4)$ in the matrix: row 1: $5 - 2(1) = 3$ ✓; row 2: $-2 + 1 = -1$ ✓; row 3: $w = 4$ ✓."
+      ]
+    },
+    {
+      "id": "la2_0005",
+      "q": "اكتشف الخطأ في كل استنتاج وصحّحه: <br>(أ) بعد اختزال نظام وصل طالب إلى $$\\left[\\begin{array}{ccc|c}1&-2&3&4\\\\0&1&-1&2\\\\0&0&0&3\\end{array}\\right]$$ وقال: الصف الأخير معاملاته أصفار إذن للنظام عدد لانهائي من الحلول. <br>(ب) في نظام آخر وصل طالب إلى $$\\left[\\begin{array}{cc|c}1&0&3\\\\0&1&2\\\\0&0&0\\end{array}\\right]$$ وقال: يوجد صف $[0\\ 0 \\mid 0]$ إذن للنظام عدد لانهائي من الحلول.",
+      "t": ["1", "medium"],
+      "a": [
+        "(أ) الخطأ: الصف الأخير يعني $0 = 3$ وهذا مستحيل، فالنظام <b>Inconsistent</b> ولا يوجد حل (وليس عدد لانهائي).",
+        "(ب) الخطأ: وجود الصف $[0\\ 0 \\mid 0]$ لا يكفي؛ العمودان 1 و2 فيهما Leading 1 فلا يوجد متغير حر، لذلك الحل وحيد: $x = 3$ ، $y = 2$."
+      ],
+      "e": [
+        "(a) The last row $[0\\ 0\\ 0 \\mid 3]$ stands for $0x_1 + 0x_2 + 0x_3 = 3$, i.e. $0 = 3$, which can never hold. A row of this form (zero coefficients, nonzero constant) means no solution, whatever the other rows say.",
+        "(b) Reading the rows: row 1 gives $x = 3$ and row 2 gives $y = 2$. Both columns contain a leading 1, so there is no free variable; the zero row $[0\\ 0 \\mid 0]$ just says $0 = 0$ and adds no freedom. Hence the solution is unique: $(3, 2)$.",
+        "Summary: infinitely many solutions need a consistent system and at least one free variable, which neither matrix has."
+      ]
+    },
+    {
+      "id": "la2_0006",
+      "q": "حلّ النظام التالي بـ <b>Gaussian Elimination</b> وحدّد نوعه: $$\\begin{aligned} x_1 - 2x_2 - 6x_3 &= 12 \\\\ 2x_1 + 4x_2 + 12x_3 &= -17 \\\\ x_1 - 4x_2 - 12x_3 &= 22 \\end{aligned}$$",
+      "t": ["0", "medium"],
+      "a": [
+        "النظام <b>Inconsistent</b>: لا يوجد حل.",
+        "الصف الأخير بعد الاختزال: $\\left[\\begin{array}{ccc|c}0&0&0&-\\frac{1}{4}\\end{array}\\right]$ أي $0 = -\\frac{1}{4}$."
+      ],
+      "e": [
+        "Augmented matrix: $$\\left[\\begin{array}{ccc|c}1&-2&-6&12\\\\2&4&12&-17\\\\1&-4&-12&22\\end{array}\\right]$$",
+        "Clear below the leading 1: $R_2 \\to R_2 - 2R_1$ gives $[0,\\ 4+4,\\ 12+12 \\mid -17-24] = [0,\\ 8,\\ 24 \\mid -41]$, and $R_3 \\to R_3 - R_1$ gives $[0,\\ -4+2,\\ -12+6 \\mid 22-12] = [0,\\ -2,\\ -6 \\mid 10]$: $$\\left[\\begin{array}{ccc|c}1&-2&-6&12\\\\0&8&24&-41\\\\0&-2&-6&10\\end{array}\\right]$$",
+        "Make the leading entry of row 2 equal to 1: $R_2 \\to \\frac{1}{8}R_2$ gives $[0,\\ 1,\\ 3 \\mid -\\frac{41}{8}]$: $$\\left[\\begin{array}{ccc|c}1&-2&-6&12\\\\0&1&3&-\\frac{41}{8}\\\\0&-2&-6&10\\end{array}\\right]$$",
+        "Clear below the leading 1 of row 2: $R_3 \\to R_3 + 2R_2$ gives $[0,\\ 0,\\ -6+6 \\mid 10 + 2(-\\frac{41}{8})] = [0,\\ 0,\\ 0 \\mid 10 - \\frac{41}{4}]$. Since $10 - \\frac{41}{4} = \\frac{40}{4} - \\frac{41}{4} = -\\frac{1}{4}$, we get: $$\\left[\\begin{array}{ccc|c}1&-2&-6&12\\\\0&1&3&-\\frac{41}{8}\\\\0&0&0&-\\frac{1}{4}\\end{array}\\right]$$",
+        "The last row means $0x_1 + 0x_2 + 0x_3 = -\\frac{1}{4}$, which is impossible. Therefore the system has no solution (inconsistent)."
+      ]
+    },
+    {
+      "id": "la2_0007",
+      "q": "حلّ النظام التالي بـ Gaussian Elimination وحدّد نوعه، ثم فسّر سبب النتيجة: $$\\begin{aligned} x + 2y + 3z &= 4 \\\\ 2x + 5y + 7z &= 9 \\\\ 3x + 7y + 10z &= 14 \\end{aligned}$$",
+      "t": ["1", "medium"],
+      "a": [
+        "النظام Inconsistent: لا يوجد حل.",
+        "السبب: الطرف الأيسر للمعادلة الثالثة $3x + 7y + 10z$ يساوي مجموع الطرفين الأيسرين للمعادلتين الأولى والثانية، لكن مجموع الطرفين الأيمنين $4 + 9 = 13$ وليس $14$."
+      ],
+      "e": [
+        "Augmented matrix: $$\\left[\\begin{array}{ccc|c}1&2&3&4\\\\2&5&7&9\\\\3&7&10&14\\end{array}\\right]$$",
+        "Clear below the leading 1: $R_2 \\to R_2 - 2R_1$ gives $[0,\\ 5-4,\\ 7-6 \\mid 9-8] = [0,\\ 1,\\ 1 \\mid 1]$, and $R_3 \\to R_3 - 3R_1$ gives $[0,\\ 7-6,\\ 10-9 \\mid 14-12] = [0,\\ 1,\\ 1 \\mid 2]$: $$\\left[\\begin{array}{ccc|c}1&2&3&4\\\\0&1&1&1\\\\0&1&1&2\\end{array}\\right]$$",
+        "Row 2 already has a leading 1. Clear below it: $R_3 \\to R_3 - R_2$ gives $[0,\\ 0,\\ 0 \\mid 1]$: $$\\left[\\begin{array}{ccc|c}1&2&3&4\\\\0&1&1&1\\\\0&0&0&1\\end{array}\\right]$$",
+        "The last row says $0 = 1$, which is impossible, so the system is inconsistent.",
+        "Why it happens: adding equation 1 and equation 2 gives $3x + 7y + 10z = 13$, while equation 3 claims that the same left side equals 14, a contradiction."
+      ]
+    },
+    {
+      "id": "la2_0008",
+      "q": "حلّ النظام التالي بـ <b>Gauss-Jordan</b>، ثم حدّد الـ Leading والـ Free variables واكتب الحل العام وحلّين خاصّين: $$\\begin{aligned} x + 2y - 3z + w &= -2 \\\\ 3x - y - 2z - 4w &= 1 \\\\ 2x + 3y - 5z + w &= -3 \\end{aligned}$$",
+      "t": ["0", "medium"],
+      "a": [
+        "النظام Consistent وله عدد لانهائي من الحلول.",
+        "Leading variables: $x, y$. Free variables: $z, w$.",
+        "الحل العام: $x = z + w$ ، $y = z - w - 1$.",
+        "مثالان: $(z, w) = (0, 0)$ يعطي $(0, -1, 0, 0)$ ، و $(z, w) = (1, 1)$ يعطي $(2, -1, 1, 1)$."
+      ],
+      "e": [
+        "Augmented matrix: $$\\left[\\begin{array}{cccc|c}1&2&-3&1&-2\\\\3&-1&-2&-4&1\\\\2&3&-5&1&-3\\end{array}\\right]$$",
+        "Clear below the leading 1: $R_2 \\to R_2 - 3R_1$ gives $[0,\\ -1-6,\\ -2+9,\\ -4-3 \\mid 1+6] = [0,\\ -7,\\ 7,\\ -7 \\mid 7]$, and $R_3 \\to R_3 - 2R_1$ gives $[0,\\ 3-4,\\ -5+6,\\ 1-2 \\mid -3+4] = [0,\\ -1,\\ 1,\\ -1 \\mid 1]$: $$\\left[\\begin{array}{cccc|c}1&2&-3&1&-2\\\\0&-7&7&-7&7\\\\0&-1&1&-1&1\\end{array}\\right]$$",
+        "Make the leading entry of row 2 equal to 1: $R_2 \\to -\\frac{1}{7}R_2$ gives $[0,\\ 1,\\ -1,\\ 1 \\mid -1]$: $$\\left[\\begin{array}{cccc|c}1&2&-3&1&-2\\\\0&1&-1&1&-1\\\\0&-1&1&-1&1\\end{array}\\right]$$",
+        "Clear above and below the leading 1 of row 2: $R_1 \\to R_1 - 2R_2$ gives $[1,\\ 0,\\ -3+2,\\ 1-2 \\mid -2+2] = [1,\\ 0,\\ -1,\\ -1 \\mid 0]$, and $R_3 \\to R_3 + R_2$ gives $[0,\\ 0,\\ 0,\\ 0 \\mid 0]$: $$\\left[\\begin{array}{cccc|c}1&0&-1&-1&0\\\\0&1&-1&1&-1\\\\0&0&0&0&0\\end{array}\\right]$$",
+        "The leading 1s are in columns 1 and 2, so $x, y$ are leading variables and $z, w$ are free. The zero row $[0\\ 0\\ 0\\ 0 \\mid 0]$ shows the system is consistent, with infinitely many solutions.",
+        "Row 1: $x - z - w = 0 \\Rightarrow x = z + w$. Row 2: $y - z + w = -1 \\Rightarrow y = z - w - 1$.",
+        "Particular solution 1: $z = 0$, $w = 0$ gives $x = 0$, $y = -1$, i.e. $(0, -1, 0, 0)$. Particular solution 2: $z = 1$, $w = 1$ gives $x = 2$, $y = 1 - 1 - 1 = -1$, i.e. $(2, -1, 1, 1)$.",
+        "Check of $(2, -1, 1, 1)$ in the original equations: $2 + 2(-1) - 3(1) + 1 = -2$ ✓; $3(2) - (-1) - 2(1) - 4(1) = 6 + 1 - 2 - 4 = 1$ ✓; $2(2) + 3(-1) - 5(1) + 1 = 4 - 3 - 5 + 1 = -3$ ✓."
+      ]
+    },
+    {
+      "id": "la2_0009",
+      "q": "حلّ النظام التالي بـ Gauss-Jordan، واكتب الحل العام بدلالة المتغيرات الحرة، ثم أوجد حلّين خاصّين وتحقق منهما في المعادلات الأصلية: $$\\begin{aligned} x + 2y + z + w &= 4 \\\\ x + 2y + 2z + 3w &= 5 \\\\ 2x + 4y + z &= 7 \\end{aligned}$$",
+      "t": ["1", "hard"],
+      "a": [
+        "النظام Consistent وله عدد لانهائي من الحلول.",
+        "Leading variables: $x, z$. Free variables: $y, w$.",
+        "الحل العام: $x = 3 - 2y + w$ ، $z = 1 - 2w$.",
+        "حلان خاصان: $(3, 0, 1, 0)$ و $(2, 1, -1, 1)$."
+      ],
+      "e": [
+        "Augmented matrix (the third equation has no $w$, so its coefficient is 0): $$\\left[\\begin{array}{cccc|c}1&2&1&1&4\\\\1&2&2&3&5\\\\2&4&1&0&7\\end{array}\\right]$$",
+        "Clear below the leading 1: $R_2 \\to R_2 - R_1$ gives $[0,\\ 0,\\ 1,\\ 2 \\mid 1]$, and $R_3 \\to R_3 - 2R_1$ gives $[0,\\ 0,\\ 1-2,\\ 0-2 \\mid 7-8] = [0,\\ 0,\\ -1,\\ -2 \\mid -1]$: $$\\left[\\begin{array}{cccc|c}1&2&1&1&4\\\\0&0&1&2&1\\\\0&0&-1&-2&-1\\end{array}\\right]$$",
+        "Column 2 has zeros in rows 2 and 3, so it has no leading 1 (this will make $y$ a free variable). Move to column 3: row 2 already has a leading 1 there. Clear below it: $R_3 \\to R_3 + R_2$ gives $[0,\\ 0,\\ 0,\\ 0 \\mid 0]$.",
+        "Clear above the leading 1 of row 2: $R_1 \\to R_1 - R_2$ gives $[1,\\ 2,\\ 0,\\ 1-2 \\mid 4-1] = [1,\\ 2,\\ 0,\\ -1 \\mid 3]$: $$\\left[\\begin{array}{cccc|c}1&2&0&-1&3\\\\0&0&1&2&1\\\\0&0&0&0&0\\end{array}\\right]$$",
+        "The leading 1s are in columns 1 and 3, so $x, z$ are leading variables and $y, w$ are free.",
+        "Row 1: $x + 2y - w = 3 \\Rightarrow x = 3 - 2y + w$. Row 2: $z + 2w = 1 \\Rightarrow z = 1 - 2w$.",
+        "Particular solutions: $(y, w) = (0, 0)$ gives $x = 3$, $z = 1$, i.e. $(3, 0, 1, 0)$; $(y, w) = (1, 1)$ gives $x = 3 - 2 + 1 = 2$, $z = 1 - 2 = -1$, i.e. $(2, 1, -1, 1)$.",
+        "Check of $(3, 0, 1, 0)$: $3 + 0 + 1 + 0 = 4$ ✓; $3 + 0 + 2 + 0 = 5$ ✓; $6 + 0 + 1 = 7$ ✓. Check of $(2, 1, -1, 1)$: $2 + 2 - 1 + 1 = 4$ ✓; $2 + 2 - 2 + 3 = 5$ ✓; $4 + 4 - 1 = 7$ ✓."
+      ]
+    },
+    {
+      "id": "la2_0010",
+      "q": "ما الشرط الذي يجب أن تحققه $b_1, b_2, b_3$ حتى يكون للنظام التالي حل؟ $$\\begin{aligned} x_1 + x_2 + x_3 &= b_1 \\\\ x_1 + 2x_3 &= b_2 \\\\ 2x_1 + x_2 + 3x_3 &= b_3 \\end{aligned}$$",
+      "t": ["0", "medium"],
+      "a": [
+        "الشرط: $b_3 - b_2 - b_1 = 0$."
+      ],
+      "e": [
+        "Augmented matrix: $$\\left[\\begin{array}{ccc|c}1&1&1&b_1\\\\1&0&2&b_2\\\\2&1&3&b_3\\end{array}\\right]$$",
+        "Clear below the leading 1: $R_2 \\to R_2 - R_1$ gives $[0,\\ -1,\\ 1 \\mid b_2 - b_1]$, and $R_3 \\to R_3 - 2R_1$ gives $[0,\\ -1,\\ 1 \\mid b_3 - 2b_1]$: $$\\left[\\begin{array}{ccc|c}1&1&1&b_1\\\\0&-1&1&b_2-b_1\\\\0&-1&1&b_3-2b_1\\end{array}\\right]$$",
+        "Make the leading entry of row 2 equal to 1: $R_2 \\to -R_2$ gives $[0,\\ 1,\\ -1 \\mid b_1 - b_2]$: $$\\left[\\begin{array}{ccc|c}1&1&1&b_1\\\\0&1&-1&b_1-b_2\\\\0&-1&1&b_3-2b_1\\end{array}\\right]$$",
+        "Clear below the leading 1 of row 2: $R_3 \\to R_3 + R_2$ gives $[0,\\ 0,\\ 0 \\mid b_3 - 2b_1 + b_1 - b_2] = [0,\\ 0,\\ 0 \\mid b_3 - b_2 - b_1]$: $$\\left[\\begin{array}{ccc|c}1&1&1&b_1\\\\0&1&-1&b_1-b_2\\\\0&0&0&b_3-b_2-b_1\\end{array}\\right]$$",
+        "The last row reads $0 = b_3 - b_2 - b_1$. The system has a solution only if this constant is 0, so the condition is $b_3 - b_2 - b_1 = 0$ (otherwise the system is inconsistent)."
+      ]
+    },
+    {
+      "id": "la2_0011",
+      "q": "للنظام: $$\\begin{aligned} x_1 + x_2 + x_3 &= b_1 \\\\ x_1 + 2x_3 &= b_2 \\\\ 2x_1 + x_2 + 3x_3 &= b_3 \\end{aligned}$$ (علمًا بأن شرط وجود الحل هو $b_3 - b_2 - b_1 = 0$): <br>(أ) هل للنظام حل عندما $(b_1, b_2, b_3) = (1, 1, 2)$؟ وإن وُجد فأوجد الحل العام. <br>(ب) هل للنظام حل عندما $(b_1, b_2, b_3) = (1, 2, 4)$؟ وضّح بالاختزال.",
+      "t": ["1", "medium"],
+      "a": [
+        "(أ) $2 - 1 - 1 = 0$ ← يوجد حل؛ الحل العام: $x_1 = 1 - 2t$ ، $x_2 = t$ ، $x_3 = t$ (عدد لانهائي من الحلول).",
+        "(ب) $4 - 2 - 1 = 1 \\neq 0$ ← لا يوجد حل (Inconsistent)."
+      ],
+      "e": [
+        "(a) Substitute $b = (1, 1, 2)$: $$\\left[\\begin{array}{ccc|c}1&1&1&1\\\\1&0&2&1\\\\2&1&3&2\\end{array}\\right]$$",
+        "$R_2 \\to R_2 - R_1$ gives $[0,\\ -1,\\ 1 \\mid 0]$ and $R_3 \\to R_3 - 2R_1$ gives $[0,\\ -1,\\ 1 \\mid 0]$: $$\\left[\\begin{array}{ccc|c}1&1&1&1\\\\0&-1&1&0\\\\0&-1&1&0\\end{array}\\right]$$",
+        "$R_2 \\to -R_2$ gives $[0,\\ 1,\\ -1 \\mid 0]$; then $R_3 \\to R_3 + R_2$ gives $[0,\\ 0,\\ 0 \\mid 0]$. Then clear above the leading 1 of row 2: $R_1 \\to R_1 - R_2$ gives $[1,\\ 0,\\ 2 \\mid 1]$: $$\\left[\\begin{array}{ccc|c}1&0&2&1\\\\0&1&-1&0\\\\0&0&0&0\\end{array}\\right]$$",
+        "Leading variables: $x_1, x_2$; free variable: $x_3 = t$. Row 1: $x_1 + 2t = 1 \\Rightarrow x_1 = 1 - 2t$. Row 2: $x_2 - t = 0 \\Rightarrow x_2 = t$.",
+        "Check in the original equations: $x_1 + x_2 + x_3 = (1 - 2t) + t + t = 1$ ✓; $x_1 + 2x_3 = 1 - 2t + 2t = 1$ ✓; $2x_1 + x_2 + 3x_3 = 2 - 4t + t + 3t = 2$ ✓.",
+        "(b) Substitute $b = (1, 2, 4)$: $$\\left[\\begin{array}{ccc|c}1&1&1&1\\\\1&0&2&2\\\\2&1&3&4\\end{array}\\right]$$ $R_2 \\to R_2 - R_1$ gives $[0,\\ -1,\\ 1 \\mid 1]$ and $R_3 \\to R_3 - 2R_1$ gives $[0,\\ -1,\\ 1 \\mid 2]$.",
+        "$R_2 \\to -R_2$ gives $[0,\\ 1,\\ -1 \\mid -1]$; then $R_3 \\to R_3 + R_2$ gives $[0,\\ 0,\\ 0 \\mid 2 - 1] = [0,\\ 0,\\ 0 \\mid 1]$, i.e. $0 = 1$. The system has no solution, which agrees with $b_3 - b_2 - b_1 = 4 - 2 - 1 = 1 \\neq 0$."
+      ]
+    },
+    {
+      "id": "la2_0012",
+      "q": "أوجد الشرط الذي يجب أن تحققه $b_1, b_2, b_3$ حتى يكون للنظام التالي حل، ثم حدّد أيّ المتجهين الآتيين $(b_1, b_2, b_3)$ يجعل النظام Consistent: $(1, 1, 3)$ و $(1, 1, 2)$. $$\\begin{aligned} x + y + z &= b_1 \\\\ 2x + y + 3z &= b_2 \\\\ 4x + 3y + 5z &= b_3 \\end{aligned}$$",
+      "t": ["1", "medium"],
+      "a": [
+        "الشرط: $b_3 - 2b_1 - b_2 = 0$.",
+        "المتجه $(1, 1, 3)$: $3 - 2 - 1 = 0$ ← النظام Consistent.",
+        "المتجه $(1, 1, 2)$: $2 - 2 - 1 = -1 \\neq 0$ ← النظام Inconsistent."
+      ],
+      "e": [
+        "Augmented matrix: $$\\left[\\begin{array}{ccc|c}1&1&1&b_1\\\\2&1&3&b_2\\\\4&3&5&b_3\\end{array}\\right]$$",
+        "Clear below the leading 1: $R_2 \\to R_2 - 2R_1$ gives $[0,\\ -1,\\ 1 \\mid b_2 - 2b_1]$, and $R_3 \\to R_3 - 4R_1$ gives $[0,\\ 3-4,\\ 5-4 \\mid b_3 - 4b_1] = [0,\\ -1,\\ 1 \\mid b_3 - 4b_1]$: $$\\left[\\begin{array}{ccc|c}1&1&1&b_1\\\\0&-1&1&b_2-2b_1\\\\0&-1&1&b_3-4b_1\\end{array}\\right]$$",
+        "$R_2 \\to -R_2$ gives $[0,\\ 1,\\ -1 \\mid 2b_1 - b_2]$. Then $R_3 \\to R_3 + R_2$ gives $[0,\\ 0,\\ 0 \\mid b_3 - 4b_1 + 2b_1 - b_2] = [0,\\ 0,\\ 0 \\mid b_3 - 2b_1 - b_2]$.",
+        "The last row says $0 = b_3 - 2b_1 - b_2$, so a solution exists only when $b_3 - 2b_1 - b_2 = 0$.",
+        "Test $(1, 1, 3)$: $3 - 2(1) - 1 = 0$, so the condition holds and the system is consistent. Test $(1, 1, 2)$: $2 - 2(1) - 1 = -1 \\neq 0$, so the last row is $0 = -1$ and the system is inconsistent."
+      ]
+    },
+    {
+      "id": "la2_0013",
+      "q": "ليكن النظام: $$\\begin{aligned} x + 2y &= 3 \\\\ 2x + 4y &= c \\end{aligned}$$ (أ) أوجد قيمة $c$ التي ينطبق عندها المستقيمان. (ب) أوجد قيم $c$ التي يكون عندها المستقيمان متوازيين. (ج) هل يمكن أن يتقاطع المستقيمان في نقطة واحدة؟ فسّر ذلك باستخدام الاختزال.",
+      "t": ["1", "medium"],
+      "a": [
+        "(أ) $c = 6$ ← ينطبقان ← عدد لانهائي من الحلول.",
+        "(ب) $c \\neq 6$ ← متوازيان ← لا يوجد حل.",
+        "(ج) لا؛ لأن الاختزال يعطي دائمًا صفًا معاملاته أصفار $[0\\ 0 \\mid c - 6]$ لأي قيمة لـ $c$، فلا يوجد حل وحيد أبدًا."
+      ],
+      "e": [
+        "Augmented matrix: $$\\left[\\begin{array}{cc|c}1&2&3\\\\2&4&c\\end{array}\\right]$$",
+        "$R_2 \\to R_2 - 2R_1$ gives $[0,\\ 4-4 \\mid c - 6] = [0,\\ 0 \\mid c - 6]$: $$\\left[\\begin{array}{cc|c}1&2&3\\\\0&0&c-6\\end{array}\\right]$$",
+        "If $c = 6$ the last row is $[0\\ 0 \\mid 0]$, leaving one equation $x + 2y = 3$ with $y$ free: infinitely many solutions, so the lines coincide (the second equation is twice the first).",
+        "If $c \\neq 6$ the last row says $0 = c - 6 \\neq 0$, which is impossible: no solution, so the lines are parallel.",
+        "A unique solution would need a leading 1 in both columns, but the second row has zero coefficients for every value of $c$. Hence the lines can never meet at exactly one point."
+      ]
+    },
+    {
+      "id": "la2_0014",
+      "q": "أوجد قيم $k$ التي يكون عندها للنظام التالي: (1) حل وحيد، (2) عدد لانهائي من الحلول، (3) لا يوجد حل. $$\\begin{aligned} x + y + z &= 2 \\\\ 2x + 3y + 2z &= 5 \\\\ 2x + 3y + (k^2 - 2)z &= k + 3 \\end{aligned}$$",
+      "t": ["1", "hard"],
+      "a": [
+        "حل وحيد: $k \\neq 2$ و $k \\neq -2$.",
+        "عدد لانهائي من الحلول: $k = 2$.",
+        "لا يوجد حل: $k = -2$."
+      ],
+      "e": [
+        "Augmented matrix: $$\\left[\\begin{array}{ccc|c}1&1&1&2\\\\2&3&2&5\\\\2&3&k^2-2&k+3\\end{array}\\right]$$",
+        "Clear below the leading 1: $R_2 \\to R_2 - 2R_1$ gives $[0,\\ 3-2,\\ 2-2 \\mid 5-4] = [0,\\ 1,\\ 0 \\mid 1]$, and $R_3 \\to R_3 - 2R_1$ gives $[0,\\ 1,\\ k^2-2-2 \\mid k+3-4] = [0,\\ 1,\\ k^2-4 \\mid k-1]$: $$\\left[\\begin{array}{ccc|c}1&1&1&2\\\\0&1&0&1\\\\0&1&k^2-4&k-1\\end{array}\\right]$$",
+        "Row 2 already has a leading 1. Clear below it: $R_3 \\to R_3 - R_2$ gives $[0,\\ 0,\\ k^2-4 \\mid k-2]$: $$\\left[\\begin{array}{ccc|c}1&1&1&2\\\\0&1&0&1\\\\0&0&k^2-4&k-2\\end{array}\\right]$$",
+        "The last row reads $(k^2 - 4)z = k - 2$, i.e. $(k-2)(k+2)z = k - 2$. Discuss the coefficient $k^2 - 4 = (k-2)(k+2)$, which vanishes at $k = 2$ and $k = -2$.",
+        "Case $k \\neq 2$ and $k \\neq -2$: the coefficient is nonzero, so $z = \\frac{k-2}{k^2-4} = \\frac{1}{k+2}$, then $y = 1$ and $x = 2 - y - z = 1 - \\frac{1}{k+2}$. Every column has a leading 1: unique solution.",
+        "Case $k = 2$: the last row becomes $[0\\ 0\\ 0 \\mid 0]$, so $z$ is free: infinitely many solutions ($y = 1$, $x = 1 - z$).",
+        "Case $k = -2$: the last row becomes $[0\\ 0\\ 0 \\mid -4]$, i.e. $0 = -4$: no solution."
+      ]
+    },
+    {
+      "id": "la2_0015",
+      "q": "في النظام التالي (وهو نظام Example 1 مع تغيير الثابت في المعادلة الثانية إلى $c$): $$\\begin{aligned} x_1 - 2x_2 - 6x_3 &= 12 \\\\ 2x_1 + 4x_2 + 12x_3 &= c \\\\ x_1 - 4x_2 - 12x_3 &= 22 \\end{aligned}$$ أوجد قيمة $c$ التي تجعل النظام Consistent، ثم اكتب الحل العام حينئذٍ وتحقق منه.",
+      "t": ["1", "hard"],
+      "a": [
+        "$c = -16$.",
+        "الحل العام: $x_1 = 2$ ، $x_2 = -5 - 3t$ ، $x_3 = t$ حيث $t$ حر.",
+        "للنظام عدد لانهائي من الحلول."
+      ],
+      "e": [
+        "Augmented matrix: $$\\left[\\begin{array}{ccc|c}1&-2&-6&12\\\\2&4&12&c\\\\1&-4&-12&22\\end{array}\\right]$$",
+        "Clear below the leading 1: $R_2 \\to R_2 - 2R_1$ gives $[0,\\ 8,\\ 24 \\mid c - 24]$, and $R_3 \\to R_3 - R_1$ gives $[0,\\ -2,\\ -6 \\mid 10]$: $$\\left[\\begin{array}{ccc|c}1&-2&-6&12\\\\0&8&24&c-24\\\\0&-2&-6&10\\end{array}\\right]$$",
+        "$R_2 \\to \\frac{1}{8}R_2$ gives $[0,\\ 1,\\ 3 \\mid \\frac{c-24}{8}]$. Then $R_3 \\to R_3 + 2R_2$ gives $[0,\\ 0,\\ 0 \\mid 10 + \\frac{c-24}{4}]$.",
+        "The system is consistent exactly when the last constant is zero: $10 + \\frac{c-24}{4} = 0 \\Rightarrow c - 24 = -40 \\Rightarrow c = -16$. (As a check, the lecture's value $c = -17$ gives $10 - \\frac{41}{4} = -\\frac{1}{4} \\neq 0$, which is why that system had no solution.)",
+        "With $c = -16$: row 2 becomes $[0,\\ 1,\\ 3 \\mid \\frac{-40}{8}] = [0,\\ 1,\\ 3 \\mid -5]$ and row 3 becomes $[0,\\ 0,\\ 0 \\mid 0]$. Clear above the leading 1 of row 2: $R_1 \\to R_1 + 2R_2$ gives $[1,\\ 0,\\ -6+6 \\mid 12 + 2(-5)] = [1,\\ 0,\\ 0 \\mid 2]$: $$\\left[\\begin{array}{ccc|c}1&0&0&2\\\\0&1&3&-5\\\\0&0&0&0\\end{array}\\right]$$",
+        "Leading variables: $x_1, x_2$; free variable: $x_3 = t$. Row 1: $x_1 = 2$. Row 2: $x_2 + 3t = -5 \\Rightarrow x_2 = -5 - 3t$.",
+        "Check in the original equations with $c = -16$: $2 - 2(-5 - 3t) - 6t = 2 + 10 + 6t - 6t = 12$ ✓; $2(2) + 4(-5 - 3t) + 12t = 4 - 20 - 12t + 12t = -16$ ✓; $2 - 4(-5 - 3t) - 12t = 2 + 20 + 12t - 12t = 22$ ✓."
+      ]
+    }
+  ]
+}
